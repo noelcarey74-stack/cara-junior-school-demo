@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Admissions and Enrolment Policy | Cara Junior School</title>
+
+  <meta
+    name="description"
+    content="Admissions and Enrolment Policy for Cara Junior School, including eligibility, application process, admission criteria, waiting list, late applications and appeals."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .policy-page {
+      background: #f7fbff;
+    }
+
+    .policy-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .policy-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .policy-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .policy-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policy-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: #eef7ff;
+      color: #1971c2;
+      font-size: 2rem;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policy-hero-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .policy-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .policy-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-content-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-content-card h2,
+    .policy-content-card h3 {
+      color: var(--navy);
+    }
+
+    .policy-content-card h3 {
+      margin-top: 28px;
+    }
+
+    .policy-content-card p {
+      color: #344054;
+    }
+
+    .policy-note {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-left: 6px solid #20c997;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-warning {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-left: 6px solid #fab005;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .policy-list li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .policy-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f5b;
+      font-weight: 950;
+    }
+
+    .admissions-grid {
+      display: grid;
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .admissions-card {
+      background: #f8fbff;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      border-top: 6px solid #20c997;
+    }
+
+    .admissions-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .admissions-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .admissions-card:nth-child(4) {
+      border-top-color: #7048e8;
+    }
+
+    .admissions-card:nth-child(5) {
+      border-top-color: #f06595;
+    }
+
+    .admissions-card:nth-child(6) {
+      border-top-color: #ff922b;
+    }
+
+    .admissions-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .admissions-card p {
+      margin-bottom: 0;
+      color: #344054;
+    }
+
+    .numbered-policy-list {
+      counter-reset: policy-step;
+      list-style: none;
+      margin: 18px 0 0;
+      padding: 0;
+    }
+
+    .numbered-policy-list li {
+      counter-increment: policy-step;
+      position: relative;
+      padding-left: 48px;
+      margin: 16px 0;
+      color: #344054;
+    }
+
+    .numbered-policy-list li::before {
+      content: counter(policy-step);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #1971c2;
+      color: #ffffff;
+      font-weight: 950;
+    }
+
+    .contact-policy-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+    }
+
+    .contact-policy-box h3 {
+      margin-top: 0;
+    }
+
+    .policy-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .policy-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .policy-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .policy-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .policy-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .policy-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .admissions-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .policy-content-card {
+        padding: 24px;
+      }
+
+      .policy-actions {
+        flex-direction: column;
+      }
+
+      .policy-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="policy-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>Cara Junior School, Banduff Road, Mayfield, Cork</p>
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html">Classes</a>
+          <a href="admissions.html" class="active">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="policies.html">Policies</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero page-hero policy-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Admissions Policy</p>
+          <h1>Admissions and Enrolment Policy</h1>
+
+          <p class="hero-text">
+            Information on admissions, enrolment, eligibility, applications,
+            oversubscription, waiting lists, late applications and review or appeal rights.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#policy-content">Read Policy</a>
+            <a class="btn btn-secondary" href="admissions.html">Admissions Page</a>
+          </div>
+        </div>
+
+        <div class="policy-hero-card">
+          <div class="policy-icon">📝</div>
+          <h2>Admissions Process</h2>
+          <p>
+            This page presents the school admissions and enrolment policy in a clear
+            website format for parents and guardians.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="policy-summary">
+          <div class="policy-summary-card">
+            <strong>Admissions Period</strong>
+            <p>Open from 1 October until 15 January, as noted in the policy.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Eligibility</strong>
+            <p>Professional reports and NCSE confirmation may be required.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Decisions</strong>
+            <p>Applicants are notified in writing within the annual admissions notice timeline.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="policy-content">
+      <div class="container legal-layout">
+        <article class="policy-content-card">
+          <p class="section-label">Admissions and Enrolment</p>
+          <h2>Cara Junior School Admissions and Enrolment Policy</h2>
+
+          <p>
+            This Admission Policy complies with the requirements of the Education Act 1998,
+            the Education (Admissions to Schools) Act 2018 and the Equal Status Act 2000.
+            In drafting the policy, the Board of Management consulted with school staff,
+            the school patron and parents of children attending the school.
+          </p>
+
+          <p>
+            The policy should be read together with the annual admission notice for the
+            school year concerned. The application form for admission is published on the
+            school website and can also be made available in hardcopy on request.
+          </p>
+
+          <div class="policy-note">
+            Cara Junior School aims to create a safe, supportive learning environment where
+            each pupil is supported and nurtured to reach their full potential.
+          </div>
+
+          <h3>School Patron</h3>
+
+          <p>
+            The school patron is the Congregation of the Brothers of Charity.
+          </p>
+
+          <h3>Characteristic Spirit and General Objectives</h3>
+
+          <p>
+            Cara Junior School aims to create a safe, supportive learning environment where
+            each pupil is supported and nurtured in order to reach their full potential.
+            Positive relationships between all stakeholders are fostered in order to maximise
+            the holistic development of pupils.
+          </p>
+
+          <h3>Non-Discrimination</h3>
+
+          <p>
+            Cara Junior School will not discriminate in its admission of a pupil to the school.
+            The policy lists grounds including gender, civil status, family status, sexual
+            orientation, religion, disability, race and Traveller community ground.
+          </p>
+
+          <ul class="policy-list">
+            <li>Gender ground.</li>
+            <li>Civil status ground.</li>
+            <li>Family status ground.</li>
+            <li>Sexual orientation ground.</li>
+            <li>Religion ground.</li>
+            <li>Disability ground.</li>
+            <li>Race ground.</li>
+            <li>Traveller community ground.</li>
+          </ul>
+
+          <h3>Cooperation with the NCSE</h3>
+
+          <p>
+            Cara Junior School will cooperate with the NCSE in the performance of its functions
+            in relation to the provision of education to children with special educational needs.
+            This includes, in particular, the provision and operation of a special class or classes
+            when requested by the Council.
+          </p>
+
+          <h3>Eligibility and Required Information</h3>
+
+          <p>
+            The policy refers to professional reports and the need for evidence of the child’s
+            overall level of need. It also refers to a clear professional recommendation regarding
+            the most appropriate educational placement type to meet the child’s needs.
+          </p>
+
+          <div class="admissions-grid">
+            <div class="admissions-card">
+              <h3>Professional Reports</h3>
+              <p>
+                Reports should evidence the child’s overall level of need and support requirements.
+              </p>
+            </div>
+
+            <div class="admissions-card">
+              <h3>Placement Recommendation</h3>
+              <p>
+                A professional recommendation should identify the most appropriate educational placement.
+              </p>
+            </div>
+
+            <div class="admissions-card">
+              <h3>NCSE Confirmation</h3>
+              <p>
+                The policy refers to a letter from the NCSE confirming the child is known to them.
+              </p>
+            </div>
+
+            <div class="admissions-card">
+              <h3>Special School Placement</h3>
+              <p>
+                The NCSE letter should confirm the required diagnosis and recommendation for a special school.
+              </p>
+            </div>
+          </div>
+
+          <h3>Admission of Students</h3>
+
+          <p>
+            The Board of Management of Cara Junior School takes ultimate responsibility for
+            the admission of students to the school.
+          </p>
+
+          <p>
+            Priority will be given to applicants who have a sibling attending Cara Junior School.
+          </p>
+
+          <p>
+            The school shall admit each student seeking admission except where the school is
+            oversubscribed, or where a parent fails to confirm in writing that the Code of
+            Behaviour of the school is acceptable and that all reasonable efforts will be made
+            to ensure compliance with that code by the student.
+          </p>
+
+          <h3>Oversubscription</h3>
+
+          <p>
+            Where the number of students seeking admission is greater than the number of places
+            available, the school may be considered oversubscribed. Where there are two or more
+            students tied for remaining places in any criteria category, drawing of lots will apply.
+          </p>
+
+          <h3>What Will Not Be Considered</h3>
+
+          <p>
+            In accordance with the policy, the school will not consider or take into account
+            certain matters when deciding on applications or placing a student on a waiting list.
+          </p>
+
+          <ul class="policy-list">
+            <li>The payment of fees or contributions to the school.</li>
+            <li>The occupation, financial status, academic ability, skills or aptitude of a student’s parents.</li>
+            <li>A requirement to attend an interview, open day or meeting as a condition of admission.</li>
+            <li>The date and time an application was received, once received within the specified admissions period.</li>
+          </ul>
+
+          <h3>Notifying Applicants of Decisions</h3>
+
+          <p>
+            Applicants will be informed in writing as to the decision of the school within
+            the timeline outlined in the annual admissions notice.
+          </p>
+
+          <p>
+            If a student is not offered a place, the reasons why they were not offered a place
+            will be communicated in writing to the applicant. Applicants will also be informed
+            of the right to seek a review or appeal of the school’s decision.
+          </p>
+
+          <h3>Acceptance of an Offer</h3>
+
+          <p>
+            In accepting an offer of admission from Cara Junior School, the applicant must indicate
+            whether they have accepted an offer of admission for another school or schools, and
+            whether they have applied for and are awaiting confirmation of an offer from another
+            school or schools.
+          </p>
+
+          <h3>Offers Not Made or Withdrawn</h3>
+
+          <p>
+            The policy sets out circumstances where an offer of admission may not be made or may
+            be withdrawn by the school. These include circumstances connected with oversubscription,
+            failure to confirm acceptance of the Code of Behaviour, or other matters set out in
+            the policy.
+          </p>
+
+          <h3>Sharing Data with Other Schools</h3>
+
+          <p>
+            Applicants should be aware that the Education (Admission to Schools) Act 2018 allows
+            for the sharing of certain information between schools in order to facilitate the
+            efficient admission of students to Cara Junior School.
+          </p>
+
+          <h3>Waiting List in the Event of Oversubscription</h3>
+
+          <p>
+            Where there are more applicants than places available, a waiting list of unsuccessful
+            applicants will be compiled and will remain valid for the school year in which admission
+            is being sought.
+          </p>
+
+          <p>
+            Placement on the waiting list is in the order of priority assigned to applications
+            after the school has applied selection criteria in accordance with the Admission Policy.
+          </p>
+
+          <h3>Late Applications</h3>
+
+          <p>
+            Applications received after the closing date outlined in the annual admission notice
+            will be considered and decided upon in accordance with the school’s admissions policy,
+            the Education Admissions to School Act 2018 and any regulations made under that Act.
+          </p>
+
+          <h3>Non-Charging of Fees</h3>
+
+          <p>
+            The Board of Cara Junior School or any persons acting on its behalf will not charge
+            fees or seek payment or contributions as a condition of an application for admission
+            or the admission or continued enrolment of a student in the school.
+          </p>
+
+          <h3>Religious Instruction</h3>
+
+          <p>
+            The policy explains arrangements for students where parents or guardians request that
+            the student attends school without attending religious instruction. Catholic students
+            are prepared for First Holy Communion and attend instruction for those sacraments.
+            Pupils of other faiths or non-faith remain in the classroom during this time on other
+            activities under staff supervision.
+          </p>
+
+          <h3>Review and Appeals</h3>
+
+          <p>
+            A parent may request the Board to review a decision to refuse admission. Where an
+            applicant has been refused for a reason other than oversubscription, the applicant
+            may request a review of that decision by the Board of Management before making an
+            appeal.
+          </p>
+
+          <p>
+            Under Section 29 of the Education Act 1998, a parent may appeal a decision to refuse
+            admission, subject to the policy requirements.
+          </p>
+
+          <h3>Review Dates and Updates</h3>
+
+          <ul class="policy-list">
+            <li>Approved by the Patron on 5 April 2022.</li>
+            <li>Ratified by the Board of Management on 19 September 2022.</li>
+            <li>Addition to section three ratified on 19 January 2023.</li>
+            <li>Additional section 4 update added in September 2025 under Circular 0039/2025.</li>
+            <li>Admissions and enrolment period open from 1 October until 15 January.</li>
+            <li>Reviewed on 26 September 2025 by Patron and Board of Management.</li>
+          </ul>
+
+          <div class="contact-policy-box">
+            <h3>Contact the School Office</h3>
+            <p>
+              If you need guidance in relation to admissions, enrolment or application forms,
+              please contact the school office.
+            </p>
+
+            <p>
+              Cara Junior School<br />
+              Banduff Road, Mayfield, Cork<br />
+              Phone: <a href="tel:0214643060">021 4643060</a><br />
+              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+            </p>
+          </div>
+
+          <div class="policy-actions">
+            <a class="btn btn-primary" href="admissions.html">Back to Admissions</a>
+            <a class="btn btn-secondary" href="policies.html">Policy Library</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to school information</h2>
+        </div>
+
+        <div class="policy-next-links">
+          <a class="policy-next-link" href="admissions.html">
+            <span>Admissions</span>
+            <small>Return to admissions documents and information</small>
+          </a>
+
+          <a class="policy-next-link" href="policies.html">
+            <span>Policy Library</span>
+            <small>Return to all school policies</small>
+          </a>
+
+          <a class="policy-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+        <h2>Cara Junior School</h2>
+        <p>Support and grow together</p>
+        <p>Banduff Road, Mayfield, Cork</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:0214643060">021 4643060</a></p>
+        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
