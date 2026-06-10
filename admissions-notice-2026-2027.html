@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Admissions Notice 2026–2027 | Cara Junior School</title>
+
+  <meta
+    name="description"
+    content="Annual Admissions Notice for Cara Junior School for the 2026–2027 school year, including application dates, decision dates and available places."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .policy-page {
+      background: #f7fbff;
+    }
+
+    .policy-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .policy-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .policy-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .policy-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policy-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: #f1fff9;
+      color: #087f5b;
+      font-size: 2rem;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policy-hero-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .policy-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .policy-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-content-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-content-card h2,
+    .policy-content-card h3 {
+      color: var(--navy);
+    }
+
+    .policy-content-card h3 {
+      margin-top: 28px;
+    }
+
+    .policy-content-card p {
+      color: #344054;
+    }
+
+    .policy-note {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-left: 6px solid #20c997;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-warning {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-left: 6px solid #fab005;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .notice-date-grid {
+      display: grid;
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .notice-date-card {
+      background: #f8fbff;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      border-top: 6px solid #20c997;
+    }
+
+    .notice-date-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .notice-date-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .notice-date-card:nth-child(4) {
+      border-top-color: #7048e8;
+    }
+
+    .notice-date-card span {
+      display: block;
+      color: #475467;
+      font-weight: 850;
+      margin-bottom: 8px;
+    }
+
+    .notice-date-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.35rem;
+      line-height: 1.25;
+    }
+
+    .places-table-wrap {
+      overflow-x: auto;
+      margin-top: 20px;
+      border-radius: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 10px 26px rgba(18, 51, 95, 0.06);
+    }
+
+    .places-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 620px;
+      background: #ffffff;
+    }
+
+    .places-table th {
+      background: #12335f;
+      color: #ffffff;
+      text-align: left;
+      padding: 14px;
+      font-size: 0.95rem;
+    }
+
+    .places-table td {
+      padding: 14px;
+      border-bottom: 1px solid rgba(18, 51, 95, 0.10);
+      color: #344054;
+      vertical-align: top;
+    }
+
+    .places-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .places-table strong {
+      color: var(--navy);
+      font-size: 1.1rem;
+    }
+
+    .contact-policy-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+    }
+
+    .contact-policy-box h3 {
+      margin-top: 0;
+    }
+
+    .policy-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .policy-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .policy-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .policy-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .policy-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .policy-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .notice-date-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .policy-content-card {
+        padding: 24px;
+      }
+
+      .policy-actions {
+        flex-direction: column;
+      }
+
+      .policy-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="policy-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>Cara Junior School, Banduff Road, Mayfield, Cork</p>
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html">Classes</a>
+          <a href="admissions.html" class="active">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="policies.html">Policies</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero page-hero policy-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Annual Admission Notice</p>
+          <h1>Admissions Notice 2026–2027</h1>
+
+          <p class="hero-text">
+            Key admission dates, decision dates and places available for the
+            2026–2027 school year at Cara Junior School.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#notice-content">View Notice</a>
+            <a class="btn btn-secondary" href="admissions.html">Admissions Page</a>
+          </div>
+        </div>
+
+        <div class="policy-hero-card">
+          <div class="policy-icon">📅</div>
+          <h2>Application Dates</h2>
+          <p>
+            Applications open on 1 October 2025 and close on 15 January 2026.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="policy-summary">
+          <div class="policy-summary-card">
+            <strong>Applications Open</strong>
+            <p>1 October 2025</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Applications Close</strong>
+            <p>15 January 2026</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Decision Date</strong>
+            <p>31 January 2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="notice-content">
+      <div class="container legal-layout">
+        <article class="policy-content-card">
+          <p class="section-label">Admissions Notice</p>
+          <h2>Annual Admission Notice for the 2026–2027 School Year</h2>
+
+          <p>
+            This notice relates to admissions to Cara Junior School for the 2026–2027
+            school year.
+          </p>
+
+          <p>
+            Cara Junior School caters for pupils aged 4–12 years old with a diagnosis of
+            Autism Spectrum Disorder and a mild or moderate intellectual disability.
+          </p>
+
+          <div class="policy-note">
+            A copy of the school’s Admission Policy and Application Form for Admission is
+            available to download from the school website or by request from the school office.
+          </div>
+
+          <h3>Admission Policy and Application Form</h3>
+
+          <p>
+            A copy of the school’s Admission Policy and the Application Form for Admission
+            for 2026–2027 is available as follows:
+          </p>
+
+          <ul>
+            <li>To download at: www.carajuniorschool.ie</li>
+            <li>On request by emailing: office@carajs.ie</li>
+          </ul>
+
+          <h3>Application and Decision Dates</h3>
+
+          <div class="notice-date-grid">
+            <div class="notice-date-card">
+              <span>The school will commence accepting applications on</span>
+              <strong>1 October 2025</strong>
+            </div>
+
+            <div class="notice-date-card">
+              <span>The school shall cease accepting applications on</span>
+              <strong>15 January 2026</strong>
+            </div>
+
+            <div class="notice-date-card">
+              <span>Applicants will be notified of the decision by</span>
+              <strong>31 January 2026</strong>
+            </div>
+
+            <div class="notice-date-card">
+              <span>Applicants must confirm acceptance of an offer by</span>
+              <strong>15 February 2026</strong>
+            </div>
+          </div>
+
+          <div class="policy-warning">
+            Failure to accept an offer within the prescribed period may result in the offer
+            being withdrawn. Late applications will be considered and decided on in accordance
+            with the school’s Admission Policy.
+          </div>
+
+          <h3>Places Available</h3>
+
+          <p>
+            The notice lists the following places being made available.
+          </p>
+
+          <div class="places-table-wrap">
+            <table class="places-table">
+              <thead>
+                <tr>
+                  <th>Class / Year Group</th>
+                  <th>Number of Places</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Junior / Senior Infants</td>
+                  <td><strong>6</strong></td>
+                </tr>
+
+                <tr>
+                  <td>2nd Class</td>
+                  <td><strong>2</strong></td>
+                </tr>
+
+                <tr>
+                  <td>3rd Class</td>
+                  <td><strong>2</strong></td>
+                </tr>
+
+                <tr>
+                  <td>4th Class</td>
+                  <td><strong>2</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="contact-policy-box">
+            <h3>Contact the School Office</h3>
+            <p>
+              If you need the Admission Policy, Application Form or guidance on admissions,
+              please contact the school office.
+            </p>
+
+            <p>
+              Cara Junior School<br />
+              Banduff Road, Mayfield, Cork<br />
+              Phone: <a href="tel:0214643060">021 4643060</a><br />
+              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+            </p>
+          </div>
+
+          <div class="policy-actions">
+            <a class="btn btn-primary" href="admissions.html">Back to Admissions</a>
+            <a class="btn btn-secondary" href="admissions-enrolment-policy.html">Admissions Policy</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to admissions information</h2>
+        </div>
+
+        <div class="policy-next-links">
+          <a class="policy-next-link" href="admissions.html">
+            <span>Admissions</span>
+            <small>Return to admissions documents and information</small>
+          </a>
+
+          <a class="policy-next-link" href="admissions-enrolment-policy.html">
+            <span>Admissions Policy</span>
+            <small>Read the admissions and enrolment policy</small>
+          </a>
+
+          <a class="policy-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+        <h2>Cara Junior School</h2>
+        <p>Support and grow together</p>
+        <p>Banduff Road, Mayfield, Cork</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:0214643060">021 4643060</a></p>
+        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
