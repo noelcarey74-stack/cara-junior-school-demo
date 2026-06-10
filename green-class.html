@@ -12,6 +12,322 @@
   />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Green Class page warm layout */
+    .green-class-page {
+      background: #f7fff8;
+    }
+
+    .green-class-page .eyebrow,
+    .green-class-page .section-label {
+      color: #087f23;
+    }
+
+    .green-class-hero {
+      position: relative;
+      padding: 56px 0 44px;
+      background:
+        radial-gradient(circle at top left, rgba(47, 158, 68, 0.18), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(105, 219, 124, 0.20), transparent 36%),
+        linear-gradient(135deg, #ffffff 0%, #effaf1 100%);
+      overflow: hidden;
+    }
+
+    .green-class-hero::before,
+    .green-class-hero::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background:
+        radial-gradient(circle at 40% 30%, rgba(47, 158, 68, 0.16), transparent 18%),
+        radial-gradient(circle at 65% 45%, rgba(47, 158, 68, 0.12), transparent 20%),
+        radial-gradient(circle at 42% 68%, rgba(47, 158, 68, 0.10), transparent 19%);
+      opacity: 0.65;
+      pointer-events: none;
+    }
+
+    .green-class-hero::before {
+      left: -60px;
+      bottom: -40px;
+    }
+
+    .green-class-hero::after {
+      right: -60px;
+      top: 30px;
+    }
+
+    .green-class-hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .green-class-copy h1 {
+      margin: 0;
+      color: #0b6b2a;
+      font-size: clamp(2.35rem, 7vw, 4.6rem);
+      line-height: 1.03;
+      letter-spacing: -0.05em;
+    }
+
+    .green-class-copy p {
+      max-width: 650px;
+      color: #26384d;
+      font-size: 1.12rem;
+    }
+
+    .green-class-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(47, 158, 68, 0.12);
+      color: #087f23;
+      border: 1px solid rgba(47, 158, 68, 0.22);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 0.78rem;
+      margin-bottom: 14px;
+    }
+
+    .green-class-badge span {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #2f9e44;
+      display: inline-block;
+    }
+
+    .green-class-photo-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 12px;
+      box-shadow: 0 22px 50px rgba(18, 51, 95, 0.14);
+      border: 1px solid rgba(47, 158, 68, 0.16);
+    }
+
+    .green-class-photo-card img {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .green-class-photo-card div {
+      padding: 16px 10px 8px;
+    }
+
+    .green-class-photo-card h2 {
+      margin: 0 0 6px;
+      color: #0b6b2a;
+      font-size: 1.35rem;
+    }
+
+    .green-class-photo-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .green-button-primary {
+      background: #087f23;
+      color: #ffffff;
+      box-shadow: 0 14px 28px rgba(8, 127, 35, 0.22);
+    }
+
+    .green-button-secondary {
+      background: #ffffff;
+      color: #087f23;
+      border: 2px solid rgba(8, 127, 35, 0.35);
+    }
+
+    .green-memory-section {
+      background: #ffffff;
+    }
+
+    .green-page-layout {
+      display: grid;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .green-memory-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .green-memory-card {
+      background: #ffffff;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(47, 158, 68, 0.12);
+      box-shadow: 0 14px 36px rgba(18, 51, 95, 0.09);
+    }
+
+    .green-memory-image {
+      min-height: 180px;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.65), transparent 32%),
+        linear-gradient(135deg, #d8f5dc, #b2f2bb);
+      color: #087f23;
+      font-weight: 950;
+      text-align: center;
+      padding: 18px;
+    }
+
+    .green-memory-image span {
+      background: rgba(255, 255, 255, 0.88);
+      padding: 8px 14px;
+      border-radius: 999px;
+    }
+
+    .green-memory-content {
+      padding: 20px;
+    }
+
+    .green-memory-date {
+      display: inline-flex;
+      background: #d8f5dc;
+      color: #087f23;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.78rem;
+      font-weight: 950;
+      margin-bottom: 10px;
+    }
+
+    .green-memory-content h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+    }
+
+    .green-memory-content p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .green-side-card {
+      background: #f3fbf4;
+      border: 1px solid rgba(47, 158, 68, 0.14);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.07);
+    }
+
+    .green-side-card h3 {
+      margin: 0 0 12px;
+      color: #0b6b2a;
+    }
+
+    .green-side-card a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(47, 158, 68, 0.16);
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 850;
+    }
+
+    .green-side-card a:last-child {
+      border-bottom: 0;
+    }
+
+    .green-side-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+      background: #2f9e44;
+    }
+
+    .green-grow-section {
+      background:
+        radial-gradient(circle at top left, rgba(47, 158, 68, 0.14), transparent 28%),
+        linear-gradient(135deg, #f3fbf4, #ffffff);
+    }
+
+    .green-grow-card {
+      display: grid;
+      gap: 18px;
+      background: #ffffff;
+      border-radius: 26px;
+      padding: 24px;
+      border: 1px solid rgba(47, 158, 68, 0.14);
+      box-shadow: var(--shadow);
+    }
+
+    .green-grow-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #d8f5dc;
+      color: #087f23;
+      font-size: 2rem;
+      font-weight: 950;
+    }
+
+    .green-grow-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .green-grow-list li {
+      position: relative;
+      padding-left: 30px;
+      margin: 12px 0;
+      color: #344054;
+    }
+
+    .green-grow-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f23;
+      font-weight: 950;
+    }
+
+    @media (min-width: 720px) {
+      .green-class-hero-grid {
+        grid-template-columns: 0.95fr 1.05fr;
+      }
+
+      .green-memory-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .green-grow-card {
+        grid-template-columns: 90px 1fr;
+        align-items: center;
+      }
+    }
+
+    @media (min-width: 980px) {
+      .green-page-layout {
+        grid-template-columns: 1fr 270px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .green-class-photo-card img {
+        height: 240px;
+      }
+    }
+  </style>
 </head>
 
 <body class="class-page green-class-page">
@@ -61,24 +377,29 @@
   </header>
 
   <main id="main-content">
-    <section class="class-hero class-hero-green">
-      <div class="container class-hero-grid">
-        <div class="class-hero-content">
-          <p class="eyebrow">Green Class</p>
+    <section class="green-class-hero">
+      <div class="container green-class-hero-grid">
+        <div class="green-class-copy">
+          <div class="green-class-badge">
+            <span></span>
+            Green Class
+          </div>
+
           <h1>Welcome to Green Class.</h1>
+
           <p>
-            This page is a special space for Green Class news, approved photos,
-            activities and school memories.
+            A warm space for Green Class news, approved photographs, classroom activities
+            and school memories throughout the year.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#green-memories">Class Memories</a>
-            <a class="btn btn-secondary" href="classes.html">Back to All Classes</a>
+            <a class="btn green-button-primary" href="#green-memories">Class Memories</a>
+            <a class="btn green-button-secondary" href="classes.html">Back to All Classes</a>
           </div>
         </div>
 
-        <div class="class-hero-panel">
-          <img src="school-front.jpg" alt="Front of Cara Junior School building in Mayfield, Cork" />
+        <div class="green-class-photo-card">
+          <img src="green-classroom.jpg" alt="Green Class classroom" />
           <div>
             <h2>Green Class Updates</h2>
             <p>
@@ -89,82 +410,95 @@
       </div>
     </section>
 
-    <section class="section" id="green-memories">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-label">2025 / 2026</p>
-          <h2>Green Class memories</h2>
-          <p>
-            This area is ready for approved photos, short updates and class activities
-            from Green Class.
-          </p>
+    <section class="section green-memory-section" id="green-memories">
+      <div class="container green-page-layout">
+        <div>
+          <div class="section-heading">
+            <p class="section-label">2025 / 2026</p>
+            <h2>Green Class memories</h2>
+            <p>
+              This area is ready for approved photos, short updates and class activities
+              from Green Class.
+            </p>
+          </div>
+
+          <div class="green-memory-grid">
+            <article class="green-memory-card">
+              <div class="green-memory-image">
+                <span>Photo to be added</span>
+              </div>
+              <div class="green-memory-content">
+                <span class="green-memory-date">2025 / 2026</span>
+                <h3>Green Class activity</h3>
+                <p>
+                  A short approved description of a Green Class activity can be added here.
+                </p>
+              </div>
+            </article>
+
+            <article class="green-memory-card">
+              <div class="green-memory-image">
+                <span>Photo to be added</span>
+              </div>
+              <div class="green-memory-content">
+                <span class="green-memory-date">2025 / 2026</span>
+                <h3>Class news update</h3>
+                <p>
+                  Green Class news, classroom learning or school memories can be shared here.
+                </p>
+              </div>
+            </article>
+
+            <article class="green-memory-card">
+              <div class="green-memory-image">
+                <span>Photo to be added</span>
+              </div>
+              <div class="green-memory-content">
+                <span class="green-memory-date">2025 / 2026</span>
+                <h3>Special school moment</h3>
+                <p>
+                  Approved photos and updates can be added safely without naming pupils.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
 
-        <div class="class-memory-grid">
-          <article class="memory-card">
-            <div class="memory-image-placeholder green-memory">
-              <span>Photo to be added</span>
-            </div>
-            <div class="memory-content">
-              <span class="memory-date">2025 / 2026</span>
-              <h3>Green Class activity</h3>
-              <p>
-                A short approved description of a Green Class activity can be added here.
-              </p>
-            </div>
-          </article>
+        <aside class="green-side-card">
+          <h3>More Classes</h3>
 
-          <article class="memory-card">
-            <div class="memory-image-placeholder green-memory">
-              <span>Photo to be added</span>
-            </div>
-            <div class="memory-content">
-              <span class="memory-date">2025 / 2026</span>
-              <h3>Class news update</h3>
-              <p>
-                Green Class news, classroom learning or school memories can be shared here.
-              </p>
-            </div>
-          </article>
-
-          <article class="memory-card">
-            <div class="memory-image-placeholder green-memory">
-              <span>Photo to be added</span>
-            </div>
-            <div class="memory-content">
-              <span class="memory-date">2025 / 2026</span>
-              <h3>Special school moment</h3>
-              <p>
-                Approved photos and updates can be added safely without naming pupils.
-              </p>
-            </div>
-          </article>
-        </div>
+          <a href="red-class.html"><span><span class="green-side-dot" style="background:#e03131;"></span>Red Class</span> ›</a>
+          <a href="peach-class.html"><span><span class="green-side-dot" style="background:#ff8a5b;"></span>Peach Class</span> ›</a>
+          <a href="turquoise-class.html"><span><span class="green-side-dot" style="background:#20c997;"></span>Turquoise Class</span> ›</a>
+          <a href="blue-class.html"><span><span class="green-side-dot" style="background:#228be6;"></span>Blue Class</span> ›</a>
+        </aside>
       </div>
     </section>
 
-    <section class="section parent-section">
-      <div class="container two-column">
-        <div>
-          <p class="section-label">Class Updates</p>
-          <h2>How this page will grow</h2>
-        </div>
+    <section class="section green-grow-section">
+      <div class="container">
+        <div class="green-grow-card">
+          <div class="green-grow-icon">🌱</div>
 
-        <div class="content-card">
-          <p>
-            When Green Class sends approved photos and text, this page can be updated
-            with a new memory card.
-          </p>
+          <div>
+            <p class="section-label">Class Updates</p>
+            <h2>How this page will grow</h2>
 
-          <p>
-            Each update should include a title, date, short description, class name and
-            confirmation that the photos are approved for the website.
-          </p>
-
-          <p>
-            For pupil privacy, children’s names should not be published with photographs
-            unless this has been specifically approved by the school.
-          </p>
+            <ul class="green-grow-list">
+              <li>
+                When Green Class sends approved photos and text, this page can be updated
+                with a new memory card.
+              </li>
+              <li>
+                Each update should include a title, date, short description, class name
+                and confirmation that the photos are approved for the website.
+              </li>
+              <li>
+                For pupil privacy, children’s names should not be published with photographs
+                unless this has been specifically approved by the school.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -172,36 +506,13 @@
     <section class="section classes-section">
       <div class="container">
         <div class="section-heading">
-          <p class="section-label">More Classes</p>
-          <h2>Visit another class page</h2>
+          <p class="section-label">Class Landing Page</p>
+          <h2>Return to all class colours</h2>
+          <p>
+            Visit the main class landing page to choose another class colour.
+          </p>
         </div>
 
-        <div class="class-grid">
-          <a class="class-card red" href="red-class.html">
-            <span>Red Class</span>
-            <small>View class page</small>
-          </a>
-
-          <a class="class-card peach" href="peach-class.html">
-            <span>Peach Class</span>
-            <small>View class page</small>
-          </a>
-
-          <a class="class-card turquoise" href="turquoise-class.html">
-            <span>Turquoise Class</span>
-            <small>View class page</small>
-          </a>
-
-          <a class="class-card blue" href="blue-class.html">
-            <span>Blue Class</span>
-            <small>View class page</small>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
         <div class="quick-links">
           <a href="classes.html">
             <span>All Classes</span>
