@@ -146,7 +146,7 @@ a {
   min-width: 0;
 }
 
-/* Old CJS block fallback, kept in case we ever use it */
+/* Old CJS block fallback */
 .brand-mark {
   width: 54px;
   height: 54px;
@@ -652,6 +652,526 @@ a {
 }
 
 /* =========================================================
+   Policy / Document Cards
+   ========================================================= */
+
+.policy-grid,
+.document-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.document-card,
+.policy-card {
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 22px;
+  border: 1px solid rgba(18, 51, 95, 0.08);
+  box-shadow: 0 12px 30px rgba(18, 51, 95, 0.08);
+}
+
+.document-card h3,
+.policy-card h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+}
+
+.document-card p,
+.policy-card p {
+  color: #344054;
+}
+
+.document-card a,
+.policy-card a {
+  display: inline-flex;
+  margin-top: 10px;
+  color: var(--navy);
+  font-weight: 900;
+  text-decoration: none;
+  border-bottom: 3px solid var(--gold);
+}
+
+/* =========================================================
+   Calendar / Timeline
+   ========================================================= */
+
+.calendar-grid,
+.event-timeline {
+  display: grid;
+  gap: 16px;
+}
+
+.calendar-card,
+.event-item {
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 22px;
+  border: 1px solid rgba(18, 51, 95, 0.08);
+  box-shadow: 0 12px 30px rgba(18, 51, 95, 0.08);
+}
+
+.calendar-card h3,
+.event-item h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+}
+
+.calendar-card p,
+.event-item p {
+  margin: 0;
+  color: #344054;
+}
+
+/* =========================================================
+   Contact / Map
+   ========================================================= */
+
+.contact-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.contact-card,
+.map-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px;
+  border: 1px solid rgba(18, 51, 95, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.contact-card h3,
+.map-card h3 {
+  margin: 0 0 10px;
+  color: var(--navy);
+}
+
+.contact-card p,
+.map-card p {
+  color: #344054;
+}
+
+.contact-card a {
+  color: var(--navy);
+  font-weight: 900;
+  text-decoration: none;
+  border-bottom: 3px solid var(--gold);
+}
+
+.map-placeholder {
+  min-height: 260px;
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(rgba(18, 51, 95, 0.12), rgba(18, 51, 95, 0.12)),
+    linear-gradient(135deg, #dbeafe, #fff3c7);
+  color: var(--navy);
+  font-weight: 900;
+  text-align: center;
+  padding: 24px;
+}
+
+/* =========================================================
+   Legal Pages
+   ========================================================= */
+
+.legal-layout {
+  display: grid;
+  gap: 18px;
+}
+
+.legal-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(18, 51, 95, 0.08);
+}
+
+.legal-card h2,
+.legal-card h3 {
+  color: var(--navy);
+}
+
+.legal-card h2 {
+  margin-top: 0;
+}
+
+.legal-card a {
+  color: var(--navy);
+  font-weight: 900;
+}
+
+/* =========================================================
+   Individual class pages
+   ========================================================= */
+
+.class-hero {
+  padding: 64px 0 44px;
+  background: linear-gradient(135deg, #ffffff, #eef7ff);
+}
+
+.class-hero-grid {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+}
+
+.class-hero-content h1 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(2.4rem, 8vw, 5rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.class-hero-content p {
+  font-size: 1.12rem;
+  color: #344054;
+  max-width: 650px;
+}
+
+.class-hero-panel {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(18, 51, 95, 0.08);
+}
+
+.class-hero-panel img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.class-hero-panel div {
+  padding: 22px;
+}
+
+.class-hero-panel h2 {
+  margin: 0 0 8px;
+  color: var(--navy);
+}
+
+.class-hero-panel p {
+  margin: 0;
+  color: #344054;
+}
+
+.class-memory-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.memory-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(18, 51, 95, 0.08);
+  box-shadow: 0 12px 30px rgba(18, 51, 95, 0.08);
+}
+
+.memory-image-placeholder {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.memory-image-placeholder span {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--navy);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 900;
+}
+
+.memory-content {
+  padding: 22px;
+}
+
+.memory-date {
+  display: inline-flex;
+  background: var(--gold-soft);
+  color: var(--navy);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.memory-content h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+}
+
+.memory-content p {
+  margin: 0;
+  color: #344054;
+}
+
+/* Green class page */
+.class-hero-green {
+  background:
+    radial-gradient(circle at top left, rgba(47, 158, 68, 0.28), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #ebfbee 100%);
+}
+
+.green-memory {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.45), transparent 35%),
+    linear-gradient(135deg, #2f9e44, #69db7c);
+}
+
+/* Red class page */
+.class-hero-red {
+  background:
+    radial-gradient(circle at top left, rgba(224, 49, 49, 0.24), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #fff5f5 100%);
+}
+
+.red-memory {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.45), transparent 35%),
+    linear-gradient(135deg, #c92a2a, #ff6b6b);
+}
+
+/* Peach class page */
+.class-hero-peach {
+  background:
+    radial-gradient(circle at top left, rgba(255, 179, 138, 0.34), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #fff0e8 100%);
+}
+
+.peach-memory {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.45), transparent 35%),
+    linear-gradient(135deg, #ff8a5b, #ffc1a6);
+}
+
+/* Turquoise class page */
+.class-hero-turquoise {
+  background:
+    radial-gradient(circle at top left, rgba(32, 201, 151, 0.26), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #e6fcf5 100%);
+}
+
+.turquoise-memory {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.45), transparent 35%),
+    linear-gradient(135deg, #099268, #63e6be);
+}
+
+/* Grey class page */
+.class-hero-grey {
+  background:
+    radial-gradient(circle at top left, rgba(134, 142, 150, 0.26), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #f1f3f5 100%);
+}
+
+.grey-memory {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.45), transparent 35%),
+    linear-gradient(135deg, #495057, #adb5bd);
+}
+
+/* Navy class page */
+.class-hero-navy {
+  background:
+    radial-gradient(circle at top left, rgba(18, 51, 95, 0.26), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #edf2ff 100%);
+}
+
+.navy-memory {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.26), transparent 35%),
+    linear-gradient(135deg, #081f3f, #1c4d83);
+}
+
+/* Purple class page */
+.class-hero-purple {
+  background:
+    radial-gradient(circle at top left, rgba(132, 94, 247, 0.24), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #f3f0ff 100%);
+}
+
+.purple-memory {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.45), transparent 35%),
+    linear-gradient(135deg, #5f3dc4, #b197fc);
+}
+
+/* Cerise class page */
+.class-hero-cerise {
+  background:
+    radial-gradient(circle at top left, rgba(214, 51, 132, 0.22), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #fff0f6 100%);
+}
+
+.cerise-memory {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.45), transparent 35%),
+    linear-gradient(135deg, #a61e4d, #f06595);
+}
+
+/* Blue class page */
+.class-hero-blue {
+  background:
+    radial-gradient(circle at top left, rgba(34, 139, 230, 0.24), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #e7f5ff 100%);
+}
+
+.blue-memory {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.45), transparent 35%),
+    linear-gradient(135deg, #1864ab, #74c0fc);
+}
+
+/* Orange class page */
+.class-hero-orange {
+  background:
+    radial-gradient(circle at top left, rgba(253, 126, 20, 0.26), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #fff4e6 100%);
+}
+
+.orange-memory {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.45), transparent 35%),
+    linear-gradient(135deg, #e8590c, #ffa94d);
+}
+
+/* Silver class page */
+.class-hero-silver {
+  background:
+    radial-gradient(circle at top left, rgba(173, 181, 189, 0.28), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.silver-memory {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.45), transparent 35%),
+    linear-gradient(135deg, #868e96, #dee2e6);
+}
+
+/* Yellow class page */
+.class-hero-yellow {
+  background:
+    radial-gradient(circle at top left, rgba(255, 212, 59, 0.32), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #fff9db 100%);
+}
+
+.yellow-memory {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.45), transparent 35%),
+    linear-gradient(135deg, #f08c00, #ffe066);
+}
+
+/* =========================================================
+   Hidden staff update page
+   ========================================================= */
+
+.staff-home-button {
+  white-space: nowrap;
+}
+
+.staff-update-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.staff-update-card {
+  min-height: 82px;
+  border: 0;
+  border-radius: 20px;
+  padding: 18px;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 950;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(18, 51, 95, 0.14);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.staff-update-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 38px rgba(18, 51, 95, 0.18);
+}
+
+.green-staff {
+  background: linear-gradient(135deg, #2f9e44, #69db7c);
+}
+
+.red-staff {
+  background: linear-gradient(135deg, #c92a2a, #ff6b6b);
+}
+
+.peach-staff {
+  background: linear-gradient(135deg, #ff8a5b, #ffc1a6);
+  color: #3b1d12;
+}
+
+.turquoise-staff {
+  background: linear-gradient(135deg, #099268, #63e6be);
+  color: #06281f;
+}
+
+.grey-staff {
+  background: linear-gradient(135deg, #495057, #adb5bd);
+}
+
+.navy-staff {
+  background: linear-gradient(135deg, #081f3f, #1c4d83);
+}
+
+.purple-staff {
+  background: linear-gradient(135deg, #5f3dc4, #b197fc);
+}
+
+.cerise-staff {
+  background: linear-gradient(135deg, #a61e4d, #f06595);
+}
+
+.blue-staff {
+  background: linear-gradient(135deg, #1864ab, #74c0fc);
+}
+
+.orange-staff {
+  background: linear-gradient(135deg, #e8590c, #ffa94d);
+  color: #351503;
+}
+
+.silver-staff {
+  background: linear-gradient(135deg, #868e96, #dee2e6);
+  color: #17202a;
+}
+
+.yellow-staff {
+  background: linear-gradient(135deg, #f08c00, #ffe066);
+  color: #2b1d00;
+}
+
+.office-staff {
+  background: linear-gradient(135deg, var(--navy), #4dabf7);
+}
+
+.calendar-staff {
+  background: linear-gradient(135deg, var(--cerise), #faa2c1);
+}
+
+.policy-staff {
+  background: linear-gradient(135deg, #343a40, #adb5bd);
+}
+
+.events-staff {
+  background: linear-gradient(135deg, var(--gold), var(--orange));
+  color: #2b1d00;
+}
+
+/* =========================================================
    Footer
    ========================================================= */
 
@@ -747,8 +1267,24 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .class-hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .class-memory-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .staff-update-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .info-grid,
-  .news-grid {
+  .news-grid,
+  .policy-grid,
+  .document-grid,
+  .calendar-grid,
+  .contact-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -784,6 +1320,12 @@ a {
   }
 }
 
+@media (min-width: 1080px) {
+  .policy-grid-large {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (min-width: 1180px) {
   .site-nav a {
     padding: 10px 14px;
@@ -803,6 +1345,12 @@ a {
     width: 56px !important;
     height: 56px !important;
     flex-basis: 56px;
+  }
+}
+
+@media (max-width: 520px) {
+  .staff-home-button {
+    display: none;
   }
 }
 
@@ -851,7 +1399,16 @@ a {
   .section {
     padding: 48px 0;
   }
+
+  .class-hero {
+    padding: 46px 0 34px;
+  }
+
+  .class-hero-panel img {
+    height: 220px;
+  }
 }
+
 /* =========================================================
    Larger policy library grid
    ========================================================= */
@@ -859,11 +1416,5 @@ a {
 @media (min-width: 720px) {
   .policy-grid-large {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1080px) {
-  .policy-grid-large {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
