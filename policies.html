@@ -8,13 +8,255 @@
 
   <meta
     name="description"
-    content="Cara Junior School policy library, including safeguarding, admissions, anti-bullying, data protection and school procedures."
+    content="Cara Junior School policy library, including safeguarding, admissions, anti-bullying, data protection, attendance and school procedures."
   />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .policies-page {
+      background: #f7fbff;
+    }
+
+    .policies-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .policies-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .policies-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .policies-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policies-hero-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 22px;
+      margin-bottom: 18px;
+    }
+
+    .policies-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policies-hero-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-section-block {
+      margin-bottom: 44px;
+    }
+
+    .policy-library-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-card-link {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .policy-card-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+      border-color: rgba(32, 201, 151, 0.34);
+    }
+
+    .policy-card-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      background: #eef7ff;
+      color: #1971c2;
+      font-size: 1.65rem;
+      font-weight: 950;
+    }
+
+    .policy-card-link:nth-child(2n) .policy-card-icon {
+      background: #f1fff9;
+      color: #087f5b;
+    }
+
+    .policy-card-link:nth-child(3n) .policy-card-icon {
+      background: #fff9db;
+      color: #e67700;
+    }
+
+    .policy-card-link:nth-child(4n) .policy-card-icon {
+      background: #fff0f6;
+      color: #c2255c;
+    }
+
+    .policy-card-link h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 1.15rem;
+    }
+
+    .policy-card-link p {
+      margin: 0 0 10px;
+      color: #475467;
+      line-height: 1.55;
+    }
+
+    .policy-card-link span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #087f5b;
+      font-weight: 950;
+      font-size: 0.92rem;
+    }
+
+    .policy-card-link span::after {
+      content: "→";
+      font-weight: 950;
+    }
+
+    .policy-feature-box {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #ffffff, #f1fff9);
+      border-radius: 28px;
+      padding: 30px;
+      border: 1px solid rgba(32, 201, 151, 0.18);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-feature-box h2,
+    .policy-feature-box h3 {
+      color: var(--navy);
+    }
+
+    .policy-feature-box p {
+      color: #344054;
+    }
+
+    .policy-note-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .policy-note-list li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .policy-note-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f5b;
+      font-weight: 950;
+    }
+
+    .policy-quick-jump {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .policy-quick-jump a {
+      display: block;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 16px;
+      text-decoration: none;
+      color: var(--navy);
+      font-weight: 950;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 8px 20px rgba(18, 51, 95, 0.05);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .policy-quick-jump a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(18, 51, 95, 0.12);
+    }
+
+    @media (min-width: 720px) {
+      .policy-library-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-quick-jump {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1100px) {
+      .policy-library-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .policy-card-link {
+        padding: 18px;
+      }
+
+      .policy-card-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.35rem;
+      }
+
+      .policies-hero-card img {
+        height: 220px;
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body class="policies-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
@@ -61,36 +303,41 @@
   </header>
 
   <main id="main-content">
-    <section class="hero page-hero">
+    <section class="hero page-hero policies-hero">
       <div class="container hero-grid">
         <div class="hero-content">
           <p class="eyebrow">Policy Library</p>
           <h1>School policies in one clear, easy-to-use place.</h1>
           <p class="hero-text">
-            This page gives parents, guardians and staff a professional policy library
-            where important school documents can be viewed or downloaded.
+            Important school policies and documents for parents, guardians, staff and visitors.
+            Each policy opens as a clear webpage for easier reading.
           </p>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#school-policies">View Policies</a>
-            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+            <a class="btn btn-secondary" href="#admissions-documents">Admissions Documents</a>
           </div>
         </div>
 
-        <div class="hero-card">
+        <div class="policies-hero-card">
           <img
-            class="hero-photo"
             src="school-front.jpg"
             alt="Front of Cara Junior School building in Mayfield, Cork"
           />
 
-          <div class="hero-info">
-            <h2>Policy Documents</h2>
-            <p>
-              Official PDF files can be linked from this page once the current school policies
-              are uploaded to the website.
-            </p>
-          </div>
+          <h2>Clear Policy Access</h2>
+          <p>
+            Instead of a plain list of PDF links, this library gives the school a modern,
+            readable and professional policy area.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="policy-quick-jump">
+          <a href="#school-policies">School Policies</a>
+          <a href="#admissions-documents">Admissions</a>
+          <a href="#calendar-documents">Calendar</a>
         </div>
       </div>
     </section>
@@ -99,175 +346,236 @@
       <div class="container">
         <div class="section-heading">
           <p class="section-label">School Policies</p>
-          <h2>Policy library</h2>
+          <h2>Main policy library</h2>
           <p>
-            The cards below are ready for the school’s official PDF documents.
-            We will connect each button to the correct PDF when the final files are uploaded.
+            Select a policy below to open it as a clear webpage.
           </p>
         </div>
 
-        <div class="policy-grid policy-grid-large">
-          <a class="document-card" href="#">
-            <div class="document-icon">PDF</div>
-            <div>
-              <h3>Child Safeguarding Statement & Risk Assessment</h3>
-              <p>Important safeguarding information for parents, guardians, staff and visitors.</p>
-              <span>PDF to be added</span>
-            </div>
-          </a>
+        <div class="policy-section-block">
+          <div class="policy-library-grid">
+            <a class="policy-card-link" href="child-safeguarding-statement.html">
+              <div class="policy-card-icon">🛡️</div>
+              <div>
+                <h3>Child Safeguarding Statement & Risk Assessment</h3>
+                <p>Safeguarding information, risk assessment areas and child protection procedures.</p>
+                <span>Open policy</span>
+              </div>
+            </a>
 
-          <a class="document-card" href="#">
-            <div class="document-icon">PDF</div>
-            <div>
-              <h3>Anti-Bullying Policy</h3>
-              <p>School policy and procedures relating to anti-bullying.</p>
-              <span>PDF to be added</span>
-            </div>
-          </a>
+            <a class="policy-card-link" href="anti-bullying-policy.html">
+              <div class="policy-card-icon">🧡</div>
+              <div>
+                <h3>Anti-Bullying Policy</h3>
+                <p>Prevention, reporting, investigation, recording and support for pupils.</p>
+                <span>Open policy</span>
+              </div>
+            </a>
 
-          <a class="document-card" href="#">
-            <div class="document-icon">PDF</div>
-            <div>
-              <h3>Code of Behaviour and Discipline Policy</h3>
-              <p>Information on behaviour expectations and school procedures.</p>
-              <span>PDF to be added</span>
-            </div>
-          </a>
+            <a class="policy-card-link" href="code-of-behaviour-policy.html">
+              <div class="policy-card-icon">🤝</div>
+              <div>
+                <h3>Code of Behaviour and Discipline Policy</h3>
+                <p>Positive behaviour supports, expectations, procedures and pupil safety.</p>
+                <span>Open policy</span>
+              </div>
+            </a>
 
-          <a class="document-card" href="#">
-            <div class="document-icon">PDF</div>
-            <div>
-              <h3>Admissions & Enrolment Policy</h3>
-              <p>Admissions and enrolment information for Cara Junior School.</p>
-              <span>PDF to be added</span>
-            </div>
-          </a>
+            <a class="policy-card-link" href="attendance-policy.html">
+              <div class="policy-card-icon">📘</div>
+              <div>
+                <h3>Attendance Policy</h3>
+                <p>Attendance, punctuality, absence procedures and reporting requirements.</p>
+                <span>Open policy</span>
+              </div>
+            </a>
 
-          <a class="document-card" href="#">
-            <div class="document-icon">PDF</div>
-            <div>
-              <h3>Data Protection Policy</h3>
-              <p>Information on data protection and how school information is handled.</p>
-              <span>PDF to be added</span>
-            </div>
-          </a>
+            <a class="policy-card-link" href="pupil-illness-policy.html">
+              <div class="policy-card-icon">🩺</div>
+              <div>
+                <h3>Pupil Illness Policy</h3>
+                <p>Guidance on pupil illness, infection control and when children should stay home.</p>
+                <span>Open policy</span>
+              </div>
+            </a>
 
-          <a class="document-card" href="#">
-            <div class="document-icon">PDF</div>
-            <div>
-              <h3>Administration of Medicine Policy</h3>
-              <p>School procedures for medication and related supports.</p>
-              <span>PDF to be added</span>
-            </div>
-          </a>
+            <a class="policy-card-link" href="school-transport-policy.html">
+              <div class="policy-card-icon">🚌</div>
+              <div>
+                <h3>School Transport Policy</h3>
+                <p>Bus escorts, safety, pick-up, drop-off, seatbelts and transport behaviour.</p>
+                <span>Open policy</span>
+              </div>
+            </a>
 
-          <a class="document-card" href="#">
-            <div class="document-icon">PDF</div>
-            <div>
-              <h3>Intimate Care Policy</h3>
-              <p>Information on intimate care procedures and pupil dignity.</p>
-              <span>PDF to be added</span>
-            </div>
-          </a>
+            <a class="policy-card-link" href="intimate-care-policy.html">
+              <div class="policy-card-icon">🤲</div>
+              <div>
+                <h3>Intimate Care Policy</h3>
+                <p>Respectful, safe and dignified intimate care support for pupils.</p>
+                <span>Open policy</span>
+              </div>
+            </a>
 
-          <a class="document-card" href="#">
-            <div class="document-icon">PDF</div>
-            <div>
-              <h3>Pupil Illness Policy</h3>
-              <p>Guidance relating to pupil illness and school attendance.</p>
-              <span>PDF to be added</span>
-            </div>
-          </a>
+            <a class="policy-card-link" href="administration-of-medicine-policy.html">
+              <div class="policy-card-icon">💊</div>
+              <div>
+                <h3>Administration of Medication Policy</h3>
+                <p>Medication procedures, emergency plans, storage and parent responsibilities.</p>
+                <span>Open policy</span>
+              </div>
+            </a>
 
-          <a class="document-card" href="#">
-            <div class="document-icon">PDF</div>
-            <div>
-              <h3>School Transport Policy</h3>
-              <p>Information relating to school transport procedures.</p>
-              <span>PDF to be added</span>
-            </div>
-          </a>
+            <a class="policy-card-link" href="data-protection-policy.html">
+              <div class="policy-card-icon">🔐</div>
+              <div>
+                <h3>Data Protection Policy</h3>
+                <p>How personal data is collected, stored, used, shared and protected.</p>
+                <span>Open policy</span>
+              </div>
+            </a>
 
-          <a class="document-card" href="#">
-            <div class="document-icon">PDF</div>
-            <div>
-              <h3>Parental Complaints Procedure</h3>
-              <p>Procedure for raising and managing parent or guardian concerns.</p>
-              <span>PDF to be added</span>
-            </div>
-          </a>
+            <a class="policy-card-link" href="parental-complaints-procedure.html">
+              <div class="policy-card-icon">📄</div>
+              <div>
+                <h3>Parental Complaints Procedure</h3>
+                <p>Procedure for parents and guardians who wish to raise a concern.</p>
+                <span>Open policy</span>
+              </div>
+            </a>
 
-          <a class="document-card" href="#">
-            <div class="document-icon">PDF</div>
-            <div>
-              <h3>Respect and Dignity at Work</h3>
-              <p>Policy information relating to respect, dignity and workplace conduct.</p>
-              <span>PDF to be added</span>
-            </div>
-          </a>
+            <a class="policy-card-link" href="respect-and-dignity-at-work.html">
+              <div class="policy-card-icon">🌿</div>
+              <div>
+                <h3>Respect and Dignity at Work</h3>
+                <p>Workplace dignity, respect, communication, bullying and harassment procedures.</p>
+                <span>Open policy</span>
+              </div>
+            </a>
 
-          <a class="document-card" href="#">
-            <div class="document-icon">PDF</div>
-            <div>
-              <h3>Covid-19 Response Plan</h3>
-              <p>School response plan and related public health procedures, if applicable.</p>
-              <span>PDF to be added</span>
-            </div>
-          </a>
+            <a class="policy-card-link" href="covid-19-response-plan.html">
+              <div class="policy-card-icon">🦠</div>
+              <div>
+                <h3>COVID-19 Response Plan</h3>
+                <p>Historical response plan for COVID-19 procedures and school safety measures.</p>
+                <span>Open policy</span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section parent-section">
-      <div class="container two-column">
-        <div>
+    <section class="section parent-section" id="admissions-documents">
+      <div class="container">
+        <div class="section-heading">
           <p class="section-label">Admissions Documents</p>
-          <h2>Admissions and application forms</h2>
+          <h2>Admissions and application pages</h2>
+          <p>
+            Admissions documents are also available as clean webpages for parents and guardians.
+          </p>
         </div>
 
-        <div class="content-card">
-          <p>
-            Admissions documents can also be included here or linked to the Admissions page,
-            so parents and guardians can quickly find the correct files.
-          </p>
+        <div class="policy-library-grid">
+          <a class="policy-card-link" href="admissions-enrolment-policy.html">
+            <div class="policy-card-icon">📝</div>
+            <div>
+              <h3>Admissions and Enrolment Policy</h3>
+              <p>Eligibility, admissions criteria, applications, waiting lists and appeals.</p>
+              <span>Open page</span>
+            </div>
+          </a>
 
-          <p>
-            This avoids the old style of a plain list of links and gives the school a cleaner,
-            more professional policy area.
-          </p>
+          <a class="policy-card-link" href="admissions-notice-2026-2027.html">
+            <div class="policy-card-icon">📅</div>
+            <div>
+              <h3>Admissions Notice 2026–2027</h3>
+              <p>Application dates, decision dates, acceptance dates and available places.</p>
+              <span>Open page</span>
+            </div>
+          </a>
 
-          <a class="text-link" href="admissions.html">Go to admissions</a>
+          <a class="policy-card-link" href="application-form.html">
+            <div class="policy-card-icon">✍️</div>
+            <div>
+              <h3>Application Form</h3>
+              <p>Pupil details, parent details, SENO information and important application notes.</p>
+              <span>Open page</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container two-column">
-        <div>
-          <p class="section-label">Official Documents</p>
-          <h2>Keeping policies current</h2>
+    <section class="section" id="calendar-documents">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Calendar</p>
+          <h2>School calendar document</h2>
+          <p>
+            School calendar information can be viewed in a clear webpage format.
+          </p>
         </div>
 
-        <div class="content-card">
-          <p>
-            School policies may be reviewed or updated from time to time.
-            Parents, guardians and staff should always refer to the latest version published
-            by the school.
-          </p>
+        <div class="policy-library-grid">
+          <a class="policy-card-link" href="school-calendar-2025-2026.html">
+            <div class="policy-card-icon">🗓️</div>
+            <div>
+              <h3>School Calendar 2025–2026</h3>
+              <p>School closures, first day back for pupils and last day of school.</p>
+              <span>Open calendar</span>
+            </div>
+          </a>
 
-          <p>
-            If you are unsure which document applies, please contact the school office.
-          </p>
+          <a class="policy-card-link" href="calendar.html">
+            <div class="policy-card-icon">📆</div>
+            <div>
+              <h3>Main Calendar Page</h3>
+              <p>Return to the main school calendar page and school date information.</p>
+              <span>Open calendar page</span>
+            </div>
+          </a>
 
-          <p>
-            <strong>Office:</strong> 021 4643060<br />
-            <strong>Email:</strong> office@carajs.ie
-          </p>
+          <a class="policy-card-link" href="contact.html">
+            <div class="policy-card-icon">☎️</div>
+            <div>
+              <h3>Confirm a Date</h3>
+              <p>Contact the school office if you need to confirm a closure or school date.</p>
+              <span>Contact office</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
     <section class="section classes-section">
+      <div class="container two-column">
+        <div>
+          <p class="section-label">Important Note</p>
+          <h2>Official school information</h2>
+        </div>
+
+        <div class="policy-feature-box">
+          <p>
+            School policies may be reviewed or updated from time to time. Parents, guardians
+            and staff should always refer to the latest version published by the school.
+          </p>
+
+          <ul class="policy-note-list">
+            <li>Policies should be checked and approved by the school before final publication.</li>
+            <li>Dates, names and review details should be confirmed against the official documents.</li>
+            <li>If unsure which document applies, please contact the school office.</li>
+          </ul>
+
+          <p>
+            <strong>Office:</strong> <a href="tel:0214643060">021 4643060</a><br />
+            <strong>Email:</strong> <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container">
         <div class="section-heading">
           <p class="section-label">Useful Pages</p>
