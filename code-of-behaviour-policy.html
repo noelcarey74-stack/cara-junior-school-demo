@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Code of Behaviour and Discipline Policy | Cara Junior School</title>
+
+  <meta
+    name="description"
+    content="Code of Behaviour and Discipline Policy for Cara Junior School, outlining positive behaviour supports, school expectations and procedures."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .policy-page {
+      background: #f7fbff;
+    }
+
+    .policy-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .policy-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .policy-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .policy-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policy-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: #f3ecff;
+      color: #7048e8;
+      font-size: 2rem;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policy-hero-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .policy-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .policy-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-content-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-content-card h2,
+    .policy-content-card h3 {
+      color: var(--navy);
+    }
+
+    .policy-content-card h3 {
+      margin-top: 28px;
+    }
+
+    .policy-content-card p {
+      color: #344054;
+    }
+
+    .policy-note {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-left: 6px solid #20c997;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-warning {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-left: 6px solid #fab005;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-danger {
+      background:
+        radial-gradient(circle at top left, rgba(240, 62, 62, 0.10), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff5f5);
+      border-left: 6px solid #f03e3e;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .policy-list li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .policy-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f5b;
+      font-weight: 950;
+    }
+
+    .warning-list li::before {
+      content: "•";
+      color: #e67700;
+      font-size: 1.6rem;
+      line-height: 0.7;
+    }
+
+    .numbered-policy-list {
+      counter-reset: policy-step;
+      list-style: none;
+      margin: 18px 0 0;
+      padding: 0;
+    }
+
+    .numbered-policy-list li {
+      counter-increment: policy-step;
+      position: relative;
+      padding-left: 48px;
+      margin: 16px 0;
+      color: #344054;
+    }
+
+    .numbered-policy-list li::before {
+      content: counter(policy-step);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #7048e8;
+      color: #ffffff;
+      font-weight: 950;
+    }
+
+    .behaviour-grid {
+      display: grid;
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .behaviour-card {
+      background: #f8fbff;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      border-top: 6px solid #20c997;
+    }
+
+    .behaviour-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .behaviour-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .behaviour-card:nth-child(4) {
+      border-top-color: #7048e8;
+    }
+
+    .behaviour-card:nth-child(5) {
+      border-top-color: #f06595;
+    }
+
+    .behaviour-card:nth-child(6) {
+      border-top-color: #ff922b;
+    }
+
+    .behaviour-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .behaviour-card p {
+      margin-bottom: 0;
+      color: #344054;
+    }
+
+    .rules-box {
+      background:
+        radial-gradient(circle at top left, rgba(112, 72, 232, 0.12), transparent 30%),
+        linear-gradient(135deg, #ffffff, #f8f5ff);
+      border-radius: 26px;
+      padding: 26px;
+      border: 1px solid rgba(112, 72, 232, 0.16);
+      margin: 24px 0;
+    }
+
+    .rules-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .rule-pill {
+      background: #ffffff;
+      border-radius: 999px;
+      padding: 12px 16px;
+      color: var(--navy);
+      font-weight: 950;
+      border: 1px solid rgba(112, 72, 232, 0.16);
+      box-shadow: 0 8px 18px rgba(18, 51, 95, 0.06);
+    }
+
+    .contact-policy-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+    }
+
+    .contact-policy-box h3 {
+      margin-top: 0;
+    }
+
+    .policy-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .policy-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .policy-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .policy-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .policy-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .policy-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .behaviour-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .rules-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .policy-content-card {
+        padding: 24px;
+      }
+
+      .policy-actions {
+        flex-direction: column;
+      }
+
+      .policy-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="policy-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>Cara Junior School, Banduff Road, Mayfield, Cork</p>
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html">Classes</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="policies.html" class="active">Policies</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero page-hero policy-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">School Policy</p>
+          <h1>Code of Behaviour and Discipline Policy</h1>
+
+          <p class="hero-text">
+            A positive, autism-friendly approach to behaviour, relationships,
+            safety, support and learning in Cara Junior School.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#policy-content">Read Policy</a>
+            <a class="btn btn-secondary" href="policies.html">Back to Policies</a>
+          </div>
+        </div>
+
+        <div class="policy-hero-card">
+          <div class="policy-icon">🤝</div>
+          <h2>Positive Behaviour</h2>
+          <p>
+            This policy supports safe, respectful and consistent behaviour approaches
+            for pupils, staff, parents and the wider school community.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="policy-summary">
+          <div class="policy-summary-card">
+            <strong>Respect</strong>
+            <p>The policy promotes dignity, respect and positive relationships.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Support</strong>
+            <p>Behaviour is understood in the context of autism, communication and individual need.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Safety</strong>
+            <p>The school aims to provide a safe and well-managed learning environment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="policy-content">
+      <div class="container legal-layout">
+        <article class="policy-content-card">
+          <p class="section-label">Code of Behaviour</p>
+          <h2>Code of Behaviour and Discipline Policy</h2>
+
+          <p>
+            The Board of Management of Cara Junior School revised the Code of Behaviour
+            in line with national guidance and legislation, including the National Education
+            Welfare Board guidelines, Department of Education guidance and the Education
+            Welfare Act 2000.
+          </p>
+
+          <h3>Ethos Statement</h3>
+
+          <p>
+            Cara Junior School is an ASD-friendly community where all pupils are equally valued
+            and respected, irrespective of gender, social or ethnic background, family circumstances,
+            educational achievement, physical characteristics or religious persuasion.
+          </p>
+
+          <p>
+            The school recognises the uniqueness of each child and endeavours to use pupils’
+            strengths to promote learning in areas of identified need. Pupils are encouraged
+            and affirmed by staff in ways that promote self-esteem, confidence, dignity and
+            distinctiveness.
+          </p>
+
+          <div class="policy-note">
+            The dignity of each child is of utmost importance. Each child is entitled to
+            an appropriate education provision, regardless of individual levels of attainment
+            and functioning.
+          </div>
+
+          <h3>Rationale</h3>
+
+          <p>
+            Effective teaching and learning require a safe, supportive and well-managed environment.
+            The policy recognises the rights of pupils to learn, the rights of teachers to teach,
+            and the rights of all members of the school community to be safe.
+          </p>
+
+          <ul class="policy-list">
+            <li>The right of all pupils to learn.</li>
+            <li>The right of all teachers to teach.</li>
+            <li>The right of all to be safe.</li>
+            <li>The importance of meaningful relationships across the school community.</li>
+            <li>The link between learning, communication, achievement and behaviour.</li>
+          </ul>
+
+          <h3>Aims of the Policy</h3>
+
+          <p>
+            The policy aims to provide a positive, non-confrontational and autism-friendly
+            learning environment, taking account of each pupil’s individual learning needs.
+          </p>
+
+          <div class="behaviour-grid">
+            <div class="behaviour-card">
+              <h3>Positive Relationships</h3>
+              <p>
+                Encourage mutual respect among pupils, staff and parents or guardians.
+              </p>
+            </div>
+
+            <div class="behaviour-card">
+              <h3>Recognition</h3>
+              <p>
+                Recognise, reward and publicise positive behaviour and pupil achievement.
+              </p>
+            </div>
+
+            <div class="behaviour-card">
+              <h3>Respect</h3>
+              <p>
+                Create an atmosphere of tolerance, consideration and respect.
+              </p>
+            </div>
+
+            <div class="behaviour-card">
+              <h3>Safety</h3>
+              <p>
+                Prevent pupils from being disadvantaged by the behaviour of others.
+              </p>
+            </div>
+
+            <div class="behaviour-card">
+              <h3>Care</h3>
+              <p>
+                Promote care for pupils, staff, property, resources, premises and the environment.
+              </p>
+            </div>
+
+            <div class="behaviour-card">
+              <h3>Support</h3>
+              <p>
+                Support pupils in line with their abilities, needs, communication and regulation.
+              </p>
+            </div>
+          </div>
+
+          <h3>Understanding Behaviour</h3>
+
+          <p>
+            The policy recognises that pupils may experience difficulties linked to autism and
+            learning disability. These may affect communication, anxiety, sensory processing,
+            transitions, routine, social understanding and emotional regulation.
+          </p>
+
+          <ul class="policy-list">
+            <li>Difficulty understanding or being understood.</li>
+            <li>Difficulty understanding social cues or social rules.</li>
+            <li>Anxiety, sensory needs or changes in routine.</li>
+            <li>Difficulty communicating pain, hunger, illness or other sensations.</li>
+            <li>Transitions, staff changes, location changes or over-stimulating environments.</li>
+            <li>Communication not being understood by others.</li>
+          </ul>
+
+          <h3>How the School Promotes a Happy School</h3>
+
+          <p>
+            Pupils, staff and parents can help to promote a happy school by working together
+            in a positive, proactive manner and treating each other with dignity and respect.
+          </p>
+
+          <ul class="policy-list">
+            <li>Create an autism-friendly environment.</li>
+            <li>Encourage and reinforce good behaviour.</li>
+            <li>Understand each child’s strengths, needs, likes and dislikes.</li>
+            <li>Provide structure, routine and clear communication.</li>
+            <li>Listen to the child and to each other.</li>
+            <li>Ensure pupils and staff feel safe and secure.</li>
+            <li>Use individual communication supports where appropriate.</li>
+            <li>Provide sensory breaks and opportunities to opt out when needed.</li>
+            <li>Work with relevant multi-disciplinary team members where required.</li>
+          </ul>
+
+          <h3>Staff Roles and Responsibilities</h3>
+
+          <p>
+            Staff are expected to model the school’s standards of behaviour, maintain a safe
+            and positive atmosphere, use low-arousal strategies, communicate with families
+            and support pupils in overcoming behavioural difficulties.
+          </p>
+
+          <ul class="policy-list">
+            <li>Model positive behaviour and respectful communication.</li>
+            <li>Use low-arousal strategies when dealing with incidents.</li>
+            <li>Consistently implement behaviour support plans where in use.</li>
+            <li>Understand the pupil’s communication, likes, dislikes and triggers.</li>
+            <li>Use a non-blaming approach to behaviour analysis and management.</li>
+            <li>Record behaviour incidents where required.</li>
+            <li>Consult with parents and multi-disciplinary supports where necessary.</li>
+          </ul>
+
+          <h3>Individual Behaviour Plans</h3>
+
+          <p>
+            The policy states that an Individual Behaviour Plan should identify supports
+            and strategies relevant to the pupil’s needs.
+          </p>
+
+          <ol class="numbered-policy-list">
+            <li>Proactive strategies and supports to maximise positive behaviour.</li>
+            <li>Proactive strategies for dealing with undesirable behaviour.</li>
+            <li>Environmental triggers for undesirable behaviour.</li>
+          </ol>
+
+          <h3>Guidelines for Good Behaviour</h3>
+
+          <p>
+            Given the level of ability and complexity of needs of pupils, the school actively
+            promotes desirable standards of behaviour every day.
+          </p>
+
+          <div class="rules-box">
+            <h3>Five Main Rules</h3>
+            <div class="rules-grid">
+              <div class="rule-pill">1. Respect each other, be nice</div>
+              <div class="rule-pill">2. Do your best</div>
+              <div class="rule-pill">3. Listen</div>
+              <div class="rule-pill">4. Help others</div>
+              <div class="rule-pill">5. Quiet hands and feet</div>
+            </div>
+          </div>
+
+          <h3>School Environment and Safety</h3>
+
+          <ul class="policy-list">
+            <li>Pupils use allocated entrance and exit areas.</li>
+            <li>Pupils must not climb boundary fences or walls.</li>
+            <li>Pupils are expected to remain with staff within the school grounds.</li>
+            <li>Staff accompany pupils during transitions to the yard.</li>
+            <li>Staff engage and interact with pupils in a positive manner.</li>
+          </ul>
+
+          <h3>Acknowledging Good Behaviour</h3>
+
+          <p>
+            The policy places strong emphasis on praise and positive reinforcement. Rewards
+            should be meaningful and appropriate to the individual pupil.
+          </p>
+
+          <ul class="policy-list">
+            <li>Use specific praise, such as “well done, you walked in the corridor.”</li>
+            <li>Praise in the presence of others where appropriate.</li>
+            <li>Use smiles, gestures, tokens, rewards and positive attention.</li>
+            <li>Display good work and encourage peer support.</li>
+            <li>Send positive notes or emails home where appropriate.</li>
+          </ul>
+
+          <h3>Positive Behaviour Management Strategies</h3>
+
+          <ul class="policy-list">
+            <li>Use behaviour support plans.</li>
+            <li>Redirect positively to another activity.</li>
+            <li>Use Social Stories where helpful.</li>
+            <li>Use planned ignoring for minor difficulties where appropriate.</li>
+            <li>Define boundaries and space for pupils.</li>
+            <li>Use praise, rewards and token systems.</li>
+            <li>Use the pupil’s augmentative communication where appropriate.</li>
+            <li>Be consistent and maintain debriefing procedures.</li>
+          </ul>
+
+          <h3>Responses and Sanctions</h3>
+
+          <p>
+            The policy recognises that many pupils may not understand consequences in the same
+            way and may require individual behaviour plans. For pupils who do understand
+            consequences, responses may include calm adult responses, quiet time under adult
+            supervision, or involvement of the Principal.
+          </p>
+
+          <div class="policy-danger">
+            All forms of physical punishment by staff are strictly prohibited.
+          </div>
+
+          <h3>Restrictive Practices</h3>
+
+          <p>
+            Restrictive practices should only be used as a last resort, and the least restrictive
+            and least intrusive option should be used. Where such practices are considered,
+            referrals should be made to relevant multi-disciplinary professionals and only
+            suitably trained staff should implement them.
+          </p>
+
+          <ul class="policy-list warning-list">
+            <li>Seclusion.</li>
+            <li>Medication including PRN medication.</li>
+            <li>Restricted access.</li>
+            <li>Restrictive restraints.</li>
+            <li>Exclusionary time out.</li>
+            <li>Physical intervention procedures.</li>
+          </ul>
+
+          <h3>Gross Misconduct</h3>
+
+          <p>
+            The policy lists examples of behaviour considered gross misconduct in the context
+            of Cara Junior School, including serious physical harm, persistent assault, behaviour
+            causing ongoing disruption, or situations where the safety of the child, other pupils
+            or staff cannot be guaranteed.
+          </p>
+
+          <h3>Procedures for Gross Misconduct</h3>
+
+          <ol class="numbered-policy-list">
+            <li>Keep incident reports.</li>
+            <li>Hold frequent meetings or phone calls with parents as part of the behaviour support process.</li>
+            <li>Refer to psychology through CDNT where appropriate.</li>
+            <li>Establish an Individual Behaviour Support Plan in consultation with parents and professionals where possible.</li>
+            <li>Consider whether additional staff training is required.</li>
+            <li>Inform SENO if additional resources are required.</li>
+            <li>Consider suspension only where risk is high and other procedures have been followed.</li>
+          </ol>
+
+          <h3>Suspension</h3>
+
+          <p>
+            Before suspension is considered, the school must consider the nature and seriousness
+            of the behaviour, the context, the impact on others, interventions already tried,
+            whether suspension is proportionate and the possible impact of suspension.
+          </p>
+
+          <p>
+            Schools are required by law to follow fair procedures when proposing to suspend a pupil,
+            including informing the pupil and parents about the complaint and giving an opportunity
+            to respond.
+          </p>
+
+          <h3>Expulsion</h3>
+
+          <p>
+            Expulsion is only considered in serious circumstances and must follow fair procedures
+            under the Education (Welfare) Act 2000. The Board of Management is the decision-making
+            body in relation to expulsions.
+          </p>
+
+          <ol class="numbered-policy-list">
+            <li>A detailed investigation under the direction of the Principal.</li>
+            <li>A recommendation to the Board of Management by the Principal.</li>
+            <li>Consideration by the Board and the holding of a hearing.</li>
+            <li>Board deliberations and action after the hearing.</li>
+            <li>Consultations arranged by the Education Welfare Officer.</li>
+            <li>Confirmation of the decision to expel.</li>
+          </ol>
+
+          <h3>Raising a Concern or Complaint</h3>
+
+          <p>
+            Staff, parents and pupils can make a complaint about any aspect of the Code of Behaviour
+            by making an appointment to speak with the Principal. Written complaints or concerns
+            may also be submitted to the Board of Management.
+          </p>
+
+          <h3>Absence from School</h3>
+
+          <p>
+            Parents are required to inform the class teacher if their child is absent from school.
+            This can be done by email to the class teacher or school administrator, or by phone.
+            If a child is absent for more than 10 consecutive school days, a doctor’s certificate
+            must be provided. If a child is absent for more than 20 school days, the Education
+            Welfare Officer must be informed.
+          </p>
+
+          <h3>Review and Ratification</h3>
+
+          <p>
+            The Code of Behaviour is reviewed in consultation with the school community at least
+            every two years. It may also be reviewed or updated as situations arise by request
+            of any stakeholder. Any review must be ratified by the Board of Management.
+          </p>
+
+          <p>
+            This policy was ratified on <strong>19 September 2022</strong>.
+          </p>
+
+          <h3>Linked Policies</h3>
+
+          <p>
+            All school policies and procedures have a bearing on the Code of Behaviour, including
+            but not limited to:
+          </p>
+
+          <ul class="policy-list">
+            <li>Anti-Bullying Policy</li>
+            <li>Admissions Policy</li>
+            <li>Health and Safety Statement</li>
+          </ul>
+
+          <div class="contact-policy-box">
+            <h3>Contact the School Office</h3>
+            <p>
+              If you need guidance in relation to the Code of Behaviour, please contact
+              the school office.
+            </p>
+
+            <p>
+              Cara Junior School<br />
+              Banduff Road, Mayfield, Cork<br />
+              Phone: <a href="tel:0214643060">021 4643060</a><br />
+              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+            </p>
+          </div>
+
+          <div class="policy-actions">
+            <a class="btn btn-primary" href="policies.html">Back to Policy Library</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to school information</h2>
+        </div>
+
+        <div class="policy-next-links">
+          <a class="policy-next-link" href="policies.html">
+            <span>Policy Library</span>
+            <small>Return to all school policies</small>
+          </a>
+
+          <a class="policy-next-link" href="parents.html">
+            <span>Parents</span>
+            <small>Useful information for parents and guardians</small>
+          </a>
+
+          <a class="policy-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+        <h2>Cara Junior School</h2>
+        <p>Support and grow together</p>
+        <p>Banduff Road, Mayfield, Cork</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:0214643060">021 4643060</a></p>
+        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
