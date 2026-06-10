@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Respect and Dignity at Work | Cara Junior School</title>
+
+  <meta
+    name="description"
+    content="Respect and Dignity at Work policy for Cara Junior School, supporting a positive, respectful and effective workplace."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .policy-page {
+      background: #f7fbff;
+    }
+
+    .policy-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .policy-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .policy-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .policy-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policy-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: #f1fff9;
+      color: #087f5b;
+      font-size: 2rem;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policy-hero-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .policy-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .policy-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-content-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-content-card h2,
+    .policy-content-card h3 {
+      color: var(--navy);
+    }
+
+    .policy-content-card h3 {
+      margin-top: 28px;
+    }
+
+    .policy-content-card p {
+      color: #344054;
+    }
+
+    .policy-note {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-left: 6px solid #20c997;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-warning {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-left: 6px solid #fab005;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .policy-list li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .policy-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f5b;
+      font-weight: 950;
+    }
+
+    .warning-list li::before {
+      content: "•";
+      color: #e67700;
+      font-size: 1.6rem;
+      line-height: 0.7;
+    }
+
+    .dignity-grid {
+      display: grid;
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .dignity-card {
+      background: #f8fbff;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      border-top: 6px solid #20c997;
+    }
+
+    .dignity-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .dignity-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .dignity-card:nth-child(4) {
+      border-top-color: #7048e8;
+    }
+
+    .dignity-card:nth-child(5) {
+      border-top-color: #f06595;
+    }
+
+    .dignity-card:nth-child(6) {
+      border-top-color: #ff922b;
+    }
+
+    .dignity-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .dignity-card p {
+      margin-bottom: 0;
+      color: #344054;
+    }
+
+    .contact-policy-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+    }
+
+    .contact-policy-box h3 {
+      margin-top: 0;
+    }
+
+    .policy-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .policy-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .policy-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .policy-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .policy-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .policy-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .dignity-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .policy-content-card {
+        padding: 24px;
+      }
+
+      .policy-actions {
+        flex-direction: column;
+      }
+
+      .policy-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="policy-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>Cara Junior School, Banduff Road, Mayfield, Cork</p>
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html">Classes</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="policies.html" class="active">Policies</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero page-hero policy-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">School Policy</p>
+          <h1>Respect & Dignity at Work</h1>
+
+          <p class="hero-text">
+            Keeping the workplace positive, respectful and effective for all members
+            of the Cara Junior School community.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#policy-content">Read Policy</a>
+            <a class="btn btn-secondary" href="policies.html">Back to Policies</a>
+          </div>
+        </div>
+
+        <div class="policy-hero-card">
+          <div class="policy-icon">🌿</div>
+          <h2>Positive Workplace</h2>
+          <p>
+            This policy supports dignity, respect, openness, equality and appropriate
+            workplace behaviour.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="policy-summary">
+          <div class="policy-summary-card">
+            <strong>Dignity</strong>
+            <p>All employees have the right to be treated with dignity and respect.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Respect</strong>
+            <p>Behaviour that undermines dignity at work is not acceptable.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Support</strong>
+            <p>Concerns are dealt with through accepted procedures and confidentiality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="policy-content">
+      <div class="container legal-layout">
+        <article class="policy-content-card">
+          <p class="section-label">Respect and Dignity</p>
+          <h2>Respect & Dignity in Our Work</h2>
+
+          <p>
+            Cara Junior School is committed to creating, maintaining and constantly
+            striving to enhance a positive work environment where work is done in an
+            atmosphere of respect, collaboration, openness and equality.
+          </p>
+
+          <p>
+            Behaviour which is not nice, including adult bullying and harassment in the
+            workplace, is not tolerated. The school recognises that everyone has the right
+            to be treated with dignity and respect.
+          </p>
+
+          <div class="policy-note">
+            All members of the school community have a duty of care to themselves and each other.
+            Respectful, open and equal relationships are the expected norm.
+          </div>
+
+          <h3>Commitment to Dignity and Respect</h3>
+
+          <p>
+            The policy states that if staff are not experiencing dignity and respect in
+            communication and professional relationships, management and the school community
+            will seek to intervene appropriately.
+          </p>
+
+          <p>
+            The school will use accepted procedures to investigate and deal with allegations
+            of harassment, bullying and other inappropriate behaviour.
+          </p>
+
+          <h3>Definition of Workplace Bullying</h3>
+
+          <p>
+            The policy adopts the definition of adult bullying set out by the Task Force.
+            Workplace bullying is repeated inappropriate behaviour, direct or indirect,
+            whether verbal, physical or otherwise, conducted by one or more persons against
+            another or others at the place of work or in the course of employment.
+          </p>
+
+          <p>
+            Isolated incidents of the behaviour described in the policy may be an affront
+            to dignity at work, but a once-off incident is not considered bullying.
+          </p>
+
+          <h3>Definition of Harassment</h3>
+
+          <p>
+            The policy describes harassment as unwanted conduct which has the purpose or effect
+            of violating a person’s dignity and creating an intimidating, hostile, degrading,
+            humiliating or offensive environment for the person.
+          </p>
+
+          <h3>A Positive Work Environment</h3>
+
+          <p>
+            Cara Junior School aims to create a positive workplace through clear expectations,
+            respectful communication and a shared commitment to making the school a good place
+            to work.
+          </p>
+
+          <div class="dignity-grid">
+            <div class="dignity-card">
+              <h3>Supportive Atmosphere</h3>
+              <p>A work environment where staff can feel supported and respected.</p>
+            </div>
+
+            <div class="dignity-card">
+              <h3>Open Communication</h3>
+              <p>Good communication through regular opportunities and staff meetings.</p>
+            </div>
+
+            <div class="dignity-card">
+              <h3>Appropriate Behaviour</h3>
+              <p>Positive interpersonal behaviour is expected from all members of the community.</p>
+            </div>
+
+            <div class="dignity-card">
+              <h3>Collaboration</h3>
+              <p>Staff are encouraged to work together in a respectful and cooperative manner.</p>
+            </div>
+
+            <div class="dignity-card">
+              <h3>Fair Treatment</h3>
+              <p>Staff should be treated fairly in line with agreed procedures.</p>
+            </div>
+
+            <div class="dignity-card">
+              <h3>Conflict Resolution</h3>
+              <p>The policy encourages openness, discussion and resolution of conflict.</p>
+            </div>
+          </div>
+
+          <h3>Behaviours That May Be a Problem</h3>
+
+          <p>
+            The policy recognises that adult bullying and harassment can create serious
+            workplace problems if they occur. Such behaviours can cause pain and suffering
+            and reduce the effectiveness of the school community.
+          </p>
+
+          <ul class="policy-list warning-list">
+            <li>Verbal abuse, insults or undermining remarks.</li>
+            <li>Excessive monitoring of work.</li>
+            <li>Withholding work-related information.</li>
+            <li>Exclusion with negative consequences.</li>
+          </ul>
+
+          <h3>How Concerns Are Handled</h3>
+
+          <p>
+            Where bullying or harassment occurs, the school will deal with it through the
+            agreed procedure. Supportive and effective procedures are in place to address
+            and investigate allegations.
+          </p>
+
+          <p>
+            The policy notes that procedures will focus on the earliest possible resolution
+            and will proceed as necessary from informal to formal stages, with a stress on
+            confidentiality.
+          </p>
+
+          <div class="policy-warning">
+            Allegations of bullying or harassment are taken seriously. The procedure aims to
+            support fairness, confidentiality and appropriate resolution.
+          </div>
+
+          <h3>Duty of Care</h3>
+
+          <p>
+            Members of the Cara Junior School community have a duty of care to themselves
+            and each other. Management has a duty of care towards employees, and employees
+            have a duty of care towards one another.
+          </p>
+
+          <p>
+            The policy states that undermining behaviour among colleagues is taken seriously,
+            whether such behaviour is against an employee of the school by another person
+            or otherwise.
+          </p>
+
+          <h3>Policy Background</h3>
+
+          <p>
+            The policy has been formulated in light of background documents including INTO
+            documents on supporting each other and working together, DES Circular 40/97,
+            and employment equality legislation and harassment guidance.
+          </p>
+
+          <h3>Sign-off and Review</h3>
+
+          <p>
+            The uploaded document shows the policy signed by Seamus Feehan, Chairperson of
+            the Board of Management, and Colette Butler, Principal. It is dated
+            <strong>11 May 2022</strong>, with review noted as <strong>May 2025</strong>.
+          </p>
+
+          <div class="contact-policy-box">
+            <h3>Contact the School Office</h3>
+            <p>
+              If you need guidance in relation to school procedures, please contact the school office.
+            </p>
+
+            <p>
+              Cara Junior School<br />
+              Banduff Road, Mayfield, Cork<br />
+              Phone: <a href="tel:0214643060">021 4643060</a><br />
+              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+            </p>
+          </div>
+
+          <div class="policy-actions">
+            <a class="btn btn-primary" href="policies.html">Back to Policy Library</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to school information</h2>
+        </div>
+
+        <div class="policy-next-links">
+          <a class="policy-next-link" href="policies.html">
+            <span>Policy Library</span>
+            <small>Return to all school policies</small>
+          </a>
+
+          <a class="policy-next-link" href="parents.html">
+            <span>Parents</span>
+            <small>Useful information for parents and guardians</small>
+          </a>
+
+          <a class="policy-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+        <h2>Cara Junior School</h2>
+        <p>Support and grow together</p>
+        <p>Banduff Road, Mayfield, Cork</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:0214643060">021 4643060</a></p>
+        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
