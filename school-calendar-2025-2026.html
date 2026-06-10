@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>School Calendar 2025–2026 | Cara Junior School</title>
+
+  <meta
+    name="description"
+    content="School Calendar 2025–2026 for Cara Junior School, including school closures, return dates and the last day of school."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .policy-page {
+      background: #f7fbff;
+    }
+
+    .policy-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .policy-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .policy-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .policy-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policy-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: #eef7ff;
+      color: #1971c2;
+      font-size: 2rem;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policy-hero-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .policy-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .policy-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-content-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-content-card h2,
+    .policy-content-card h3 {
+      color: var(--navy);
+    }
+
+    .policy-content-card h3 {
+      margin-top: 28px;
+    }
+
+    .policy-content-card p {
+      color: #344054;
+    }
+
+    .policy-note {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-left: 6px solid #20c997;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .calendar-key {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0;
+    }
+
+    .key-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 16px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 8px 20px rgba(18, 51, 95, 0.05);
+      color: #344054;
+      font-weight: 850;
+    }
+
+    .key-colour {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      flex: 0 0 auto;
+    }
+
+    .key-closed {
+      background: #e03131;
+    }
+
+    .key-existing {
+      background: #15aabf;
+    }
+
+    .key-new {
+      background: #d63384;
+    }
+
+    .key-last {
+      background: #2f9e44;
+    }
+
+    .calendar-section {
+      margin-top: 26px;
+      background: #f8fbff;
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .calendar-section h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .date-grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .date-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 18px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 8px 20px rgba(18, 51, 95, 0.05);
+      border-left: 7px solid #20c997;
+    }
+
+    .date-card.closed {
+      border-left-color: #e03131;
+    }
+
+    .date-card.existing {
+      border-left-color: #15aabf;
+    }
+
+    .date-card.new-pupils {
+      border-left-color: #d63384;
+    }
+
+    .date-card.last-day {
+      border-left-color: #2f9e44;
+    }
+
+    .date-card span {
+      display: block;
+      color: var(--navy);
+      font-weight: 950;
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+
+    .date-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .month-list {
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .month-list li {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 16px;
+      margin: 12px 0;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      color: #344054;
+      box-shadow: 0 8px 20px rgba(18, 51, 95, 0.05);
+    }
+
+    .month-list strong {
+      color: var(--navy);
+    }
+
+    .policy-warning {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-left: 6px solid #fab005;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .contact-policy-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+    }
+
+    .contact-policy-box h3 {
+      margin-top: 0;
+    }
+
+    .policy-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .policy-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .policy-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .policy-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .policy-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .policy-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .calendar-key {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .date-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .policy-content-card {
+        padding: 24px;
+      }
+
+      .policy-actions {
+        flex-direction: column;
+      }
+
+      .policy-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="policy-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>Cara Junior School, Banduff Road, Mayfield, Cork</p>
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html">Classes</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html" class="active">Calendar</a>
+          <a href="policies.html">Policies</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero page-hero policy-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">School Calendar</p>
+          <h1>School Calendar 2025–2026</h1>
+
+          <p class="hero-text">
+            Key school dates for Cara Junior School, including school closures,
+            return dates and the last day of school.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#calendar-content">View Dates</a>
+            <a class="btn btn-secondary" href="calendar.html">Calendar Page</a>
+          </div>
+        </div>
+
+        <div class="policy-hero-card">
+          <div class="policy-icon">🗓️</div>
+          <h2>2025–2026</h2>
+          <p>
+            This page presents the school calendar in a clean website format for parents
+            and guardians.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="policy-summary">
+          <div class="policy-summary-card">
+            <strong>Existing Pupils</strong>
+            <p>First day back: 1 September 2025.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>New Pupils</strong>
+            <p>First day back: 2 September 2025.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Last Day</strong>
+            <p>Last day of school: 30 June 2026.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="calendar-content">
+      <div class="container legal-layout">
+        <article class="policy-content-card">
+          <p class="section-label">Calendar</p>
+          <h2>School Calendar 2025–2026</h2>
+
+          <p>
+            This calendar page sets out the main dates from the Cara Junior School
+            2025–2026 school calendar.
+          </p>
+
+          <div class="policy-note">
+            Calendar dates can occasionally change. Parents and guardians should contact
+            the school office if they need to confirm a closure, return date or school event.
+          </div>
+
+          <h3>Calendar Colour Key</h3>
+
+          <div class="calendar-key">
+            <div class="key-card">
+              <span class="key-colour key-closed"></span>
+              School Closed
+            </div>
+
+            <div class="key-card">
+              <span class="key-colour key-existing"></span>
+              First Day Back for Existing Pupils
+            </div>
+
+            <div class="key-card">
+              <span class="key-colour key-new"></span>
+              First Day Back for New Pupils
+            </div>
+
+            <div class="key-card">
+              <span class="key-colour key-last"></span>
+              Last Day of School
+            </div>
+          </div>
+
+          <div class="calendar-section">
+            <h3>Key Return and Finish Dates</h3>
+
+            <div class="date-grid">
+              <div class="date-card existing">
+                <span>1 September 2025</span>
+                <p>First day back to school for existing pupils.</p>
+              </div>
+
+              <div class="date-card new-pupils">
+                <span>2 September 2025</span>
+                <p>First day back to school for new pupils.</p>
+              </div>
+
+              <div class="date-card last-day">
+                <span>30 June 2026</span>
+                <p>Last day of school.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="calendar-section">
+            <h3>School Closures by Month</h3>
+
+            <ul class="month-list">
+              <li>
+                <strong>August 2025:</strong> School closed for the month of August.
+              </li>
+
+              <li>
+                <strong>October 2025:</strong> School closed 27–31 October.
+              </li>
+
+              <li>
+                <strong>December 2025:</strong> School closed 1 December and 22–31 December.
+              </li>
+
+              <li>
+                <strong>January 2026:</strong> School closed 1–2 January.
+              </li>
+
+              <li>
+                <strong>February 2026:</strong> School closed 19–20 February.
+              </li>
+
+              <li>
+                <strong>March 2026:</strong> School closed 16–17 March and 30–31 March.
+              </li>
+
+              <li>
+                <strong>April 2026:</strong> School closed 1–10 April.
+              </li>
+
+              <li>
+                <strong>May 2026:</strong> School closed 1 May, 4 May and 29 May.
+              </li>
+
+              <li>
+                <strong>June 2026:</strong> School closed 1 June. Last day of school is 30 June.
+              </li>
+
+              <li>
+                <strong>July 2026:</strong> School closed for the month of July.
+              </li>
+            </ul>
+          </div>
+
+          <div class="policy-warning">
+            This webpage is a clean version of the calendar. The official school calendar
+            image should be checked before final publication.
+          </div>
+
+          <div class="contact-policy-box">
+            <h3>Contact the School Office</h3>
+            <p>
+              If you need to confirm a school date, closure or return date, please contact
+              the school office.
+            </p>
+
+            <p>
+              Cara Junior School<br />
+              Banduff Road, Mayfield, Cork<br />
+              Phone: <a href="tel:0214643060">021 4643060</a><br />
+              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+            </p>
+          </div>
+
+          <div class="policy-actions">
+            <a class="btn btn-primary" href="calendar.html">Back to Calendar</a>
+            <a class="btn btn-secondary" href="parents.html">Parents Page</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to school information</h2>
+        </div>
+
+        <div class="policy-next-links">
+          <a class="policy-next-link" href="calendar.html">
+            <span>Calendar</span>
+            <small>Return to the main calendar page</small>
+          </a>
+
+          <a class="policy-next-link" href="parents.html">
+            <span>Parents</span>
+            <small>Useful information for parents and guardians</small>
+          </a>
+
+          <a class="policy-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+        <h2>Cara Junior School</h2>
+        <p>Support and grow together</p>
+        <p>Banduff Road, Mayfield, Cork</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:0214643060">021 4643060</a></p>
+        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
