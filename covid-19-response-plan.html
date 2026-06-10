@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>COVID-19 Response Plan | Cara Junior School</title>
+
+  <meta
+    name="description"
+    content="COVID-19 Response Plan for Cara Junior School, outlining safety procedures, hygiene, cleaning, ventilation, suspected case procedures and school response measures."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .policy-page {
+      background: #f7fbff;
+    }
+
+    .policy-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .policy-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .policy-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .policy-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policy-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: #fff9db;
+      color: #e67700;
+      font-size: 2rem;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policy-hero-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .policy-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .policy-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-content-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-content-card h2,
+    .policy-content-card h3 {
+      color: var(--navy);
+    }
+
+    .policy-content-card h3 {
+      margin-top: 28px;
+    }
+
+    .policy-content-card p {
+      color: #344054;
+    }
+
+    .policy-note {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-left: 6px solid #20c997;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-warning {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-left: 6px solid #fab005;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-danger {
+      background:
+        radial-gradient(circle at top left, rgba(240, 62, 62, 0.10), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff5f5);
+      border-left: 6px solid #f03e3e;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .policy-list li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .policy-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f5b;
+      font-weight: 950;
+    }
+
+    .warning-list li::before {
+      content: "•";
+      color: #e67700;
+      font-size: 1.6rem;
+      line-height: 0.7;
+    }
+
+    .covid-grid {
+      display: grid;
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .covid-card {
+      background: #f8fbff;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      border-top: 6px solid #20c997;
+    }
+
+    .covid-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .covid-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .covid-card:nth-child(4) {
+      border-top-color: #7048e8;
+    }
+
+    .covid-card:nth-child(5) {
+      border-top-color: #f06595;
+    }
+
+    .covid-card:nth-child(6) {
+      border-top-color: #ff922b;
+    }
+
+    .covid-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .covid-card p {
+      margin-bottom: 0;
+      color: #344054;
+    }
+
+    .numbered-policy-list {
+      counter-reset: policy-step;
+      list-style: none;
+      margin: 18px 0 0;
+      padding: 0;
+    }
+
+    .numbered-policy-list li {
+      counter-increment: policy-step;
+      position: relative;
+      padding-left: 48px;
+      margin: 16px 0;
+      color: #344054;
+    }
+
+    .numbered-policy-list li::before {
+      content: counter(policy-step);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #e67700;
+      color: #ffffff;
+      font-weight: 950;
+    }
+
+    .contact-policy-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+    }
+
+    .contact-policy-box h3 {
+      margin-top: 0;
+    }
+
+    .policy-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .policy-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .policy-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .policy-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .policy-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .policy-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .covid-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .policy-content-card {
+        padding: 24px;
+      }
+
+      .policy-actions {
+        flex-direction: column;
+      }
+
+      .policy-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="policy-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>Cara Junior School, Banduff Road, Mayfield, Cork</p>
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html">Classes</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="policies.html" class="active">Policies</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero page-hero policy-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">School Policy</p>
+          <h1>COVID-19 Response Plan</h1>
+
+          <p class="hero-text">
+            A school response plan for COVID-19 covering safe return to school,
+            hygiene, cleaning, PPE, class bubbles, suspected cases and staff responsibilities.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#policy-content">Read Plan</a>
+            <a class="btn btn-secondary" href="policies.html">Back to Policies</a>
+          </div>
+        </div>
+
+        <div class="policy-hero-card">
+          <div class="policy-icon">🦠</div>
+          <h2>Response Plan</h2>
+          <p>
+            This page presents the key points from the school COVID-19 Response Plan
+            in a clear website format.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="policy-summary">
+          <div class="policy-summary-card">
+            <strong>Return to School</strong>
+            <p>Planning, induction training, risk assessment and safe reopening procedures.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Safety Measures</strong>
+            <p>Hygiene, cleaning, PPE, ventilation and physical distancing where possible.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Response Procedures</strong>
+            <p>Steps for suspected cases, absence management and staff wellbeing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="policy-content">
+      <div class="container legal-layout">
+        <article class="policy-content-card">
+          <p class="section-label">COVID-19 Response Plan</p>
+          <h2>Cara Junior School Response Plan COVID-19</h2>
+
+          <p>
+            The Board of Management of Cara Junior School prepared this response plan to support
+            the safe resumption of school-based teaching and learning and the safe return of staff
+            to the school building.
+          </p>
+
+          <p>
+            The plan outlines procedures and controls in line with public health advice and
+            Department of Education guidance. It covers planning, staff responsibilities, school
+            operations, cleaning, PPE, suspected cases and related appendices.
+          </p>
+
+          <div class="policy-warning">
+            This plan was prepared during the COVID-19 period and should be treated as a live
+            historical response document. Any current health guidance should always be checked
+            against up-to-date public health and Department of Education advice.
+          </div>
+
+          <h3>Preparation for Return to School</h3>
+
+          <p>
+            Before reopening for the 2020/2021 school year, the school planned a number of
+            actions to support a safe return.
+          </p>
+
+          <ul class="policy-list">
+            <li>Monitor public health advice and communicate relevant information to stakeholders.</li>
+            <li>Carry out induction training for staff.</li>
+            <li>Inform staff members of their roles and responsibilities.</li>
+            <li>Put a comprehensive risk assessment in place.</li>
+            <li>Adapt buildings in response to COVID-19 recommended practices.</li>
+          </ul>
+
+          <h3>Procedures During Reopening</h3>
+
+          <ul class="policy-list">
+            <li>Hygiene and cleaning procedures to be COVID-19 compliant.</li>
+            <li>PPE to be used in line with Department guidance.</li>
+            <li>Staff to assist pupils in understanding physical distancing to the best of their individual ability.</li>
+            <li>Procedures to be in place for suspected COVID-19 cases.</li>
+            <li>Behaviour management and absence management procedures to be considered.</li>
+          </ul>
+
+          <h3>Staff Responsibilities</h3>
+
+          <p>
+            Staff have a statutory obligation to take reasonable care for their own health and
+            safety and that of colleagues and others. The plan states that cooperation from all
+            staff is essential to reduce the risk of spread.
+          </p>
+
+          <ul class="policy-list">
+            <li>Adhere to the school COVID-19 Response Plan and control measures.</li>
+            <li>Complete the Return to Work form before returning to school.</li>
+            <li>Complete COVID-19 induction training and any required training.</li>
+            <li>Follow good hygiene and respiratory etiquette practices.</li>
+            <li>Maintain physical distancing where possible.</li>
+            <li>Monitor personal wellbeing and symptoms.</li>
+            <li>Self-isolate at home and contact a GP if symptoms develop.</li>
+            <li>Cooperate with contact tracing and public health advice.</li>
+          </ul>
+
+          <h3>Lead Worker Representative</h3>
+
+          <p>
+            The plan includes the appointment of a Lead Worker Representative. The LWR works
+            with school management to assist in implementing and monitoring measures to prevent
+            the spread of COVID-19 in the workplace.
+          </p>
+
+          <p>
+            The document notes that Laura Ankettell was elected as Lead Worker Representative
+            before the school reopening week beginning 24 August 2020.
+          </p>
+
+          <h3>Risk Assessment and Buildings</h3>
+
+          <p>
+            The school response plan required the health and safety risk assessment to be updated.
+            It also included building checks after low usage and occupation during lockdown.
+          </p>
+
+          <ul class="policy-list">
+            <li>Review and update health and safety risk assessment.</li>
+            <li>Check water systems and outlets where low usage may have occurred.</li>
+            <li>Check school equipment and mechanical ventilation for deterioration or damage.</li>
+            <li>Resume essential services including bin collections.</li>
+            <li>Display signage throughout the school.</li>
+          </ul>
+
+          <h3>Physical Distancing</h3>
+
+          <p>
+            The plan recognises that it is not always possible for staff to maintain physical
+            distance from pupils, and that it would not always be appropriate where this could
+            negatively affect a pupil’s care, reassurance or first-aid needs.
+          </p>
+
+          <p>
+            Where possible, staff should maintain distance and take measures to avoid close
+            face-to-face contact. Desks, classroom layouts and floor markings were to be adapted
+            where appropriate.
+          </p>
+
+          <h3>Visitor Protocol</h3>
+
+          <p>
+            Access to the school building was to follow agreed school procedures, with sign-in
+            and sign-out logs maintained for visitors.
+          </p>
+
+          <ul class="policy-list">
+            <li>Maintain detailed logs of those entering the school.</li>
+            <li>Use hand sanitiser at entry and exit points.</li>
+            <li>Visitors during the school day by prior arrangement only.</li>
+            <li>Maintain physical distancing between staff and visitors where possible.</li>
+            <li>Use reception procedures and Perspex screening.</li>
+          </ul>
+
+          <h3>Ventilation</h3>
+
+          <p>
+            The plan includes a ventilation section based on Department guidance. It notes that
+            windows should be open as fully as possible when classrooms are not in use and
+            partially open when classrooms are in use, while balancing ventilation with comfort.
+          </p>
+
+          <h3>Class Bubbles and Class Interaction</h3>
+
+          <p>
+            Classes were to be paired with partner classes, with interactions such as break times,
+            yard times, supervision and staff absence management restricted to class bubbles and
+            staff pairings as far as possible.
+          </p>
+
+          <div class="covid-grid">
+            <div class="covid-card">
+              <h3>Class Bubbles</h3>
+              <p>
+                Classes were grouped to reduce contact between large groups of pupils and staff.
+              </p>
+            </div>
+
+            <div class="covid-card">
+              <h3>Arrival and Dismissal</h3>
+              <p>
+                Drop-off, collection and school transport procedures were organised to reduce congestion.
+              </p>
+            </div>
+
+            <div class="covid-card">
+              <h3>Staffrooms</h3>
+              <p>
+                Staffrooms and break arrangements were allocated to reduce mixing between bubbles.
+              </p>
+            </div>
+
+            <div class="covid-card">
+              <h3>Yard Times</h3>
+              <p>
+                Break times and yard times were scheduled to prevent unnecessary contact between pods.
+              </p>
+            </div>
+
+            <div class="covid-card">
+              <h3>Shared Resources</h3>
+              <p>
+                Equipment, toys, tablets, books and musical instruments required additional cleaning or separation.
+              </p>
+            </div>
+
+            <div class="covid-card">
+              <h3>Behaviour Support</h3>
+              <p>
+                Behaviour escalation plans had to account for COVID-19 contact reduction and safety.
+              </p>
+            </div>
+          </div>
+
+          <h3>School Transport</h3>
+
+          <p>
+            The plan outlined procedures for buses and taxis, including staggered arrivals,
+            different entry points for class bubbles, hand sanitising on entry and exit, and
+            reducing the need for escorts to enter the school building.
+          </p>
+
+          <h3>Hygiene and Cleaning</h3>
+
+          <p>
+            The response plan includes respiratory hygiene, hand hygiene, cleaning products,
+            shared resources and PPE procedures.
+          </p>
+
+          <ul class="policy-list">
+            <li>Bins with liners for disposal of tissues and PPE.</li>
+            <li>Frequent handwashing and hand sanitising.</li>
+            <li>Posters on hand hygiene and respiratory hygiene.</li>
+            <li>Surface sanitiser and cloths available for classroom use.</li>
+            <li>Work areas and classrooms sanitised during the day.</li>
+            <li>Shared resources cleaned between use where needed.</li>
+            <li>Cleaning products stored safely out of pupil reach.</li>
+          </ul>
+
+          <h3>PPE</h3>
+
+          <p>
+            The plan states that visors and masks were provided for staff and that Department
+            and Health and Safety Authority guidance would be monitored. It notes that masks
+            can reduce communication for younger pupils and pupils with additional needs, who
+            may rely on seeing facial expressions, gestures and speech.
+          </p>
+
+          <h3>Dealing with a Suspected Case</h3>
+
+          <p>
+            The plan includes a procedure for dealing with a suspected case of COVID-19 in school.
+            A designated isolation area was identified upstairs in the medical room.
+          </p>
+
+          <ol class="numbered-policy-list">
+            <li>If the person is a pupil, parents or guardians should be contacted immediately.</li>
+            <li>The person should be isolated and accompanied to the isolation area safely.</li>
+            <li>Others should maintain distance from the symptomatic person.</li>
+            <li>A face covering or mask should be used where appropriate.</li>
+            <li>The person should go home or be collected as soon as possible.</li>
+            <li>Public transport or school transport should not be used.</li>
+            <li>If the person is too unwell to go home, call 999 or 112.</li>
+            <li>Follow-up actions and cleaning should be arranged.</li>
+          </ol>
+
+          <div class="policy-danger">
+            If a staff member or pupil has symptoms, they should not attend school. If symptoms
+            develop while in school, the suspected case procedure should be followed.
+          </div>
+
+          <h3>Cleaning After a Suspected Case</h3>
+
+          <p>
+            The plan sets out cleaning and disinfecting procedures for rooms or areas where a
+            suspected case has been present. The room should not be reused until it has been
+            thoroughly cleaned and disinfected and surfaces are dry.
+          </p>
+
+          <h3>Behaviour Management</h3>
+
+          <p>
+            The plan recognises that behaviour support continued to be important. It refers to
+            Pivotal MAPA and states that holds should only be used in emergency situations after
+            careful risk assessment.
+          </p>
+
+          <p>
+            Staff teams were asked to use pre-emptive strategies and review incidents that trigger
+            pupils, with behaviour support plans developed, reviewed and revised where necessary.
+          </p>
+
+          <h3>Absence Management</h3>
+
+          <p>
+            COVID-19-related absence was to be managed in line with Department of Education
+            procedures. Staff wellbeing supports were also referenced through the Employee
+            Assistance Service and Occupational Health supports.
+          </p>
+
+          <h3>Appendices Included</h3>
+
+          <p>
+            The response plan includes several appendices and checklists, including:
+          </p>
+
+          <ul class="policy-list">
+            <li>Pre-Return to Work Questionnaire.</li>
+            <li>Procedure for Returning to Work.</li>
+            <li>Contact Tracing Log.</li>
+            <li>Addendum to GDPR Policy regarding COVID-19 protocols.</li>
+            <li>Class Management Plan.</li>
+            <li>Lead Worker Representative guidance.</li>
+            <li>Cleaning procedure for toys and shared equipment.</li>
+            <li>Procedure for dealing with a suspected case.</li>
+            <li>School management checklist.</li>
+            <li>Cleaning checklist.</li>
+          </ul>
+
+          <h3>Ratification and Review</h3>
+
+          <p>
+            The plan was ratified by the Board of Management in August 2020. The document shows
+            Chairperson Seamus Feehan and the date <strong>18 August 2020</strong>. It also notes
+            that the policy must be regarded as a live document and is subject to frequent
+            modification in line with public health and Department requirements.
+          </p>
+
+          <div class="contact-policy-box">
+            <h3>Contact the School Office</h3>
+            <p>
+              If you need guidance in relation to school procedures, please contact the school office.
+            </p>
+
+            <p>
+              Cara Junior School<br />
+              Banduff Road, Mayfield, Cork<br />
+              Phone: <a href="tel:0214643060">021 4643060</a><br />
+              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+            </p>
+          </div>
+
+          <div class="policy-actions">
+            <a class="btn btn-primary" href="policies.html">Back to Policy Library</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to school information</h2>
+        </div>
+
+        <div class="policy-next-links">
+          <a class="policy-next-link" href="policies.html">
+            <span>Policy Library</span>
+            <small>Return to all school policies</small>
+          </a>
+
+          <a class="policy-next-link" href="parents.html">
+            <span>Parents</span>
+            <small>Useful information for parents and guardians</small>
+          </a>
+
+          <a class="policy-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+        <h2>Cara Junior School</h2>
+        <p>Support and grow together</p>
+        <p>Banduff Road, Mayfield, Cork</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:0214643060">021 4643060</a></p>
+        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
