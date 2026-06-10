@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Attendance Policy | Cara Junior School</title>
+
+  <meta
+    name="description"
+    content="Attendance Policy for Cara Junior School, explaining school attendance, punctuality, absence procedures and reporting requirements."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .policy-page {
+      background: #f7fbff;
+    }
+
+    .policy-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .policy-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .policy-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .policy-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policy-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: #eef7ff;
+      color: #1971c2;
+      font-size: 2rem;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policy-hero-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .policy-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .policy-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-content-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-content-card h2,
+    .policy-content-card h3 {
+      color: var(--navy);
+    }
+
+    .policy-content-card h3 {
+      margin-top: 28px;
+    }
+
+    .policy-content-card p {
+      color: #344054;
+    }
+
+    .policy-note {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-left: 6px solid #20c997;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-warning {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-left: 6px solid #fab005;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .policy-list li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .policy-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f5b;
+      font-weight: 950;
+    }
+
+    .numbered-policy-list {
+      counter-reset: policy-step;
+      list-style: none;
+      margin: 18px 0 0;
+      padding: 0;
+    }
+
+    .numbered-policy-list li {
+      counter-increment: policy-step;
+      position: relative;
+      padding-left: 48px;
+      margin: 16px 0;
+      color: #344054;
+    }
+
+    .numbered-policy-list li::before {
+      content: counter(policy-step);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #1971c2;
+      color: #ffffff;
+      font-weight: 950;
+    }
+
+    .policy-detail-grid {
+      display: grid;
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .policy-detail-box {
+      background: #f8fbff;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policy-detail-box h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .policy-detail-box p {
+      margin-bottom: 0;
+    }
+
+    .contact-policy-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+    }
+
+    .contact-policy-box h3 {
+      margin-top: 0;
+    }
+
+    .policy-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .policy-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .policy-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .policy-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .policy-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .policy-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .policy-detail-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .policy-content-card {
+        padding: 24px;
+      }
+
+      .policy-actions {
+        flex-direction: column;
+      }
+
+      .policy-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="policy-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>Cara Junior School, Banduff Road, Mayfield, Cork</p>
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html">Classes</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="policies.html" class="active">Policies</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero page-hero policy-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">School Policy</p>
+          <h1>Attendance Policy</h1>
+
+          <p class="hero-text">
+            Cara Junior School recognises the importance of school attendance and aims to
+            provide a supportive, positive and welcoming school environment for every pupil.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#policy-content">Read Policy</a>
+            <a class="btn btn-secondary" href="policies.html">Back to Policies</a>
+          </div>
+        </div>
+
+        <div class="policy-hero-card">
+          <div class="policy-icon">📘</div>
+          <h2>Statement of Strategy</h2>
+          <p>
+            This policy explains school attendance expectations, absence procedures,
+            punctuality, monitoring and reporting responsibilities.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="policy-summary">
+          <div class="policy-summary-card">
+            <strong>School Day</strong>
+            <p>School begins at 9.10 a.m. and pupils are expected to be on time.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Absences</strong>
+            <p>Parents and guardians should explain absences by email or note.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Reporting</strong>
+            <p>The school must report 20 days or more of absence to the relevant authorities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="policy-content">
+      <div class="container legal-layout">
+        <article class="policy-content-card">
+          <p class="section-label">Attendance Policy</p>
+          <h2>Cara Junior School Attendance Policy</h2>
+
+          <p>
+            Cara Junior School recognises the importance of school attendance. The school
+            endeavours to provide a supportive, positive and welcoming environment where the
+            needs of each individual pupil are met.
+          </p>
+
+          <p>
+            This policy supports pupils and their right to education. The legislation governing
+            school attendance in Ireland is the Education (Welfare) Act 2000.
+          </p>
+
+          <div class="policy-note">
+            Parents and guardians are required to ensure that their children attend school
+            on days when the school is open and classes are in progress.
+          </div>
+
+          <div class="policy-detail-grid">
+            <div class="policy-detail-box">
+              <h3>School Details</h3>
+              <p>
+                <strong>School:</strong> Cara Junior School<br />
+                <strong>Address:</strong> Banduff Road, Mayfield, Cork, T23 TA12<br />
+                <strong>Roll Number:</strong> 20354A
+              </p>
+            </div>
+
+            <div class="policy-detail-box">
+              <h3>Policy Approval</h3>
+              <p>
+                <strong>Approved by Board of Management:</strong><br />
+                21 November 2024
+              </p>
+            </div>
+          </div>
+
+          <h3>Attendance Expectations</h3>
+
+          <p>
+            Parents and guardians should notify the school of the reason for a child’s absence,
+            as required under the Education Act.
+          </p>
+
+          <p>
+            Schools are obliged to keep a register of attendance and maintain attendance records
+            for all pupils. The school must inform the relevant authorities if a child is absent
+            for 20 days or more in the school year.
+          </p>
+
+          <p>
+            Pupils under the age of 6 who are absent cannot be reported to TUSLA. Only absences
+            from their 6th birthday are included in reporting.
+          </p>
+
+          <div class="policy-warning">
+            A child who is unwell with a contagious infection should be kept at home until well
+            enough to return to school in full health, in the interest of other pupils.
+          </div>
+
+          <h3>Holidays During Term Time</h3>
+
+          <p>
+            Parents are discouraged from taking holidays during school term time. Only absences
+            relating to activities organised by the school, or in which the school is involved,
+            can be authorised by the Principal.
+          </p>
+
+          <p>
+            The school cannot give permission for holiday absences during term time.
+          </p>
+
+          <h3>How Attendance Is Monitored</h3>
+
+          <p>
+            Attendance is monitored daily and must be taken before 10.00 a.m. using the Aladdin
+            electronic e-book system. Daily, end-of-term and yearly attendance is recorded.
+          </p>
+
+          <ul class="policy-list">
+            <li>Attendance is recorded daily through Aladdin.</li>
+            <li>December and June attendance records are maintained.</li>
+            <li>The roll book can be amended to reflect arrivals or mistakes if necessary.</li>
+            <li>The Deputy Principal has responsibility for attendance records.</li>
+          </ul>
+
+          <h3>Punctuality</h3>
+
+          <ul class="policy-list">
+            <li>School begins at 9.10 a.m.</li>
+            <li>All pupils and staff are expected to be on time.</li>
+            <li>The Principal may contact parents or guardians where pupils are consistently late.</li>
+            <li>The Principal is obliged under the Education Welfare Act to report children who are consistently late to TUSLA Child and Family Agency.</li>
+          </ul>
+
+          <h3>Absence Procedures</h3>
+
+          <ul class="policy-list">
+            <li>All new absences must be explained by email or by a note from parents or guardians.</li>
+            <li>All communication regarding absences will be kept on file in school for one year by the class teacher.</li>
+            <li>If no correspondence is received, the pupil’s absence will be recorded as unexplained.</li>
+          </ul>
+
+          <h3>School Refusal</h3>
+
+          <p>
+            If a pupil refuses to attend school, the school may consult with the Principal,
+            parents or guardians, and Child Disability Network Team therapist supports.
+          </p>
+
+          <ul class="policy-list">
+            <li>A problem-solving framework or attendance plan may be drawn up.</li>
+            <li>TUSLA or the Education Welfare Officer may be informed if necessary.</li>
+            <li>Other supports such as NCSE, SESS or NEPS may be consulted where applicable.</li>
+          </ul>
+
+          <h3>Strategies in the Event of Non-Attendance</h3>
+
+          <p>
+            Any concerns about a pupil’s attendance are brought to the attention of parents
+            or guardians. Individual teachers are responsible for this after consultation with
+            the Principal, with help from the Deputy Principal where needed.
+          </p>
+
+          <ol class="numbered-policy-list">
+            <li>
+              The Principal, having been alerted by the class teacher, will inform parents by
+              letter when the pupil reaches 15 days of absence during an academic year.
+            </li>
+
+            <li>
+              Section 21 of the Education (Welfare) Act obliges the school to inform the
+              Education Welfare Officer if a child is absent for more than 20 days in any
+              school year, or has not attended school regularly.
+            </li>
+
+            <li>
+              A meeting with parents or guardians will be requested after 25 days of absence
+              during an academic year.
+            </li>
+
+            <li>
+              In some cases, the Education Welfare Officer may serve a school attendance notice
+              where a parent is deemed to be failing or neglecting to cause the child to attend school.
+            </li>
+          </ol>
+
+          <h3>School Transfer</h3>
+
+          <p>
+            Under Section 20 of the Education (Welfare) Act 2000, the Principal of a child’s
+            current school must notify the Principal of the pupil’s previous school that the
+            child is now registered in another school through the Primary Online Database.
+          </p>
+
+          <h3>School Roles in Relation to Attendance</h3>
+
+          <div class="policy-detail-grid">
+            <div class="policy-detail-box">
+              <h3>Class Teachers</h3>
+              <ul class="policy-list">
+                <li>Record daily attendance using Aladdin.</li>
+                <li>Record daily absence using Aladdin.</li>
+                <li>Retain absence notes for one academic year.</li>
+                <li>Inform the Principal of frequent absences.</li>
+              </ul>
+            </div>
+
+            <div class="policy-detail-box">
+              <h3>Deputy Principal</h3>
+              <ul class="policy-list">
+                <li>Monitors Aladdin weekly to ensure attendance is up to date.</li>
+                <li>Maintains hard copies of attendance records for two years.</li>
+                <li>Submits attendance to N.E.W.B. and TUSLA in December and June.</li>
+                <li>Supports roll maintenance if a teacher is absent.</li>
+              </ul>
+            </div>
+
+            <div class="policy-detail-box">
+              <h3>Principal</h3>
+              <ul class="policy-list">
+                <li>Contacts parents or guardians if absences are persistent and unexplained.</li>
+                <li>Ensures the school roll is maintained in line with regulations.</li>
+                <li>Contacts parents or guardians where pupils are consistently late.</li>
+                <li>Requests meetings after 25 days of persistent or unexplained absence.</li>
+              </ul>
+            </div>
+
+            <div class="policy-detail-box">
+              <h3>Parents and Guardians</h3>
+              <ul class="policy-list">
+                <li>Provide written information on absences, usually by email.</li>
+                <li>Support good attendance and punctuality.</li>
+                <li>Work with the school where attendance concerns arise.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3>Partnership Arrangements</h3>
+
+          <p>
+            Parents, staff members and pupils are encouraged to uphold the school’s policy
+            on attendance. On occasion, it may be necessary to report a pupil’s absence to
+            TUSLA as part of a care review or CDNT meeting.
+          </p>
+
+          <h3>Monitoring and Review</h3>
+
+          <p>
+            This statement is monitored periodically by the Deputy Principal. It forms part of
+            induction protocols for permanent, temporary and substitute teachers. Compliance is
+            monitored and teachers are updated at staff meetings where required.
+          </p>
+
+          <p>
+            The policy will be reviewed on a whole-school basis as required by law or when the
+            need arises.
+          </p>
+
+          <div class="contact-policy-box">
+            <h3>Contact the School Office</h3>
+            <p>
+              If you need guidance on attendance, absence notes or school procedures, please
+              contact the school office.
+            </p>
+
+            <p>
+              Cara Junior School<br />
+              Banduff Road, Mayfield, Cork<br />
+              Phone: <a href="tel:0214643060">021 4643060</a><br />
+              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+            </p>
+          </div>
+
+          <div class="policy-actions">
+            <a class="btn btn-primary" href="policies.html">Back to Policy Library</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to school information</h2>
+        </div>
+
+        <div class="policy-next-links">
+          <a class="policy-next-link" href="policies.html">
+            <span>Policy Library</span>
+            <small>Return to all school policies</small>
+          </a>
+
+          <a class="policy-next-link" href="parents.html">
+            <span>Parents</span>
+            <small>Useful information for parents and guardians</small>
+          </a>
+
+          <a class="policy-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+        <h2>Cara Junior School</h2>
+        <p>Support and grow together</p>
+        <p>Banduff Road, Mayfield, Cork</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:0214643060">021 4643060</a></p>
+        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
