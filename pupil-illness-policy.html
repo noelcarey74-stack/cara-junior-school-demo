@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Pupil Illness Policy | Cara Junior School</title>
+
+  <meta
+    name="description"
+    content="Pupil Illness Policy for Cara Junior School, including guidance on when pupils should remain at home due to illness."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .policy-page {
+      background: #f7fbff;
+    }
+
+    .policy-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .policy-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .policy-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .policy-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policy-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: #fff5f5;
+      color: #c92a2a;
+      font-size: 2rem;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policy-hero-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .policy-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .policy-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-content-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-content-card h2,
+    .policy-content-card h3 {
+      color: var(--navy);
+    }
+
+    .policy-content-card h3 {
+      margin-top: 28px;
+    }
+
+    .policy-content-card p {
+      color: #344054;
+    }
+
+    .policy-note {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-left: 6px solid #20c997;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-warning {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-left: 6px solid #fab005;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .policy-list li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .policy-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f5b;
+      font-weight: 950;
+    }
+
+    .illness-grid {
+      display: grid;
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .illness-card {
+      background: #f8fbff;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      border-top: 6px solid #20c997;
+    }
+
+    .illness-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .illness-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .illness-card:nth-child(4) {
+      border-top-color: #f03e3e;
+    }
+
+    .illness-card:nth-child(5) {
+      border-top-color: #7048e8;
+    }
+
+    .illness-card:nth-child(6) {
+      border-top-color: #ff922b;
+    }
+
+    .illness-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .illness-card p {
+      margin-bottom: 0;
+      color: #344054;
+    }
+
+    .symptom-table-wrap {
+      overflow-x: auto;
+      margin-top: 20px;
+      border-radius: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 10px 26px rgba(18, 51, 95, 0.06);
+    }
+
+    .symptom-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+      background: #ffffff;
+    }
+
+    .symptom-table th {
+      background: #12335f;
+      color: #ffffff;
+      text-align: left;
+      padding: 14px;
+      font-size: 0.95rem;
+    }
+
+    .symptom-table td {
+      padding: 14px;
+      border-bottom: 1px solid rgba(18, 51, 95, 0.10);
+      color: #344054;
+      vertical-align: top;
+    }
+
+    .symptom-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .symptom-table strong {
+      color: var(--navy);
+    }
+
+    .contact-policy-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+    }
+
+    .contact-policy-box h3 {
+      margin-top: 0;
+    }
+
+    .policy-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .policy-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .policy-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .policy-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .policy-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .policy-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .illness-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .policy-content-card {
+        padding: 24px;
+      }
+
+      .policy-actions {
+        flex-direction: column;
+      }
+
+      .policy-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="policy-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>Cara Junior School, Banduff Road, Mayfield, Cork</p>
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html">Classes</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="policies.html" class="active">Policies</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero page-hero policy-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">School Policy</p>
+          <h1>Pupil Illness Policy</h1>
+
+          <p class="hero-text">
+            Guidance for parents and guardians on when a child should remain at home,
+            when the school may contact home, and how illness is managed safely.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#policy-content">Read Policy</a>
+            <a class="btn btn-secondary" href="policies.html">Back to Policies</a>
+          </div>
+        </div>
+
+        <div class="policy-hero-card">
+          <div class="policy-icon">🩺</div>
+          <h2>Health and Safety</h2>
+          <p>
+            This page presents the pupil illness guidance in a clearer website format
+            for parents, guardians and staff.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="policy-summary">
+          <div class="policy-summary-card">
+            <strong>Keep Home if Unwell</strong>
+            <p>If a child cannot take part in normal school activities, they should stay at home.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Infection Control</strong>
+            <p>Some illnesses require absence to prevent infection spreading to pupils or staff.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Collection</strong>
+            <p>If a child becomes unwell during the day, parents or guardians may be contacted.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="policy-content">
+      <div class="container legal-layout">
+        <article class="policy-content-card">
+          <p class="section-label">Pupil Illness Policy</p>
+          <h2>Policy on Pupil Illness in Cara Junior School</h2>
+
+          <p>
+            Deciding when to keep a child from school can be difficult, especially where
+            a child may not be able to verbalise that they are unwell or in pain.
+          </p>
+
+          <p>
+            Some illnesses require absence from school to prevent infection spreading to
+            other children or staff and to allow the child time to rest, recover and be treated.
+          </p>
+
+          <div class="policy-note">
+            If your child is not well enough to participate in normal school activities,
+            the safest decision may be to keep them at home under observation.
+          </div>
+
+          <h3>Why this policy is important</h3>
+
+          <p>
+            Cara Junior School pupils may require a high level of support, supervision and
+            routine during the school day. The school does not have nursing cover as part of
+            the multi-disciplinary support team.
+          </p>
+
+          <p>
+            If a sick child is in class for the day, it may disrupt the educational activities
+            of the class and may require significant staff attention. It may also increase the
+            risk of infection spreading to other pupils and staff.
+          </p>
+
+          <h3>If a child becomes unwell during the day</h3>
+
+          <p>
+            If a child appears unwell during the school day, the school will contact parents
+            or guardians where there are concerns about the child’s health or capacity to
+            remain in school.
+          </p>
+
+          <p>
+            The school has a medical room where a child may rest while awaiting collection,
+            but this is only an interim measure.
+          </p>
+
+          <h3>When to keep a child at home</h3>
+
+          <div class="illness-grid">
+            <div class="illness-card">
+              <h3>Too Unwell for Activities</h3>
+              <p>
+                Keep the child at home if they are extremely tired, unusually irritable,
+                crying without known cause, or not able to participate in normal activities.
+              </p>
+            </div>
+
+            <div class="illness-card">
+              <h3>Additional Care Needed</h3>
+              <p>
+                Keep the child at home if they need more care than staff can provide safely
+                without affecting the health and safety of other pupils.
+              </p>
+            </div>
+
+            <div class="illness-card">
+              <h3>Restrictions Needed</h3>
+              <p>
+                If a child needs restrictions such as no PE, no yard or reduced activity,
+                they may need to remain at home.
+              </p>
+            </div>
+
+            <div class="illness-card">
+              <h3>Infectious Illness</h3>
+              <p>
+                If a condition can be passed to other pupils or staff, the child should remain
+                at home until the risk of infection has passed.
+              </p>
+            </div>
+
+            <div class="illness-card">
+              <h3>Poor Sleep or Exhaustion</h3>
+              <p>
+                If a child has not slept well or has been awake since early morning, consider
+                keeping them at home under observation.
+              </p>
+            </div>
+
+            <div class="illness-card">
+              <h3>After Laxatives</h3>
+              <p>
+                If laxatives have been administered, the policy advises keeping the child at home
+                for 24 hours.
+              </p>
+            </div>
+          </div>
+
+          <h3>Common illness and symptom guidance</h3>
+
+          <p>
+            The table below summarises the main guidance from the policy in a website-friendly way.
+            Parents and guardians should seek medical advice where necessary.
+          </p>
+
+          <div class="symptom-table-wrap">
+            <table class="symptom-table">
+              <thead>
+                <tr>
+                  <th>Illness or Symptom</th>
+                  <th>Guidance</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><strong>Antibiotics</strong></td>
+                  <td>Remain at home until the child has no fever for 24 hours, indicating antibiotics are taking effect.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Asthma</strong></td>
+                  <td>Absence is needed if the pupil has had an asthma attack and requires recovery time. The school should have a written health plan and medication authorisation.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Body rash with fever</strong></td>
+                  <td>Seek medical advice. The pupil may return when a medical practitioner determines the illness is not communicable.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Chicken pox or shingles</strong></td>
+                  <td>Remain at home until blisters have dried and crusted, usually 5–6 days after onset of rash.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Conjunctivitis</strong></td>
+                  <td>May return 24 hours after treatment begins. If a GP decides not to treat, a note is required.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Severe cough, runny nose or mucus</strong></td>
+                  <td>Medical attention may be necessary, especially with uncontrolled coughing, wheezing or difficulty breathing.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Diarrhoea</strong></td>
+                  <td>Pupils and staff with gastrointestinal illness should stay at home until symptom-free for at least 48 hours.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Vomiting</strong></td>
+                  <td>Parents will be contacted to collect the child immediately. Stay at home until symptom-free for at least 48 hours.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Fever with behaviour changes or illness</strong></td>
+                  <td>Exclusion is necessary where fever is accompanied by behaviour changes or signs of illness.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Headlice</strong></td>
+                  <td>Children may return after treatment and removal of live lice and nits from hair.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Impetigo / Staph / MRSA</strong></td>
+                  <td>May return 24 hours after treatment starts. Wound must be covered with dressing taped on all four sides.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Ringworm</strong></td>
+                  <td>May return after treatment begins. Area should be covered in school for the first 48 hours.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Scabies</strong></td>
+                  <td>May return after treatment is started with a note from GP.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Strep throat</strong></td>
+                  <td>May return after 24 hours of antibiotic treatment and no fever for 24 hours.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Vaccine preventable diseases</strong></td>
+                  <td>Remain at home until judged not infectious by a medical practitioner.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Slapped cheek syndrome</strong></td>
+                  <td>Medical advice may be needed. Keep child at home until rash has presented and they are no longer contagious.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="policy-warning">
+            This webpage is a clean summary of the policy. Parents and guardians should contact
+            the school or seek medical advice if unsure whether a child should attend school.
+          </div>
+
+          <h3>Policy review</h3>
+
+          <p>
+            The uploaded policy notes that it was ratified by the Board of Management on
+            21 March 2013, reviewed during the 2016–2017 school year, and ratified again
+            on 6 March 2018. The next scheduled review noted in the document was the
+            2022–2023 school year.
+          </p>
+
+          <div class="contact-policy-box">
+            <h3>Contact the School Office</h3>
+            <p>
+              If your child is unwell or you need guidance about attendance due to illness,
+              please contact the school office.
+            </p>
+
+            <p>
+              Cara Junior School<br />
+              Banduff Road, Mayfield, Cork<br />
+              Phone: <a href="tel:0214643060">021 4643060</a><br />
+              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+            </p>
+          </div>
+
+          <div class="policy-actions">
+            <a class="btn btn-primary" href="policies.html">Back to Policy Library</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to school information</h2>
+        </div>
+
+        <div class="policy-next-links">
+          <a class="policy-next-link" href="policies.html">
+            <span>Policy Library</span>
+            <small>Return to all school policies</small>
+          </a>
+
+          <a class="policy-next-link" href="parents.html">
+            <span>Parents</span>
+            <small>Useful information for parents and guardians</small>
+          </a>
+
+          <a class="policy-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+        <h2>Cara Junior School</h2>
+        <p>Support and grow together</p>
+        <p>Banduff Road, Mayfield, Cork</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:0214643060">021 4643060</a></p>
+        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
