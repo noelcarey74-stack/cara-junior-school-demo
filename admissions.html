@@ -12,9 +12,293 @@
   />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .admissions-page {
+      background: #f7fbff;
+    }
+
+    .admissions-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .admissions-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .admissions-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .admissions-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 14px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .admissions-hero-card img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 22px;
+    }
+
+    .admissions-help-box {
+      padding: 18px 10px 6px;
+    }
+
+    .admissions-help-box h2 {
+      margin: 0 0 8px;
+      color: var(--navy);
+    }
+
+    .admissions-help-box p {
+      margin: 0 0 10px;
+      color: #475467;
+    }
+
+    .admissions-help-box a {
+      color: #087f5b;
+      font-weight: 850;
+    }
+
+    .admissions-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .admissions-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .admissions-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .admissions-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .admissions-doc-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .admissions-doc-card {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 16px;
+      align-items: start;
+      background: #ffffff;
+      border-radius: 26px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 16px 38px rgba(18, 51, 95, 0.10);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .admissions-doc-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 52px rgba(18, 51, 95, 0.16);
+    }
+
+    .admissions-doc-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: #eef7ff;
+      color: var(--navy);
+      font-weight: 950;
+      font-size: 0.9rem;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .admissions-doc-card h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+    }
+
+    .admissions-doc-card p {
+      margin: 0 0 12px;
+      color: #475467;
+    }
+
+    .admissions-doc-card span {
+      display: inline-flex;
+      background: #f1fff9;
+      color: #087f5b;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.82rem;
+      font-weight: 950;
+    }
+
+    .apply-card {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #ffffff, #f1fff9);
+      border-radius: 28px;
+      padding: 30px;
+      border: 1px solid rgba(32, 201, 151, 0.18);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .apply-card p {
+      color: #344054;
+    }
+
+    .apply-steps {
+      margin: 20px 0 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: step;
+    }
+
+    .apply-steps li {
+      counter-increment: step;
+      position: relative;
+      padding-left: 46px;
+      margin: 16px 0;
+      color: #344054;
+    }
+
+    .apply-steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #20c997;
+      color: #ffffff;
+      font-weight: 950;
+    }
+
+    .admissions-info-card {
+      text-align: center;
+      border-top: 6px solid #20c997;
+    }
+
+    .admissions-info-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .admissions-info-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .official-note-card {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 28px;
+      padding: 30px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .official-note-card p {
+      color: #344054;
+    }
+
+    .admissions-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .admissions-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .admissions-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .admissions-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .admissions-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .admissions-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .admissions-doc-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .admissions-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .admissions-hero-card img {
+        height: 240px;
+      }
+
+      .admissions-doc-card {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body class="admissions-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
@@ -61,11 +345,12 @@
   </header>
 
   <main id="main-content">
-    <section class="hero page-hero">
+    <section class="hero page-hero admissions-hero">
       <div class="container hero-grid">
         <div class="hero-content">
           <p class="eyebrow">Admissions</p>
           <h1>Admissions information for parents and guardians.</h1>
+
           <p class="hero-text">
             This page provides a clear place for admissions documents, application forms
             and important enrolment information for Cara Junior School.
@@ -77,23 +362,41 @@
           </div>
         </div>
 
-        <div class="hero-card">
+        <div class="admissions-hero-card">
           <img
-            class="hero-photo"
             src="school-front.jpg"
             alt="Front of Cara Junior School building in Mayfield, Cork"
           />
 
-          <div class="hero-info">
+          <div class="admissions-help-box">
             <h2>Need Help?</h2>
             <p>
               Please contact the school office if you have a question about admissions,
               enrolment or application forms.
             </p>
             <p>
-              <strong>Office:</strong> 021 4643060<br />
-              <strong>Email:</strong> office@carajs.ie
+              <strong>Office:</strong> <a href="tel:0214643060">021 4643060</a><br />
+              <strong>Email:</strong> <a href="mailto:office@carajs.ie">office@carajs.ie</a>
             </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="admissions-summary">
+          <div class="admissions-summary-card">
+            <strong>Admissions Policy</strong>
+            <p>Find the school’s admissions and enrolment information.</p>
+          </div>
+
+          <div class="admissions-summary-card">
+            <strong>Annual Notice</strong>
+            <p>View the admissions notice for the relevant school year.</p>
+          </div>
+
+          <div class="admissions-summary-card">
+            <strong>Application Form</strong>
+            <p>Download or view the school application form when added.</p>
           </div>
         </div>
       </div>
@@ -110,9 +413,9 @@
           </p>
         </div>
 
-        <div class="policy-grid">
-          <a class="document-card" href="#" aria-label="Admissions and enrolment policy PDF">
-            <div class="document-icon">PDF</div>
+        <div class="admissions-doc-grid">
+          <a class="admissions-doc-card" href="#" aria-label="Admissions and enrolment policy PDF">
+            <div class="admissions-doc-icon">PDF</div>
             <div>
               <h3>Admissions & Enrolment Policy</h3>
               <p>View the school’s admissions and enrolment policy.</p>
@@ -120,8 +423,8 @@
             </div>
           </a>
 
-          <a class="document-card" href="#" aria-label="Admissions notice 2026 2027 PDF">
-            <div class="document-icon">PDF</div>
+          <a class="admissions-doc-card" href="#" aria-label="Admissions notice 2026 2027 PDF">
+            <div class="admissions-doc-icon">PDF</div>
             <div>
               <h3>Admissions Notice 2026–2027</h3>
               <p>View the admissions notice for the relevant school year.</p>
@@ -129,8 +432,8 @@
             </div>
           </a>
 
-          <a class="document-card" href="#" aria-label="Application form PDF">
-            <div class="document-icon">PDF</div>
+          <a class="admissions-doc-card" href="#" aria-label="Application form PDF">
+            <div class="admissions-doc-icon">PDF</div>
             <div>
               <h3>Application Form</h3>
               <p>Download the school application form.</p>
@@ -148,21 +451,17 @@
           <h2>A simple place for the application process</h2>
         </div>
 
-        <div class="content-card">
+        <div class="apply-card">
           <p>
             Parents and guardians should review the admissions information and contact
             the school office if they need guidance on the application process.
           </p>
 
-          <p>
-            The admissions policy, annual admissions notice and application form will be
-            available from this page.
-          </p>
-
-          <p>
-            If additional documents are required, the school office will advise parents
-            and guardians directly.
-          </p>
+          <ol class="apply-steps">
+            <li>Read the admissions policy and annual admissions notice.</li>
+            <li>Download or request the school application form.</li>
+            <li>Contact the school office if you need help with the process.</li>
+          </ol>
         </div>
       </div>
     </section>
@@ -179,17 +478,17 @@
         </div>
 
         <div class="info-grid">
-          <article class="info-card">
+          <article class="info-card admissions-info-card">
             <h3>Phone</h3>
             <p><a href="tel:0214643060">021 4643060</a></p>
           </article>
 
-          <article class="info-card">
+          <article class="info-card admissions-info-card">
             <h3>Email</h3>
             <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
           </article>
 
-          <article class="info-card">
+          <article class="info-card admissions-info-card">
             <h3>Address</h3>
             <p>Cara Junior School, Banduff Road, Mayfield, Cork.</p>
           </article>
@@ -204,7 +503,7 @@
           <h2>Official information</h2>
         </div>
 
-        <div class="content-card">
+        <div class="official-note-card">
           <p>
             Admissions information may change from year to year. Parents and guardians
             should always refer to the latest official documents published by the school.
@@ -213,6 +512,32 @@
           <p>
             This page is designed to make those documents easier to find and use.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to school information</h2>
+        </div>
+
+        <div class="admissions-next-links">
+          <a class="admissions-next-link" href="parents.html">
+            <span>Parents</span>
+            <small>Useful information for parents and guardians</small>
+          </a>
+
+          <a class="admissions-next-link" href="policies.html">
+            <span>Policies</span>
+            <small>School policy library and PDF downloads</small>
+          </a>
+
+          <a class="admissions-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
+          </a>
         </div>
       </div>
     </section>
@@ -237,6 +562,7 @@
         <h3>Quick Links</h3>
         <ul>
           <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
           <li><a href="policies.html">Policies</a></li>
           <li><a href="calendar.html">Calendar</a></li>
           <li><a href="contact.html">Contact</a></li>
