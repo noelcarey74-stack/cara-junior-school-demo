@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Intimate Care Policy | Cara Junior School</title>
+
+  <meta
+    name="description"
+    content="Intimate Care Policy for Cara Junior School, outlining respectful, safe and dignified support for pupils requiring intimate physical care."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .policy-page {
+      background: #f7fbff;
+    }
+
+    .policy-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .policy-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .policy-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .policy-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policy-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: #f1fff9;
+      color: #087f5b;
+      font-size: 2rem;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policy-hero-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .policy-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .policy-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-content-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-content-card h2,
+    .policy-content-card h3 {
+      color: var(--navy);
+    }
+
+    .policy-content-card h3 {
+      margin-top: 28px;
+    }
+
+    .policy-content-card p {
+      color: #344054;
+    }
+
+    .policy-note {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-left: 6px solid #20c997;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-warning {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-left: 6px solid #fab005;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .policy-list li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .policy-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f5b;
+      font-weight: 950;
+    }
+
+    .care-grid {
+      display: grid;
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .care-card {
+      background: #f8fbff;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      border-top: 6px solid #20c997;
+    }
+
+    .care-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .care-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .care-card:nth-child(4) {
+      border-top-color: #7048e8;
+    }
+
+    .care-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .care-card p {
+      margin-bottom: 0;
+      color: #344054;
+    }
+
+    .contact-policy-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+    }
+
+    .contact-policy-box h3 {
+      margin-top: 0;
+    }
+
+    .policy-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .policy-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .policy-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .policy-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .policy-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .policy-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .care-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .policy-content-card {
+        padding: 24px;
+      }
+
+      .policy-actions {
+        flex-direction: column;
+      }
+
+      .policy-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="policy-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>Cara Junior School, Banduff Road, Mayfield, Cork</p>
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html">Classes</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="policies.html" class="active">Policies</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero page-hero policy-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">School Policy</p>
+          <h1>Intimate Care Policy</h1>
+
+          <p class="hero-text">
+            A respectful and careful policy for supporting pupils who require intimate
+            physical care while protecting dignity, welfare, privacy and safety.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#policy-content">Read Policy</a>
+            <a class="btn btn-secondary" href="policies.html">Back to Policies</a>
+          </div>
+        </div>
+
+        <div class="policy-hero-card">
+          <div class="policy-icon">🤲</div>
+          <h2>Dignity and Welfare</h2>
+          <p>
+            This policy supports best practice in intimate care while protecting pupils,
+            staff and the wider school community.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="policy-summary">
+          <div class="policy-summary-card">
+            <strong>Dignity</strong>
+            <p>Pupils and staff should have their dignity and welfare respected.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Safety</strong>
+            <p>Best practice and infection-control procedures should be followed.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Communication</strong>
+            <p>Parents are consulted and informed where appropriate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="policy-content">
+      <div class="container legal-layout">
+        <article class="policy-content-card">
+          <p class="section-label">Intimate Care</p>
+          <h2>Policy and Procedure in Relation to Intimate Physical Care of Pupils</h2>
+
+          <p>
+            This Intimate Care Policy was developed by the staff of Cara Junior School
+            to ensure each pupil can access appropriate physical assistance in order to
+            participate fully in school life and develop independence in intimate care needs.
+          </p>
+
+          <div class="policy-note">
+            The policy aims to ensure that the dignity and welfare of pupils and staff are
+            respected, that rights are protected, and that best practice is promoted throughout
+            the school.
+          </div>
+
+          <h3>Aims of the Policy</h3>
+
+          <ul class="policy-list">
+            <li>The dignity and welfare of pupils and staff are respected and maintained.</li>
+            <li>The rights of pupils and staff are protected.</li>
+            <li>Best practice is promoted throughout the school in the area of intimate care.</li>
+            <li>Pupils are supported to develop independence where possible.</li>
+          </ul>
+
+          <h3>Definition of Intimate Care</h3>
+
+          <p>
+            Intimate care is the support provided by staff to pupils while involved in personal
+            care routines such as dressing, undressing, toileting and showering.
+          </p>
+
+          <p>
+            Where necessary, such support may involve varying levels of supervision and assistance,
+            and may involve physical contact with a pupil when they are partially or fully undressed.
+          </p>
+
+          <h3>Guidelines Covered by the Policy</h3>
+
+          <div class="care-grid">
+            <div class="care-card">
+              <h3>Staff Guidelines</h3>
+              <p>
+                How staff provide intimate care assistance respectfully, safely and discreetly.
+              </p>
+            </div>
+
+            <div class="care-card">
+              <h3>Pupil Welfare</h3>
+              <p>
+                How pupils are treated with dignity, privacy and sensitivity during intimate care.
+              </p>
+            </div>
+
+            <div class="care-card">
+              <h3>Reporting</h3>
+              <p>
+                When and how concerns or incidents during intimate care are reported.
+              </p>
+            </div>
+
+            <div class="care-card">
+              <h3>Parents</h3>
+              <p>
+                Communication with parents regarding the intimate care needs of their child.
+              </p>
+            </div>
+          </div>
+
+          <h3>Staff Guidelines</h3>
+
+          <ul class="policy-list">
+            <li>
+              Intimate care assistance should take place in designated areas, such as toilet
+              areas attached to classrooms or appropriate toilet facilities during outings.
+            </li>
+
+            <li>
+              Staff should ensure supplies of toiletries, towels and fresh clothes are available
+              so the pupil is not left unattended while items are located.
+            </li>
+
+            <li>
+              Staff should be discreet in the use of intimate care items and should not make them
+              visible outside designated areas.
+            </li>
+
+            <li>
+              Staff should follow best practice for infection control and use protective clothing
+              and gloves where appropriate.
+            </li>
+
+            <li>
+              Where possible, male staff will attend to male pupils and female staff will attend
+              to female pupils requiring assistance.
+            </li>
+
+            <li>
+              Staffing levels for intimate care assistance should be organised in line with the
+              individual needs of pupils in each classroom.
+            </li>
+
+            <li>
+              Individual goals for personal care and toileting skills may be developed as part
+              of the student support planning process.
+            </li>
+
+            <li>
+              If a pupil requires physical assistance outside school facilities, they should be
+              accompanied to toilet areas by appropriate staff.
+            </li>
+          </ul>
+
+          <h3>Privacy and Dignity</h3>
+
+          <p>
+            To protect a child’s privacy and dignity, one staff member may deliver intimate care
+            assistance in toilet areas, while another staff member remains available nearby if
+            additional assistance is required.
+          </p>
+
+          <p>
+            Staff should preserve the dignity of the pupil at all times and should communicate
+            clearly, calmly and appropriately during care routines.
+          </p>
+
+          <h3>Pupil Welfare</h3>
+
+          <ul class="policy-list">
+            <li>Every pupil should be treated with dignity and have their privacy respected.</li>
+            <li>Discreet observation may be used to check if a pupil needs changing.</li>
+            <li>Physical contact during intimate care should be minimal and supportive.</li>
+            <li>Before assisting, staff should explain what is happening in a straightforward and reassuring way, where appropriate.</li>
+            <li>Pupils should be involved as much as possible in their own intimate care programme.</li>
+            <li>Staff should be sensitive to pupils’ verbal and non-verbal reactions.</li>
+          </ul>
+
+          <div class="policy-warning">
+            Intimate care must not be undertaken if a pupil is presenting with challenging
+            behaviour that may increase risk to the pupil or staff. Individual behaviour
+            strategies should be followed in these situations.
+          </div>
+
+          <h3>Outings and Off-Site Activities</h3>
+
+          <p>
+            Staff should check in advance whether suitable facilities exist for intimate care
+            procedures while pupils are on outings.
+          </p>
+
+          <h3>Reporting</h3>
+
+          <p>
+            If during intimate care assistance a concern arises, staff members involved should
+            report the incident immediately to the class teacher or Principal. Parents will be
+            contacted and an incident form completed where appropriate.
+          </p>
+
+          <p>
+            Reporting may be required where:
+          </p>
+
+          <ul class="policy-list">
+            <li>The pupil is hurt in any way.</li>
+            <li>The pupil appears to staff to be sore, tender or bruised.</li>
+            <li>The pupil appears to misinterpret what is being said or done.</li>
+            <li>The pupil has an emotional reaction without an apparent cause.</li>
+          </ul>
+
+          <p>
+            Children First, National Guidance for the Protection and Welfare of Children should
+            be followed at all times.
+          </p>
+
+          <h3>Parents</h3>
+
+          <p>
+            Parental concerns and suggestions regarding the intimate care needs of their child
+            will be addressed on enrolment, at the beginning of each school year, at student
+            support meetings and/or parent-teacher meetings as appropriate.
+          </p>
+
+          <p>
+            Regular communication with parents may be made by email, telephone or face to face
+            where required.
+          </p>
+
+          <h3>Implementation and Review</h3>
+
+          <p>
+            All parents will receive a copy of this policy on enrolment. New staff will receive
+            a copy as part of their induction into the school.
+          </p>
+
+          <p>
+            This policy was ratified by the Board of Management on <strong>03/02/2012</strong>.
+            It was reviewed and ratified on <strong>17/02/2022</strong>. The next review is noted
+            for the school year <strong>2025/26</strong>.
+          </p>
+
+          <div class="contact-policy-box">
+            <h3>Contact the School Office</h3>
+            <p>
+              If you need guidance in relation to intimate care procedures, please contact
+              the school office.
+            </p>
+
+            <p>
+              Cara Junior School<br />
+              Banduff Road, Mayfield, Cork<br />
+              Phone: <a href="tel:0214643060">021 4643060</a><br />
+              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+            </p>
+          </div>
+
+          <div class="policy-actions">
+            <a class="btn btn-primary" href="policies.html">Back to Policy Library</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to school information</h2>
+        </div>
+
+        <div class="policy-next-links">
+          <a class="policy-next-link" href="policies.html">
+            <span>Policy Library</span>
+            <small>Return to all school policies</small>
+          </a>
+
+          <a class="policy-next-link" href="parents.html">
+            <span>Parents</span>
+            <small>Useful information for parents and guardians</small>
+          </a>
+
+          <a class="policy-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+        <h2>Cara Junior School</h2>
+        <p>Support and grow together</p>
+        <p>Banduff Road, Mayfield, Cork</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:0214643060">021 4643060</a></p>
+        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
