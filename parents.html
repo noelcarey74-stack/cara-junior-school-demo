@@ -12,9 +12,265 @@
   />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .parents-page {
+      background: #f7fbff;
+    }
+
+    .parents-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .parents-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .parents-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .parents-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 14px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .parents-hero-card img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 22px;
+    }
+
+    .parents-school-day {
+      padding: 18px 10px 6px;
+    }
+
+    .parents-school-day h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .parents-school-day ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #344054;
+    }
+
+    .parents-school-day li {
+      margin: 7px 0;
+    }
+
+    .parents-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .parents-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .parents-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .parents-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .parents-info-card {
+      border-top: 6px solid #20c997;
+    }
+
+    .parents-info-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .parents-info-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .parents-info-card:nth-child(4) {
+      border-top-color: #7048e8;
+    }
+
+    .parents-info-card:nth-child(5) {
+      border-top-color: #f06595;
+    }
+
+    .parents-info-card:nth-child(6) {
+      border-top-color: #ff922b;
+    }
+
+    .home-school-card {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #ffffff, #f1fff9);
+      border-radius: 28px;
+      padding: 30px;
+      border: 1px solid rgba(32, 201, 151, 0.18);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .home-school-card p {
+      color: #344054;
+    }
+
+    .home-school-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .home-school-list li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .home-school-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f5b;
+      font-weight: 950;
+    }
+
+    .parents-link-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .parents-link-card {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .parents-link-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .parents-link-card span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .parents-link-card small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    .privacy-care-card {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 28px;
+      padding: 30px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .privacy-care-card p {
+      color: #344054;
+    }
+
+    .privacy-care-card ul {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .privacy-care-card li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .privacy-care-card li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #e67700;
+      font-weight: 950;
+    }
+
+    .parents-contact-card {
+      text-align: center;
+      border-top: 6px solid #20c997;
+    }
+
+    .parents-contact-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .parents-contact-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    @media (min-width: 720px) {
+      .parents-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .parents-link-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .parents-hero-card img {
+        height: 240px;
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body class="parents-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
@@ -61,11 +317,12 @@
   </header>
 
   <main id="main-content">
-    <section class="hero page-hero">
+    <section class="hero page-hero parents-hero">
       <div class="container hero-grid">
         <div class="hero-content">
           <p class="eyebrow">Parents and Guardians</p>
           <h1>Useful school information in one clear place.</h1>
+
           <p class="hero-text">
             This page brings together key information for parents and guardians,
             including the school day, communication, meetings, policies and office contact details.
@@ -77,20 +334,38 @@
           </div>
         </div>
 
-        <div class="hero-card">
+        <div class="parents-hero-card">
           <img
-            class="hero-photo"
             src="school-front.jpg"
             alt="Front of Cara Junior School building in Mayfield, Cork"
           />
 
-          <div class="hero-info">
+          <div class="parents-school-day">
             <h2>School Day</h2>
             <ul>
               <li><strong>Start:</strong> 9.10 a.m.</li>
               <li><strong>Finish:</strong> 2.50 p.m.</li>
               <li><strong>Office:</strong> 021 4643060</li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="parents-summary">
+          <div class="parents-summary-card">
+            <strong>School Day</strong>
+            <p>Start, finish and office contact information.</p>
+          </div>
+
+          <div class="parents-summary-card">
+            <strong>Useful Links</strong>
+            <p>Admissions, policies, calendar and contact details.</p>
+          </div>
+
+          <div class="parents-summary-card">
+            <strong>Home & School</strong>
+            <p>Clear communication between families and school.</p>
           </div>
         </div>
       </div>
@@ -108,42 +383,42 @@
         </div>
 
         <div class="info-grid">
-          <article class="info-card">
+          <article class="info-card parents-info-card">
             <h3>School Day</h3>
             <p>
               The school day begins at 9.10 a.m. and finishes at 2.50 p.m.
             </p>
           </article>
 
-          <article class="info-card">
+          <article class="info-card parents-info-card">
             <h3>Contacting the Office</h3>
             <p>
               Parents and guardians can contact the school office by phone or email.
             </p>
           </article>
 
-          <article class="info-card">
+          <article class="info-card parents-info-card">
             <h3>Meetings</h3>
             <p>
               Meetings with teachers, the principal or school staff can be arranged through the office.
             </p>
           </article>
 
-          <article class="info-card">
+          <article class="info-card parents-info-card">
             <h3>Admissions</h3>
             <p>
               Admissions information, notices and application forms are available on the admissions page.
             </p>
           </article>
 
-          <article class="info-card">
+          <article class="info-card parents-info-card">
             <h3>Policies</h3>
             <p>
               School policies are available in the policy library and can be viewed or downloaded.
             </p>
           </article>
 
-          <article class="info-card">
+          <article class="info-card parents-info-card">
             <h3>Calendar</h3>
             <p>
               Key school dates, closures and calendar information can be found on the calendar page.
@@ -160,7 +435,7 @@
           <h2>Working together</h2>
         </div>
 
-        <div class="content-card">
+        <div class="home-school-card">
           <p>
             Strong communication between home and school is important. Parents and guardians
             are encouraged to contact the school office if they need information, support or guidance.
@@ -171,10 +446,11 @@
             The school office can direct queries to the most appropriate person.
           </p>
 
-          <p>
-            For urgent or important matters, parents and guardians should contact the school
-            directly by phone.
-          </p>
+          <ul class="home-school-list">
+            <li>Contact the office for general school questions.</li>
+            <li>Meetings can be arranged through the school office.</li>
+            <li>For urgent or important matters, please phone the school directly.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -186,23 +462,23 @@
           <h2>Common parent pages</h2>
         </div>
 
-        <div class="quick-links">
-          <a href="admissions.html">
+        <div class="parents-link-grid">
+          <a class="parents-link-card" href="admissions.html">
             <span>Admissions</span>
             <small>Application forms and admissions notices</small>
           </a>
 
-          <a href="calendar.html">
+          <a class="parents-link-card" href="calendar.html">
             <span>Calendar</span>
             <small>School year dates and closures</small>
           </a>
 
-          <a href="policies.html">
+          <a class="parents-link-card" href="policies.html">
             <span>Policies</span>
             <small>Policy library and PDF downloads</small>
           </a>
 
-          <a href="contact.html">
+          <a class="parents-link-card" href="contact.html">
             <span>Contact</span>
             <small>Phone, email and address</small>
           </a>
@@ -217,20 +493,16 @@
           <h2>School communications</h2>
         </div>
 
-        <div class="content-card">
+        <div class="privacy-care-card">
           <p>
             The school website should only publish approved information, photographs and documents.
           </p>
 
-          <p>
-            For pupil privacy, photographs and class updates should be checked and approved
-            by the school before they are added to the website.
-          </p>
-
-          <p>
-            Children’s names should not be published with photographs unless this has been
-            specifically approved by the school.
-          </p>
+          <ul>
+            <li>Class updates and photographs should be checked and approved by the school.</li>
+            <li>Pupil names should not be published with photographs unless approved by the school.</li>
+            <li>Official documents should be kept up to date in the school policy library.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -243,17 +515,17 @@
         </div>
 
         <div class="info-grid">
-          <article class="info-card">
+          <article class="info-card parents-contact-card">
             <h3>Phone</h3>
             <p><a href="tel:0214643060">021 4643060</a></p>
           </article>
 
-          <article class="info-card">
+          <article class="info-card parents-contact-card">
             <h3>Email</h3>
             <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
           </article>
 
-          <article class="info-card">
+          <article class="info-card parents-contact-card">
             <h3>Address</h3>
             <p>Cara Junior School, Banduff Road, Mayfield, Cork.</p>
           </article>
@@ -281,6 +553,7 @@
         <h3>Quick Links</h3>
         <ul>
           <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
           <li><a href="policies.html">Policies</a></li>
           <li><a href="calendar.html">Calendar</a></li>
           <li><a href="contact.html">Contact</a></li>
