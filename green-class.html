@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Green Class page for Cara Junior School, with approved class news, activities, photos and school memories."
+    content="Green Class page for Cara Junior School, with approved class news, activities, photos and school updates."
   />
 
   <link rel="stylesheet" href="styles.css" />
@@ -151,16 +151,102 @@
       border: 2px solid rgba(8, 127, 35, 0.35);
     }
 
-    .green-memory-section {
+    /* Class team */
+    .green-team-section {
       background: #ffffff;
     }
 
-    .green-memory-grid {
+    .green-team-grid {
+      display: grid;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .green-team-card {
+      background: #f3fbf4;
+      border-radius: 26px;
+      padding: 24px;
+      border: 1px solid rgba(47, 158, 68, 0.14);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .green-team-card h3 {
+      margin: 0 0 14px;
+      color: #0b6b2a;
+      font-size: 1.4rem;
+    }
+
+    .team-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .team-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(47, 158, 68, 0.14);
+      color: #344054;
+    }
+
+    .team-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .team-list strong {
+      color: var(--navy);
+    }
+
+    .team-photo-card {
+      background: #ffffff;
+      border-radius: 26px;
+      padding: 14px;
+      border: 1px solid rgba(47, 158, 68, 0.14);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .team-photo-placeholder {
+      min-height: 240px;
+      border-radius: 20px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.75), transparent 32%),
+        linear-gradient(135deg, #d8f5dc, #b2f2bb);
+      color: #087f23;
+      font-weight: 950;
+    }
+
+    .team-photo-card p {
+      margin: 14px 4px 4px;
+      color: #475467;
+      font-size: 0.95rem;
+    }
+
+    .green-note-box {
+      margin-top: 18px;
+      background: #ffffff;
+      border-left: 5px solid #2f9e44;
+      border-radius: 16px;
+      padding: 16px;
+      color: #344054;
+    }
+
+    /* Updates */
+    .green-updates-section {
+      background: #ffffff;
+    }
+
+    .green-update-grid {
       display: grid;
       gap: 18px;
     }
 
-    .green-memory-card {
+    .green-update-card {
       display: block;
       background: #ffffff;
       border-radius: 24px;
@@ -172,13 +258,13 @@
       transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
     }
 
-    .green-memory-card:hover {
+    .green-update-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 22px 46px rgba(18, 51, 95, 0.14);
       border-color: rgba(47, 158, 68, 0.34);
     }
 
-    .green-memory-image {
+    .green-update-image {
       min-height: 180px;
       display: grid;
       place-items: center;
@@ -191,17 +277,17 @@
       padding: 18px;
     }
 
-    .green-memory-image span {
+    .green-update-image span {
       background: rgba(255, 255, 255, 0.88);
       padding: 8px 14px;
       border-radius: 999px;
     }
 
-    .green-memory-content {
+    .green-update-content {
       padding: 20px;
     }
 
-    .green-memory-date {
+    .green-update-date {
       display: inline-flex;
       background: #d8f5dc;
       color: #087f23;
@@ -212,23 +298,24 @@
       margin-bottom: 10px;
     }
 
-    .green-memory-content h3 {
+    .green-update-content h3 {
       margin: 0 0 8px;
       color: var(--navy);
     }
 
-    .green-memory-content p {
+    .green-update-content p {
       margin: 0;
       color: #475467;
     }
 
-    .green-memory-content small {
+    .green-update-content small {
       display: inline-flex;
       margin-top: 14px;
       color: #087f23;
       font-weight: 950;
     }
 
+    /* Detail sections */
     .activity-detail-section {
       background:
         radial-gradient(circle at top left, rgba(47, 158, 68, 0.10), transparent 30%),
@@ -320,7 +407,7 @@
       color: #344054;
     }
 
-    .back-to-memories {
+    .back-to-updates {
       display: inline-flex;
       margin-top: 22px;
       color: #087f23;
@@ -384,7 +471,11 @@
         grid-template-columns: 0.95fr 1.05fr;
       }
 
-      .green-memory-grid {
+      .green-team-grid {
+        grid-template-columns: 1.05fr 0.95fr;
+      }
+
+      .green-update-grid {
         grid-template-columns: repeat(3, 1fr);
       }
 
@@ -469,11 +560,11 @@
 
           <p>
             A warm space for Green Class news, approved photographs, classroom activities
-            and school memories throughout the year.
+            and school updates throughout the year.
           </p>
 
           <div class="hero-actions">
-            <a class="btn green-button-primary" href="#green-memories">Class Memories</a>
+            <a class="btn green-button-primary" href="#green-updates">Class Updates</a>
             <a class="btn green-button-secondary" href="classes.html">Back to All Classes</a>
           </div>
         </div>
@@ -483,65 +574,113 @@
             <img src="green-classroom.jpg" alt="Green Class classroom" />
           </a>
           <div>
-            <h2>Green Class Updates</h2>
+            <h2>Green Class</h2>
             <p>
-              Approved Green Class updates can be added here as the school year progresses.
-              Click the classroom photo to open it larger.
+              Click the classroom image to open it larger. Real approved classroom photos
+              can be added here later.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section green-memory-section" id="green-memories">
+    <section class="section green-team-section">
+      <div class="container green-team-grid">
+        <div>
+          <p class="section-label">Class Team</p>
+          <h2>Green Class team</h2>
+
+          <div class="green-team-card">
+            <h3>2025 / 2026</h3>
+
+            <ul class="team-list">
+              <li>
+                <strong>Class Teacher</strong>
+                <span>To be confirmed</span>
+              </li>
+              <li>
+                <strong>SNA Team</strong>
+                <span>To be confirmed</span>
+              </li>
+              <li>
+                <strong>Class Colour</strong>
+                <span>Green</span>
+              </li>
+              <li>
+                <strong>Room</strong>
+                <span>Green Class</span>
+              </li>
+            </ul>
+
+            <div class="green-note-box">
+              Teacher and SNA names can be added once approved by the school.
+              Staff photographs should only be used where staff are happy and the school approves.
+            </div>
+          </div>
+        </div>
+
+        <div class="team-photo-card">
+          <div class="team-photo-placeholder">
+            Class team photo<br />
+            to be added if approved
+          </div>
+          <p>
+            A staff or classroom photo can be placed here once approved. Pupil names should
+            not be attached to photographs unless the school gives clear permission.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section green-updates-section" id="green-updates">
       <div class="container">
         <div class="section-heading">
           <p class="section-label">2025 / 2026</p>
-          <h2>Green Class memories</h2>
+          <h2>Green Class updates</h2>
           <p>
-            Click a card below to open the activity section with space for photos, class news
-            and approved information.
+            Click a card below to open the activity, news or photo section further down
+            this same page.
           </p>
         </div>
 
-        <div class="green-memory-grid">
-          <a class="green-memory-card" href="#green-activity-1">
-            <div class="green-memory-image">
+        <div class="green-update-grid">
+          <a class="green-update-card" href="#green-activity-1">
+            <div class="green-update-image">
               <span>Open activity</span>
             </div>
-            <div class="green-memory-content">
-              <span class="green-memory-date">2025 / 2026</span>
-              <h3>Green Class activity</h3>
+            <div class="green-update-content">
+              <span class="green-update-date">2025 / 2026</span>
+              <h3>Class Activities</h3>
               <p>
-                Classroom activity, learning moments and approved photos can be added here.
+                Classroom activities, learning moments and approved photos can be added here.
               </p>
               <small>View activity →</small>
             </div>
           </a>
 
-          <a class="green-memory-card" href="#green-activity-2">
-            <div class="green-memory-image">
+          <a class="green-update-card" href="#green-activity-2">
+            <div class="green-update-image">
               <span>Open news</span>
             </div>
-            <div class="green-memory-content">
-              <span class="green-memory-date">2025 / 2026</span>
-              <h3>Class news update</h3>
+            <div class="green-update-content">
+              <span class="green-update-date">2025 / 2026</span>
+              <h3>Class News</h3>
               <p>
-                Green Class news, classroom learning or school memories can be shared here.
+                Green Class news, classroom learning or school updates can be shared here.
               </p>
               <small>View news →</small>
             </div>
           </a>
 
-          <a class="green-memory-card" href="#green-activity-3">
-            <div class="green-memory-image">
+          <a class="green-update-card" href="#green-activity-3">
+            <div class="green-update-image">
               <span>Open photos</span>
             </div>
-            <div class="green-memory-content">
-              <span class="green-memory-date">2025 / 2026</span>
-              <h3>Special school moment</h3>
+            <div class="green-update-content">
+              <span class="green-update-date">2025 / 2026</span>
+              <h3>Photos & Moments</h3>
               <p>
-                Approved photos and updates can be added safely without naming pupils.
+                Approved photos and special class moments can be added safely here.
               </p>
               <small>View photos →</small>
             </div>
@@ -555,8 +694,8 @@
         <article class="activity-detail-card">
           <div class="activity-detail-header">
             <div>
-              <p class="section-label">Green Class Activity</p>
-              <h2>Green Class activity</h2>
+              <p class="section-label">Class Activities</p>
+              <h2>Green Class activities</h2>
               <p>
                 This section can hold the full story of a class activity, including photos,
                 a short description and approved information from the class team.
@@ -570,7 +709,7 @@
             </div>
 
             <div class="activity-text-box">
-              <h3>Update notes</h3>
+              <h3>Activity notes</h3>
               <p>
                 Add the teacher-approved activity text here. Teacher names can be included
                 if approved by the school. Pupil names should be avoided unless the school
@@ -590,11 +729,11 @@
             <p>
               A short approved description of the Green Class activity can be written here.
               This could describe classroom learning, sensory work, art, play-based learning,
-              communication activities, seasonal work or another approved class moment.
+              communication activities, seasonal work or another approved class activity.
             </p>
           </div>
 
-          <a class="back-to-memories" href="#green-memories">Back to Green Class memories</a>
+          <a class="back-to-updates" href="#green-updates">Back to Green Class updates</a>
         </article>
       </div>
     </section>
@@ -605,7 +744,7 @@
           <div class="activity-detail-header">
             <div>
               <p class="section-label">Class News</p>
-              <h2>Green Class news update</h2>
+              <h2>Green Class news</h2>
               <p>
                 This section is for class news, small updates, school events or classroom
                 achievements that are approved for the website.
@@ -636,12 +775,12 @@
           <div class="activity-text-box">
             <h3>Class news details</h3>
             <p>
-              Green Class news, classroom learning or school memories can be shared here.
+              Green Class news, classroom learning or school updates can be shared here.
               Keep the wording simple, warm and approved by the school before publishing.
             </p>
           </div>
 
-          <a class="back-to-memories" href="#green-memories">Back to Green Class memories</a>
+          <a class="back-to-updates" href="#green-updates">Back to Green Class updates</a>
         </article>
       </div>
     </section>
@@ -651,16 +790,16 @@
         <article class="activity-detail-card">
           <div class="activity-detail-header">
             <div>
-              <p class="section-label">Photos & Memories</p>
-              <h2>Special school moment</h2>
+              <p class="section-label">Photos & Moments</p>
+              <h2>Green Class photos and moments</h2>
               <p>
-                This section can be used for special memories, approved photographs,
-                seasonal events, classroom displays or school celebrations.
+                This section can be used for approved photographs, seasonal events,
+                classroom displays or special class moments.
               </p>
 
               <div class="activity-meta">
                 <span>Green Class</span>
-                <span>Photos and memories</span>
+                <span>Photos and moments</span>
                 <span>No pupil names unless approved</span>
               </div>
             </div>
@@ -675,20 +814,20 @@
           </div>
 
           <div class="activity-gallery">
-            <div class="activity-photo-placeholder">Memory photo 1</div>
-            <div class="activity-photo-placeholder">Memory photo 2</div>
-            <div class="activity-photo-placeholder">Memory photo 3</div>
+            <div class="activity-photo-placeholder">Photo 1</div>
+            <div class="activity-photo-placeholder">Photo 2</div>
+            <div class="activity-photo-placeholder">Photo 3</div>
           </div>
 
           <div class="activity-text-box">
-            <h3>About this moment</h3>
+            <h3>About these photos</h3>
             <p>
               A short approved description of this Green Class moment can be added here.
               This keeps the page warm, personal and professional without needing extra files.
             </p>
           </div>
 
-          <a class="back-to-memories" href="#green-memories">Back to Green Class memories</a>
+          <a class="back-to-updates" href="#green-updates">Back to Green Class updates</a>
         </article>
       </div>
     </section>
@@ -699,21 +838,21 @@
           <div class="green-grow-icon">🌱</div>
 
           <div>
-            <p class="section-label">Class Updates</p>
+            <p class="section-label">Future Updates</p>
             <h2>How this page will grow</h2>
 
             <ul class="green-grow-list">
               <li>
                 When Green Class sends approved photos and text, this page can be updated
-                with a new memory card or a new activity section.
+                with a new card or a new section.
               </li>
               <li>
                 Each update should include a title, date, short description, class name
                 and confirmation that the photos are approved for the website.
               </li>
               <li>
-                Teacher names can be included if approved by the school. Pupil names should
-                not be published with photographs unless this has been specifically approved.
+                Teacher and SNA names can be included if approved by the school. Pupil names
+                should not be published with photographs unless this has been specifically approved.
               </li>
             </ul>
           </div>
