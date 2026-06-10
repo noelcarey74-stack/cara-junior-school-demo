@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /cara-office-updates-2026.html
+
+Sitemap: https://noelcarey74.github.io/cara-junior-school-demo/sitemap.xml
