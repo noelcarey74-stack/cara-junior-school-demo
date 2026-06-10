@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://noelcarey74.github.io/cara-junior-school-demo/</loc>
@@ -19,6 +18,36 @@
 
   <url>
     <loc>https://noelcarey74.github.io/cara-junior-school-demo/classes.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/admissions.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/parents.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/calendar.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/policies.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/news.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/contact.html</loc>
     <priority>0.9</priority>
   </url>
 
@@ -83,33 +112,88 @@
   </url>
 
   <url>
-    <loc>https://noelcarey74.github.io/cara-junior-school-demo/admissions.html</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://noelcarey74.github.io/cara-junior-school-demo/parents.html</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://noelcarey74.github.io/cara-junior-school-demo/calendar.html</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://noelcarey74.github.io/cara-junior-school-demo/policies.html</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://noelcarey74.github.io/cara-junior-school-demo/news.html</loc>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/parental-complaints-procedure.html</loc>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://noelcarey74.github.io/cara-junior-school-demo/contact.html</loc>
-    <priority>0.9</priority>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/attendance-policy.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/child-safeguarding-statement.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/pupil-illness-policy.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/code-of-behaviour-policy.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/school-transport-policy.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/respect-and-dignity-at-work.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/intimate-care-policy.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/data-protection-policy.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/anti-bullying-policy.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/administration-of-medicine-policy.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/covid-19-response-plan.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/admissions-enrolment-policy.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/admissions-notice-2026-2027.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/application-form.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/school-calendar-2025-2026.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://noelcarey74.github.io/cara-junior-school-demo/cara-office-updates-2026.html</loc>
+    <priority>0.6</priority>
   </url>
 
   <url>
