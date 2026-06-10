@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Administration of Medication Policy | Cara Junior School</title>
+
+  <meta
+    name="description"
+    content="Administration of Medication Policy for Cara Junior School, outlining procedures for medication, emergency care, storage and parent responsibilities."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .policy-page {
+      background: #f7fbff;
+    }
+
+    .policy-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .policy-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .policy-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .policy-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policy-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: #fff5f5;
+      color: #c92a2a;
+      font-size: 2rem;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policy-hero-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .policy-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .policy-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-content-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-content-card h2,
+    .policy-content-card h3 {
+      color: var(--navy);
+    }
+
+    .policy-content-card h3 {
+      margin-top: 28px;
+    }
+
+    .policy-content-card p {
+      color: #344054;
+    }
+
+    .policy-note {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-left: 6px solid #20c997;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-warning {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-left: 6px solid #fab005;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-danger {
+      background:
+        radial-gradient(circle at top left, rgba(240, 62, 62, 0.10), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff5f5);
+      border-left: 6px solid #f03e3e;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .policy-list li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .policy-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f5b;
+      font-weight: 950;
+    }
+
+    .medicine-grid {
+      display: grid;
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .medicine-card {
+      background: #f8fbff;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      border-top: 6px solid #20c997;
+    }
+
+    .medicine-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .medicine-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .medicine-card:nth-child(4) {
+      border-top-color: #7048e8;
+    }
+
+    .medicine-card:nth-child(5) {
+      border-top-color: #f06595;
+    }
+
+    .medicine-card:nth-child(6) {
+      border-top-color: #ff922b;
+    }
+
+    .medicine-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .medicine-card p {
+      margin-bottom: 0;
+      color: #344054;
+    }
+
+    .numbered-policy-list {
+      counter-reset: policy-step;
+      list-style: none;
+      margin: 18px 0 0;
+      padding: 0;
+    }
+
+    .numbered-policy-list li {
+      counter-increment: policy-step;
+      position: relative;
+      padding-left: 48px;
+      margin: 16px 0;
+      color: #344054;
+    }
+
+    .numbered-policy-list li::before {
+      content: counter(policy-step);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #c92a2a;
+      color: #ffffff;
+      font-weight: 950;
+    }
+
+    .contact-policy-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+    }
+
+    .contact-policy-box h3 {
+      margin-top: 0;
+    }
+
+    .policy-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .policy-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .policy-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .policy-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .policy-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .policy-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .medicine-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .policy-content-card {
+        padding: 24px;
+      }
+
+      .policy-actions {
+        flex-direction: column;
+      }
+
+      .policy-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="policy-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>Cara Junior School, Banduff Road, Mayfield, Cork</p>
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html">Classes</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="policies.html" class="active">Policies</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero page-hero policy-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">School Policy</p>
+          <h1>Administration of Medication Policy</h1>
+
+          <p class="hero-text">
+            Guidance for parents, guardians and staff on medication, emergency situations,
+            monitoring equipment, storage, transport and written authorisation.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#policy-content">Read Policy</a>
+            <a class="btn btn-secondary" href="policies.html">Back to Policies</a>
+          </div>
+        </div>
+
+        <div class="policy-hero-card">
+          <div class="policy-icon">💊</div>
+          <h2>Clear Medical Procedures</h2>
+          <p>
+            This policy explains when medication may be administered, what written
+            information is required, and what remains a parental responsibility.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="policy-summary">
+          <div class="policy-summary-card">
+            <strong>Written Permission</strong>
+            <p>Parents or guardians must request authorisation in writing.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Prescribed Medication</strong>
+            <p>Only medication prescribed by a registered medical practitioner may be administered.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Emergency Care</strong>
+            <p>In emergencies, staff will seek medical assistance and act to prevent injury.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="policy-content">
+      <div class="container legal-layout">
+        <article class="policy-content-card">
+          <p class="section-label">Medication Policy</p>
+          <h2>Administration of Medication Policy</h2>
+
+          <p>
+            The Board of Management of Cara Junior School reviewed this policy to ensure
+            clarity on the roles and responsibilities relating to the administration of
+            medication in school.
+          </p>
+
+          <p>
+            The policy recognises that some pupils may have complex medical needs or ongoing
+            medical conditions. Parents and guardians are asked to inform teachers in writing
+            about ongoing medical conditions and to comply fully with school procedures.
+          </p>
+
+          <div class="policy-note">
+            The administration of medicine to children is a parental responsibility.
+            Teachers are not obliged to administer medication or supervise pupils while
+            taking medication.
+          </div>
+
+          <h3>Responsibilities</h3>
+
+          <p>
+            While teachers are acting in loco parentis during the school day, the policy states
+            that they are not under an obligation to administer medicine or supervise children
+            taking medicine.
+          </p>
+
+          <p>
+            The Board of Management may assist families where possible, but the school cannot
+            request teachers to take on responsibilities that would mean assuming liability
+            for medical accidents. Cara Junior School is not on an HSE-supported campus and
+            does not have access to nursing support in a medical emergency.
+          </p>
+
+          <h3>Procedures the School Cannot Carry Out</h3>
+
+          <p>
+            The policy notes that certain medical procedures are unable to be carried out by
+            school personnel where they require medical training, intimate contact, or critical
+            timing and dosage.
+          </p>
+
+          <ul class="policy-list">
+            <li>Oral suctioning procedures for removal of mucus.</li>
+            <li>Urethral catheterisation for removal of urine.</li>
+            <li>Administration of nebulisers.</li>
+            <li>Administration of injections.</li>
+            <li>Administration of nutrition or medication through naso-gastric lines or pegs.</li>
+          </ul>
+
+          <h3>Emergency Situations</h3>
+
+          <p>
+            In emergency situations, school staff will do no more than is obviously necessary
+            to relieve distress or prevent further injury, and will seek medical assistance
+            and treatment for the child.
+          </p>
+
+          <p>
+            In the event of an epileptic seizure or another emergency situation requiring the
+            administration of emergency medication, an ambulance will immediately be called
+            and parents will be informed.
+          </p>
+
+          <div class="policy-danger">
+            The school will not wait to ascertain whether a pupil will recover following
+            emergency medication. Staff will follow the school procedure and parents should
+            go immediately to the hospital if contacted.
+          </div>
+
+          <h3>Use of Monitors</h3>
+
+          <p>
+            Some pupils may attend school with monitors for checking heart rate, blood sugar
+            levels or other medical needs. Given the complexity of need in classes, teachers
+            should factor checking these monitors into the daily schedule where appropriate.
+          </p>
+
+          <p>
+            It is the responsibility of parents and guardians to ensure monitors are in full
+            working order. The school does not have the technical knowledge or time to adjust
+            or change monitors that are not reading accurately.
+          </p>
+
+          <h3>Medication Guidelines</h3>
+
+          <p>
+            The administration of any oral medication in Cara Junior School can only be done
+            under strictly controlled guidelines.
+          </p>
+
+          <ol class="numbered-policy-list">
+            <li>
+              Parents or guardians should write to the Board of Management requesting that
+              staff members be authorised to administer medication.
+            </li>
+
+            <li>
+              Only medication prescribed by a registered medical practitioner will be administered.
+              Paracetamol, Calpol and similar medicines also need to be prescribed by a GP and
+              will not be administered without written guidance from a doctor.
+            </li>
+
+            <li>
+              Written requests should contain the child’s full name and address, name of the
+              medication, exact dosage and time of administration, and signature of parent or guardian.
+            </li>
+
+            <li>
+              Pupils with epilepsy must have an Epileptic Care Plan, devised in consultation
+              with the child’s medical team.
+            </li>
+
+            <li>
+              Pupils with anaphylaxis should have emergency first-aid arrangements in place.
+            </li>
+
+            <li>
+              Pupils with diabetes should have a diabetes plan in place.
+            </li>
+          </ol>
+
+          <h3>Administration by Staff</h3>
+
+          <ul class="policy-list">
+            <li>Where possible, medication times should be arranged outside school hours.</li>
+            <li>The Board of Management may authorise named staff to administer oral medication.</li>
+            <li>Staff will not administer oral medication without specific Board authorisation.</li>
+            <li>Where possible, two staff should be present during administration: one to administer and one to witness.</li>
+            <li>The Board of Management will inform the school’s insurers accordingly.</li>
+            <li>The Board may seek an indemnity from parents or guardians.</li>
+          </ul>
+
+          <h3>High Temperature</h3>
+
+          <p>
+            Parents or guardians will be requested to collect a child with a high temperature
+            as recorded on a thermometer. The policy notes that a high temperature is usually
+            100°F or 37°C.
+          </p>
+
+          <h3>Medication Records</h3>
+
+          <p>
+            The oral medication record form must be signed on each occasion and retained in
+            the school. A copy may be sent to parents weekly. Parents are notified by phone
+            if the child declines to take oral medication.
+          </p>
+
+          <div class="policy-warning">
+            If dosage changes over holiday periods, the school will be unable to administer
+            an increased dose unless appropriate written documentation is provided in advance.
+          </div>
+
+          <h3>Storage and Transportation of Medication</h3>
+
+          <ul class="policy-list">
+            <li>Medication must not be given to pupils to bring to school.</li>
+            <li>Medication must be handed to the pupil’s bus escort, classroom staff or school staff.</li>
+            <li>Medication should be sent in a child-proof container, clearly pharmacy-labelled with the child’s name and instructions.</li>
+            <li>Large amounts of tablets or liquids will not be stored in school.</li>
+            <li>The school will only accept a week’s supply at a time.</li>
+            <li>Any medicine left over on a Friday will be sent home.</li>
+          </ul>
+
+          <h3>Emergency Medication and Special Medication</h3>
+
+          <p>
+            Emergency medication for medical conditions may be carried by staff in waist bags
+            when accompanying children around the school, to avoid delay where administration
+            is required.
+          </p>
+
+          <div class="medicine-grid">
+            <div class="medicine-card">
+              <h3>Epipens</h3>
+              <p>
+                Epipens are stored in sealed containers in a designated staff room area.
+                The pupil’s photo and name should be clearly displayed.
+              </p>
+            </div>
+
+            <div class="medicine-card">
+              <h3>Epilepsy Plan</h3>
+              <p>
+                Pupils with epilepsy must have an Epileptic Care Plan devised with their medical team.
+              </p>
+            </div>
+
+            <div class="medicine-card">
+              <h3>Diabetes Plan</h3>
+              <p>
+                Pupils with diabetes should have an agreed diabetes plan in place.
+              </p>
+            </div>
+
+            <div class="medicine-card">
+              <h3>Medication Dates</h3>
+              <p>
+                Teachers should regularly check medication dates and inform parents or guardians
+                if expiry dates are approaching.
+              </p>
+            </div>
+
+            <div class="medicine-card">
+              <h3>Supervising Staff</h3>
+              <p>
+                Children with medical conditions should be highlighted to supervising staff
+                at break and lunch times.
+              </p>
+            </div>
+
+            <div class="medicine-card">
+              <h3>School Trips</h3>
+              <p>
+                During school outings, at least one designated staff member should be present
+                where medication may be required.
+              </p>
+            </div>
+          </div>
+
+          <h3>Parent / Guardian Authorisation Form</h3>
+
+          <p>
+            The policy includes an Appendix A form where parents or guardians request the
+            Board of Management to authorise staff to administer medication. The form includes
+            indemnity wording, confirmation that current prescribed medication and instructions
+            are attached, and signature spaces for parents or guardians, class teacher and Principal.
+          </p>
+
+          <h3>Policy Review</h3>
+
+          <p>
+            The policy was discussed and ratified by the Board of Management of Cara Junior
+            School on <strong>11 October 2016</strong>. The document notes the next review in
+            the school year <strong>2024–2025</strong>.
+          </p>
+
+          <div class="contact-policy-box">
+            <h3>Contact the School Office</h3>
+            <p>
+              If you need guidance in relation to medication, emergency care plans or school
+              procedures, please contact the school office.
+            </p>
+
+            <p>
+              Cara Junior School<br />
+              Banduff Road, Mayfield, Cork<br />
+              Phone: <a href="tel:0214643060">021 4643060</a><br />
+              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+            </p>
+          </div>
+
+          <div class="policy-actions">
+            <a class="btn btn-primary" href="policies.html">Back to Policy Library</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to school information</h2>
+        </div>
+
+        <div class="policy-next-links">
+          <a class="policy-next-link" href="policies.html">
+            <span>Policy Library</span>
+            <small>Return to all school policies</small>
+          </a>
+
+          <a class="policy-next-link" href="parents.html">
+            <span>Parents</span>
+            <small>Useful information for parents and guardians</small>
+          </a>
+
+          <a class="policy-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+        <h2>Cara Junior School</h2>
+        <p>Support and grow together</p>
+        <p>Banduff Road, Mayfield, Cork</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:0214643060">021 4643060</a></p>
+        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
