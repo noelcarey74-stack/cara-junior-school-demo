@@ -12,9 +12,230 @@
   />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .about-page {
+      background: #f7fbff;
+    }
+
+    .about-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .about-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(47, 158, 68, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(112, 72, 232, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(240, 101, 149, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .about-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 14px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .about-hero-card img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 22px;
+    }
+
+    .about-motto-card {
+      margin-top: 14px;
+      padding: 20px 10px 8px;
+    }
+
+    .about-motto-card h2 {
+      margin: 0 0 8px;
+      color: var(--navy);
+    }
+
+    .about-motto-card p {
+      margin: 0;
+      color: #344054;
+      font-size: 1.05rem;
+    }
+
+    .about-highlight-strip {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .about-highlight-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .about-highlight-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .about-highlight-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .about-care-card {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 28%),
+        linear-gradient(135deg, #ffffff, #f1fff9);
+      border-radius: 28px;
+      padding: 28px;
+      border: 1px solid rgba(32, 201, 151, 0.18);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .about-care-card p {
+      color: #344054;
+    }
+
+    .approach-card {
+      border-top: 6px solid #20c997;
+    }
+
+    .approach-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .approach-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .principal-section {
+      background:
+        radial-gradient(circle at top right, rgba(112, 72, 232, 0.12), transparent 28%),
+        linear-gradient(135deg, #ffffff, #f8f5ff);
+    }
+
+    .principal-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 30px;
+      border: 1px solid rgba(112, 72, 232, 0.16);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .principal-card p {
+      color: #344054;
+    }
+
+    .principal-signoff {
+      display: inline-flex;
+      margin-top: 12px;
+      background: #f3ecff;
+      color: #5f3dc4;
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-weight: 950;
+    }
+
+    .vision-card {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 28%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 28px;
+      padding: 30px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .about-info-card {
+      text-align: center;
+      border-top: 6px solid #20c997;
+    }
+
+    .about-info-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .about-info-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .about-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .about-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .about-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .about-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .about-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .about-highlight-strip {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .about-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .about-hero-card img {
+        height: 240px;
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body class="about-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
@@ -61,29 +282,51 @@
   </header>
 
   <main id="main-content">
-    <section class="hero page-hero">
+    <section class="hero page-hero about-hero">
       <div class="container hero-grid">
         <div class="hero-content">
           <p class="eyebrow">About Cara Junior School</p>
           <h1>Supporting every child to grow, learn and belong.</h1>
+
           <p class="hero-text">
             Cara Junior School is a welcoming, safe and inclusive school community
             where each child is supported as an individual.
           </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="classes.html">View Classes</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+          </div>
         </div>
 
-        <div class="hero-card">
+        <div class="about-hero-card">
           <img
-            class="hero-photo"
             src="school-front.jpg"
             alt="Front of Cara Junior School building in Mayfield, Cork"
           />
 
-          <div class="hero-info">
+          <div class="about-motto-card">
             <h2>Our Motto</h2>
-            <p>
-              <strong>Support and grow together</strong>
-            </p>
+            <p><strong>Support and grow together</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="about-highlight-strip">
+          <div class="about-highlight-card">
+            <strong>Safe</strong>
+            <p>A calm and caring school environment for pupils.</p>
+          </div>
+
+          <div class="about-highlight-card">
+            <strong>Inclusive</strong>
+            <p>Each child is supported and celebrated as an individual.</p>
+          </div>
+
+          <div class="about-highlight-card">
+            <strong>Supportive</strong>
+            <p>Families and school staff work together for each pupil.</p>
           </div>
         </div>
       </div>
@@ -96,7 +339,7 @@
           <h2>A caring learning environment</h2>
         </div>
 
-        <div class="content-card">
+        <div class="about-care-card">
           <p>
             Cara Junior School caters for pupils aged 4–12 years with a dual diagnosis
             of autism and a mild or moderate intellectual disability.
@@ -128,14 +371,14 @@
         </div>
 
         <div class="info-grid">
-          <article class="info-card">
+          <article class="info-card approach-card">
             <h3>Structured Learning</h3>
             <p>
-              We use structured teaching approaches to support routine, independence and engagement.
+              Structured teaching approaches support routine, independence and engagement.
             </p>
           </article>
 
-          <article class="info-card">
+          <article class="info-card approach-card">
             <h3>Communication Supports</h3>
             <p>
               Supports such as PECS, communication boards, visual supports and Lámh may be used
@@ -143,7 +386,7 @@
             </p>
           </article>
 
-          <article class="info-card">
+          <article class="info-card approach-card">
             <h3>Sensory Regulation</h3>
             <p>
               Pupils are supported in a calm and caring environment with attention to sensory needs
@@ -154,14 +397,14 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section principal-section">
       <div class="container two-column">
         <div>
           <p class="section-label">Principal’s Welcome</p>
           <h2>A message from our Principal</h2>
         </div>
 
-        <div class="content-card">
+        <div class="principal-card">
           <p>
             It is a privilege to be part of the Cara Junior School community.
             Our school is built on care, respect, support and partnership with families.
@@ -178,9 +421,7 @@
             strong communication between home and school.
           </p>
 
-          <p>
-            <strong>Principal: Colette Butler</strong>
-          </p>
+          <span class="principal-signoff">Principal: Colette Butler</span>
         </div>
       </div>
     </section>
@@ -192,7 +433,7 @@
           <h2>Safe, inclusive and respectful</h2>
         </div>
 
-        <div class="content-card">
+        <div class="vision-card">
           <p>
             We are a school community that supports and respects each other.
             We provide a welcoming, safe and inclusive environment.
@@ -214,20 +455,46 @@
         </div>
 
         <div class="info-grid">
-          <article class="info-card">
+          <article class="info-card about-info-card">
             <h3>School Day</h3>
             <p>9.10 a.m. to 2.50 p.m.</p>
           </article>
 
-          <article class="info-card">
+          <article class="info-card about-info-card">
             <h3>Office</h3>
             <p>021 4643060</p>
           </article>
 
-          <article class="info-card">
+          <article class="info-card about-info-card">
             <h3>Email</h3>
             <p>office@carajs.ie</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Explore More</p>
+          <h2>Useful school pages</h2>
+        </div>
+
+        <div class="about-next-links">
+          <a class="about-next-link" href="classes.html">
+            <span>Classes</span>
+            <small>View all class colour pages</small>
+          </a>
+
+          <a class="about-next-link" href="admissions.html">
+            <span>Admissions</span>
+            <small>Admissions information and application details</small>
+          </a>
+
+          <a class="about-next-link" href="parents.html">
+            <span>Parents</span>
+            <small>Useful information for parents and guardians</small>
+          </a>
         </div>
       </div>
     </section>
@@ -252,6 +519,7 @@
         <h3>Quick Links</h3>
         <ul>
           <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
           <li><a href="policies.html">Policies</a></li>
           <li><a href="calendar.html">Calendar</a></li>
           <li><a href="contact.html">Contact</a></li>
