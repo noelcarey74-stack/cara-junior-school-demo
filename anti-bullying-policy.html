@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Anti-Bullying Policy | Cara Junior School</title>
+
+  <meta
+    name="description"
+    content="Anti-Bullying Policy for pupils at Cara Junior School, outlining prevention, reporting, investigation, recording and pupil support."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .policy-page {
+      background: #f7fbff;
+    }
+
+    .policy-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .policy-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .policy-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .policy-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policy-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: #fff0f6;
+      color: #c2255c;
+      font-size: 2rem;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policy-hero-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .policy-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .policy-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-content-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-content-card h2,
+    .policy-content-card h3 {
+      color: var(--navy);
+    }
+
+    .policy-content-card h3 {
+      margin-top: 28px;
+    }
+
+    .policy-content-card p {
+      color: #344054;
+    }
+
+    .policy-note {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-left: 6px solid #20c997;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-warning {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-left: 6px solid #fab005;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-danger {
+      background:
+        radial-gradient(circle at top left, rgba(240, 62, 62, 0.10), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff5f5);
+      border-left: 6px solid #f03e3e;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .policy-list li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .policy-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f5b;
+      font-weight: 950;
+    }
+
+    .warning-list li::before {
+      content: "•";
+      color: #e67700;
+      font-size: 1.6rem;
+      line-height: 0.7;
+    }
+
+    .bullying-grid {
+      display: grid;
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .bullying-card {
+      background: #f8fbff;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      border-top: 6px solid #20c997;
+    }
+
+    .bullying-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .bullying-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .bullying-card:nth-child(4) {
+      border-top-color: #7048e8;
+    }
+
+    .bullying-card:nth-child(5) {
+      border-top-color: #f06595;
+    }
+
+    .bullying-card:nth-child(6) {
+      border-top-color: #ff922b;
+    }
+
+    .bullying-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .bullying-card p {
+      margin-bottom: 0;
+      color: #344054;
+    }
+
+    .numbered-policy-list {
+      counter-reset: policy-step;
+      list-style: none;
+      margin: 18px 0 0;
+      padding: 0;
+    }
+
+    .numbered-policy-list li {
+      counter-increment: policy-step;
+      position: relative;
+      padding-left: 48px;
+      margin: 16px 0;
+      color: #344054;
+    }
+
+    .numbered-policy-list li::before {
+      content: counter(policy-step);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #c2255c;
+      color: #ffffff;
+      font-weight: 950;
+    }
+
+    .contact-policy-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+    }
+
+    .contact-policy-box h3 {
+      margin-top: 0;
+    }
+
+    .policy-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .policy-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .policy-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .policy-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .policy-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .policy-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .bullying-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .policy-content-card {
+        padding: 24px;
+      }
+
+      .policy-actions {
+        flex-direction: column;
+      }
+
+      .policy-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="policy-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>Cara Junior School, Banduff Road, Mayfield, Cork</p>
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html">Classes</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="policies.html" class="active">Policies</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero page-hero policy-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">School Policy</p>
+          <h1>Anti-Bullying Policy for Pupils</h1>
+
+          <p class="hero-text">
+            Cara Junior School is committed to creating a positive school culture where
+            pupils are safe, respected and supported.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#policy-content">Read Policy</a>
+            <a class="btn btn-secondary" href="policies.html">Back to Policies</a>
+          </div>
+        </div>
+
+        <div class="policy-hero-card">
+          <div class="policy-icon">🧡</div>
+          <h2>Respect and Safety</h2>
+          <p>
+            This policy outlines how the school prevents, reports, investigates, records
+            and follows up on bullying behaviour.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="policy-summary">
+          <div class="policy-summary-card">
+            <strong>Prevention</strong>
+            <p>The policy promotes a positive school culture and awareness strategies.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Reporting</strong>
+            <p>Bullying concerns can be reported by pupils, parents, guardians or staff.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Support</strong>
+            <p>Pupils affected by bullying are supported through school programmes and follow-up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="policy-content">
+      <div class="container legal-layout">
+        <article class="policy-content-card">
+          <p class="section-label">Anti-Bullying Policy</p>
+          <h2>Anti-Bullying Policy for Pupils</h2>
+
+          <p>
+            The aim of this policy is to provide the school community with clear guidelines
+            for the implementation of anti-bullying procedures in Cara Junior School.
+          </p>
+
+          <p>
+            The Board of Management recognises the very serious nature of bullying and the
+            negative impact it can have on the lives of pupils. The school is committed to
+            preventing and tackling bullying behaviour.
+          </p>
+
+          <div class="policy-note">
+            A positive school culture welcomes difference and diversity, encourages pupils to
+            disclose bullying concerns, and promotes respectful relationships across the school.
+          </div>
+
+          <h3>Positive School Culture</h3>
+
+          <p>
+            The policy identifies the following as important elements of a positive school culture.
+          </p>
+
+          <ul class="policy-list">
+            <li>Effective leadership from adults who model the school ethos.</li>
+            <li>A school-wide approach involving management, staff, parents and pupils.</li>
+            <li>A shared understanding of what bullying is and its impact.</li>
+            <li>Education and prevention strategies that build empathy and reduce cyberbullying risk.</li>
+            <li>Effective supervision and monitoring of pupils throughout the day.</li>
+            <li>Support for staff.</li>
+            <li>Consistent recording, investigation and follow-up of bullying behaviour.</li>
+            <li>Ongoing evaluation of the effectiveness of the policy.</li>
+          </ul>
+
+          <h3>Definition of Bullying</h3>
+
+          <p>
+            Bullying is defined in the policy as unwanted negative behaviour, whether verbal,
+            psychological or physical, conducted by an individual or group against another
+            person or persons, and which is repeated over time.
+          </p>
+
+          <p>
+            The policy notes that isolated or once-off incidents of intentional negative behaviour
+            do not normally fall within the definition of bullying and are dealt with in line
+            with the school’s code of behaviour. However, placing a once-off offensive or hurtful
+            public message, image or statement on a social network or other public forum may be
+            regarded as bullying where it can be viewed or repeated by others.
+          </p>
+
+          <h3>Types of Bullying</h3>
+
+          <div class="bullying-grid">
+            <div class="bullying-card">
+              <h3>Cyberbullying</h3>
+              <p>
+                Inappropriate comments, photos, texts, messages, pictures or websites on devices
+                or social media platforms.
+              </p>
+            </div>
+
+            <div class="bullying-card">
+              <h3>Physical Bullying</h3>
+              <p>
+                Pushing, pulling, kicking, spitting, pinching, hitting, squeezing, head-butting,
+                biting, choking, scratching or similar behaviour.
+              </p>
+            </div>
+
+            <div class="bullying-card">
+              <h3>Emotional Bullying</h3>
+              <p>
+                Exclusion, name-calling, teasing, ignoring, intimidation, shouting, taking or
+                breaking possessions, invasion of privacy, telling lies or peer pressure.
+              </p>
+            </div>
+
+            <div class="bullying-card">
+              <h3>Identity-Based Bullying</h3>
+              <p>
+                Bullying based on identity, including homophobic, racist, Traveller community,
+                disability or special education needs related bullying.
+              </p>
+            </div>
+
+            <div class="bullying-card">
+              <h3>Relational Bullying</h3>
+              <p>
+                Deliberate exclusion, malicious gossip and other behaviours that damage relationships.
+              </p>
+            </div>
+
+            <div class="bullying-card">
+              <h3>Cyber Safety</h3>
+              <p>
+                The policy includes prevention strategies aimed at eliminating opportunities
+                for cyberbullying.
+              </p>
+            </div>
+          </div>
+
+          <div class="policy-warning">
+            For pupils in Cara Junior School, bullying can be an abstract concept and may be
+            difficult to understand. Staff should consider indicators of bullying carefully.
+          </div>
+
+          <h3>Relevant Teachers</h3>
+
+          <p>
+            The policy identifies the relevant teachers for investigating and dealing with
+            bullying as the Principal, Deputy Principal and all class teachers.
+          </p>
+
+          <h3>Awareness and Prevention Strategies</h3>
+
+          <p>
+            Cara Junior School uses awareness and prevention strategies aimed at cyberbullying,
+            homophobic bullying, transphobic bullying and other forms of bullying.
+          </p>
+
+          <ul class="policy-list">
+            <li>Careful planning of class groups and flexibility to make changes where needed.</li>
+            <li>Recognising that some pupils may “get on” with others while others may not.</li>
+            <li>Identifying hot spots and hot times such as playgrounds, corridors and transitions.</li>
+            <li>Close liaison with escorts, drivers, parents and school staff regarding transport.</li>
+            <li>Developing pupil profiles and sharing relevant information with staff as needed.</li>
+            <li>Supporting pupils with risky behaviour histories and managing incidents where necessary.</li>
+            <li>Awareness of pupils’ age and maturity compared with peers in certain situations.</li>
+            <li>Social stories, SPHE, Stay Safe and programmes to build empathy and resilience.</li>
+            <li>Promotion of school rules such as kind hands, quiet feet and respectful behaviour.</li>
+          </ul>
+
+          <h3>Reporting Bullying Behaviour</h3>
+
+          <p>
+            Any pupil or parent or guardian may bring a bullying incident to any teacher in
+            the school. Reports, including anonymous reports, will be investigated and dealt
+            with by the relevant teacher.
+          </p>
+
+          <p>
+            Teaching and non-teaching staff such as secretaries, SNAs, bus escorts and caretakers
+            must report any incidents witnessed by them or mentioned to them.
+          </p>
+
+          <h3>Investigating and Dealing with Incidents</h3>
+
+          <p>
+            The primary aim of investigating and dealing with bullying is to resolve issues
+            and restore, as far as practicable, the relationships of the parties involved.
+          </p>
+
+          <ul class="policy-list">
+            <li>Teachers use professional judgement to decide whether bullying has occurred.</li>
+            <li>Parents, guardians and pupils are required to co-operate with investigations.</li>
+            <li>Teachers take a calm, unemotional problem-solving approach.</li>
+            <li>Where possible, incidents are investigated outside the classroom situation.</li>
+            <li>Interviews are conducted sensitively and with due regard to pupil rights.</li>
+            <li>Questions of what, where, when, who and why may be explored calmly.</li>
+            <li>Where a group is involved, members may be interviewed individually first.</li>
+          </ul>
+
+          <h3>Where Bullying Has Occurred</h3>
+
+          <p>
+            Where the relevant teacher has determined that bullying has occurred, parents or
+            guardians of those involved should be contacted at an early stage. The school will
+            discuss actions being taken and the supports provided to pupils.
+          </p>
+
+          <p>
+            Pupils should understand how they have breached the school’s anti-bullying policy
+            and should be given an opportunity to see the situation from the perspective of
+            the pupil affected.
+          </p>
+
+          <h3>Follow-Up and Recording</h3>
+
+          <p>
+            In determining whether a bullying case has been adequately and appropriately addressed,
+            the relevant teacher will consider whether bullying has stopped, whether issues
+            have been resolved as far as practicable, whether relationships have been restored,
+            and any feedback from the parties involved.
+          </p>
+
+          <p>
+            Records of bullying incidents must be kept in an objective and factual manner.
+          </p>
+
+          <ol class="numbered-policy-list">
+            <li>
+              Informal stage: staff keep written records of incidents witnessed or reported,
+              and all incidents must be reported to the relevant teacher.
+            </li>
+
+            <li>
+              Formal stage: where bullying has occurred, the relevant teacher keeps appropriate
+              written records to assist in resolving issues and restoring relationships.
+            </li>
+
+            <li>
+              Formal recording template: used in cases where bullying has not been adequately
+              addressed within 20 school days, or where certain behaviours must be immediately reported.
+            </li>
+          </ol>
+
+          <h3>Established Intervention Strategies</h3>
+
+          <ul class="policy-list">
+            <li>Teacher interviews with all pupils.</li>
+            <li>Agreements between pupils and monitoring of progress.</li>
+            <li>Working with parents and guardians to support interventions.</li>
+            <li>No Blame Approach.</li>
+            <li>Circle Time.</li>
+            <li>Social Stories and role play.</li>
+            <li>Visual supports.</li>
+            <li>Contracts for “No Bullying Behaviour”.</li>
+          </ul>
+
+          <h3>Support for Pupils Affected by Bullying</h3>
+
+          <p>
+            The school provides supports and opportunities for pupils affected by bullying
+            to take part in activities designed to raise self-esteem, develop friendships,
+            build social skills and build resilience.
+          </p>
+
+          <ul class="policy-list">
+            <li>SPHE lessons.</li>
+            <li>Stay Safe Programme.</li>
+            <li>Group activities and circle time.</li>
+            <li>Pastoral care system.</li>
+            <li>Liaison with appropriate agencies where counselling or further supports are required.</li>
+            <li>Referral to HSE Children and Family Services or Gardaí where appropriate.</li>
+          </ul>
+
+          <h3>Supervision, Monitoring and Prevention of Harassment</h3>
+
+          <p>
+            The Board of Management confirms that appropriate supervision and monitoring
+            policies and practices are in place to prevent and deal with bullying behaviour
+            and to support early intervention where possible.
+          </p>
+
+          <p>
+            The Board of Management also confirms that the school will take steps to prevent
+            harassment of pupils or staff on any of the nine grounds specified in equality
+            legislation.
+          </p>
+
+          <h3>Review and Availability</h3>
+
+          <p>
+            The policy is made available to school personnel, published on the school website
+            and readily accessible to parents and pupils on request. It is provided to the
+            Parents’ Association and the patron if requested.
+          </p>
+
+          <p>
+            The policy and its implementation will be reviewed by the Board of Management
+            once in every school year. Written notification that the review has been completed
+            will be made available to the school community.
+          </p>
+
+          <p>
+            The uploaded policy shows the Principal’s signature dated <strong>12/05/2022</strong>,
+            with next review noted as <strong>Summer 2023</strong>.
+          </p>
+
+          <div class="contact-policy-box">
+            <h3>Contact the School Office</h3>
+            <p>
+              If you need guidance in relation to bullying concerns or school procedures,
+              please contact the school office.
+            </p>
+
+            <p>
+              Cara Junior School<br />
+              Banduff Road, Mayfield, Cork<br />
+              Phone: <a href="tel:0214643060">021 4643060</a><br />
+              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+            </p>
+          </div>
+
+          <div class="policy-actions">
+            <a class="btn btn-primary" href="policies.html">Back to Policy Library</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to school information</h2>
+        </div>
+
+        <div class="policy-next-links">
+          <a class="policy-next-link" href="policies.html">
+            <span>Policy Library</span>
+            <small>Return to all school policies</small>
+          </a>
+
+          <a class="policy-next-link" href="parents.html">
+            <span>Parents</span>
+            <small>Useful information for parents and guardians</small>
+          </a>
+
+          <a class="policy-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+        <h2>Cara Junior School</h2>
+        <p>Support and grow together</p>
+        <p>Banduff Road, Mayfield, Cork</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:0214643060">021 4643060</a></p>
+        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
