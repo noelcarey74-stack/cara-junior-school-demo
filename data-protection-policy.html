@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Data Protection Policy | Cara Junior School</title>
+
+  <meta
+    name="description"
+    content="Data Protection Policy for Cara Junior School, explaining how personal data is collected, stored, used and protected."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .policy-page {
+      background: #f7fbff;
+    }
+
+    .policy-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .policy-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .policy-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .policy-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policy-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: #eef7ff;
+      color: #1971c2;
+      font-size: 2rem;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policy-hero-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .policy-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .policy-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-content-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-content-card h2,
+    .policy-content-card h3 {
+      color: var(--navy);
+    }
+
+    .policy-content-card h3 {
+      margin-top: 28px;
+    }
+
+    .policy-content-card p {
+      color: #344054;
+    }
+
+    .policy-note {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-left: 6px solid #20c997;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-warning {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-left: 6px solid #fab005;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .policy-list li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .policy-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f5b;
+      font-weight: 950;
+    }
+
+    .data-grid {
+      display: grid;
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .data-card {
+      background: #f8fbff;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      border-top: 6px solid #20c997;
+    }
+
+    .data-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .data-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .data-card:nth-child(4) {
+      border-top-color: #7048e8;
+    }
+
+    .data-card:nth-child(5) {
+      border-top-color: #f06595;
+    }
+
+    .data-card:nth-child(6) {
+      border-top-color: #ff922b;
+    }
+
+    .data-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .data-card p {
+      margin-bottom: 0;
+      color: #344054;
+    }
+
+    .numbered-policy-list {
+      counter-reset: policy-step;
+      list-style: none;
+      margin: 18px 0 0;
+      padding: 0;
+    }
+
+    .numbered-policy-list li {
+      counter-increment: policy-step;
+      position: relative;
+      padding-left: 48px;
+      margin: 16px 0;
+      color: #344054;
+    }
+
+    .numbered-policy-list li::before {
+      content: counter(policy-step);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #1971c2;
+      color: #ffffff;
+      font-weight: 950;
+    }
+
+    .contact-policy-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+    }
+
+    .contact-policy-box h3 {
+      margin-top: 0;
+    }
+
+    .policy-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .policy-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .policy-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .policy-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .policy-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .policy-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .data-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .policy-content-card {
+        padding: 24px;
+      }
+
+      .policy-actions {
+        flex-direction: column;
+      }
+
+      .policy-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="policy-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>Cara Junior School, Banduff Road, Mayfield, Cork</p>
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html">Classes</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="policies.html" class="active">Policies</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero page-hero policy-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">School Policy</p>
+          <h1>Data Protection Policy</h1>
+
+          <p class="hero-text">
+            How Cara Junior School collects, uses, stores and protects personal data
+            relating to pupils, parents, guardians, staff and school administration.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#policy-content">Read Policy</a>
+            <a class="btn btn-secondary" href="policies.html">Back to Policies</a>
+          </div>
+        </div>
+
+        <div class="policy-hero-card">
+          <div class="policy-icon">🔐</div>
+          <h2>Protecting Information</h2>
+          <p>
+            This policy supports safe handling of personal data and explains key rights,
+            responsibilities and procedures.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="policy-summary">
+          <div class="policy-summary-card">
+            <strong>Personal Data</strong>
+            <p>The school holds information needed for education, care and administration.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Security</strong>
+            <p>Records should be stored securely and accessed only where appropriate.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Rights</strong>
+            <p>Data subjects have rights including access, correction and lawful processing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="policy-content">
+      <div class="container legal-layout">
+        <article class="policy-content-card">
+          <p class="section-label">Data Protection</p>
+          <h2>Cara Junior School Data Protection Policy</h2>
+
+          <p>
+            This policy applies to personal data held by Cara Junior School and explains
+            how such information should be protected, processed, stored and used.
+          </p>
+
+          <p>
+            It applies to school staff, the Board of Management, parents and guardians,
+            students and others where the school handles or processes their personal data
+            in the course of school business.
+          </p>
+
+          <div class="policy-note">
+            Personal data should be protected, used only for appropriate school purposes,
+            stored securely and shared only where there is a lawful and proper reason.
+          </div>
+
+          <h3>Purpose and Scope</h3>
+
+          <p>
+            The purpose of the policy is to assist the school in meeting its statutory
+            obligations, to explain those obligations to school staff and to inform staff,
+            students and parents or guardians how their data will be treated.
+          </p>
+
+          <p>
+            The policy is intended to help the school collect, process, retain and protect
+            personal data in a consistent and responsible way.
+          </p>
+
+          <h3>Why Data Protection Matters</h3>
+
+          <p>
+            The school has legal responsibilities to comply with data protection law and
+            to handle information carefully. The policy recognises that schools hold important
+            and sometimes sensitive information about pupils, families, staff and school activity.
+          </p>
+
+          <h3>Types of Data Held</h3>
+
+          <div class="data-grid">
+            <div class="data-card">
+              <h3>Staff Data</h3>
+              <p>
+                Personnel files, contact details, payroll information, attendance records,
+                qualifications, references, vetting records and employment-related records.
+              </p>
+            </div>
+
+            <div class="data-card">
+              <h3>Student Data</h3>
+              <p>
+                Personal details, school report cards, diagnostic reports, attendance records,
+                assessments, IEPs, records of meetings, permissions, referrals and student work.
+              </p>
+            </div>
+
+            <div class="data-card">
+              <h3>Administrative Data</h3>
+              <p>
+                Attendance reports, roll books, correspondence, accident reports, medication
+                forms, behaviour records, book rental records and child protection records.
+              </p>
+            </div>
+
+            <div class="data-card">
+              <h3>Board of Management Data</h3>
+              <p>
+                Names, contact details, Board membership records, appointments, minutes and
+                Board correspondence.
+              </p>
+            </div>
+
+            <div class="data-card">
+              <h3>Financial and Other Records</h3>
+              <p>
+                Creditors, PPS numbers, tax details, bank details, amounts paid and related
+                records needed for school administration.
+              </p>
+            </div>
+
+            <div class="data-card">
+              <h3>CCTV Images / Recordings</h3>
+              <p>
+                CCTV is used for safety and security of staff, students, visitors and school
+                property, with restricted access to recordings.
+              </p>
+            </div>
+          </div>
+
+          <h3>Data Protection Principles</h3>
+
+          <p>
+            The policy applies data protection principles to personal data records held by the
+            school. These principles guide how information is obtained, processed, stored,
+            retained and shared.
+          </p>
+
+          <ol class="numbered-policy-list">
+            <li>Obtain and process personal data fairly.</li>
+            <li>Use and disclose personal data only in ways compatible with the purpose for which it was collected.</li>
+            <li>Keep personal data safe and secure.</li>
+            <li>Keep personal data accurate, complete and up to date.</li>
+            <li>Ensure personal data is adequate, relevant and not excessive.</li>
+            <li>Retain personal data only for as long as necessary.</li>
+            <li>Provide a copy of personal data to the individual on request, where appropriate.</li>
+            <li>Keep personal data only for specified, explicit and lawful purposes.</li>
+          </ol>
+
+          <h3>Sharing and Disclosure</h3>
+
+          <p>
+            Personal data may be shared where there is a lawful basis or appropriate reason,
+            such as fulfilling educational, statutory, safeguarding or administrative responsibilities.
+          </p>
+
+          <p>
+            The policy refers to bodies such as the Department of Education, TUSLA, the NCSE,
+            NEPS and other relevant agencies where appropriate.
+          </p>
+
+          <h3>Keeping Data Safe</h3>
+
+          <p>
+            The policy states that security measures should be taken against unauthorised access,
+            alteration, disclosure or destruction of data and against accidental loss or destruction.
+          </p>
+
+          <ul class="policy-list">
+            <li>Records may be kept in locked filing cabinets or locked offices.</li>
+            <li>Access is restricted to appropriate school personnel.</li>
+            <li>Some records are password protected.</li>
+            <li>Child protection records are maintained securely.</li>
+            <li>CCTV access is restricted to the Principal and Deputy Principal.</li>
+          </ul>
+
+          <h3>CCTV Images and Recordings</h3>
+
+          <p>
+            The policy notes that CCTV is installed externally in Cara Junior School as detailed
+            in the CCTV policy. The purpose is safety and security of staff, students, visitors,
+            property and equipment.
+          </p>
+
+          <p>
+            Access to images and recordings is restricted. Recordings may be retained for a
+            limited period except where required for an incident investigation.
+          </p>
+
+          <h3>Data Access Requests</h3>
+
+          <p>
+            Individuals may be entitled to a copy of their personal data on written request.
+            Requests should be responded to within one month, although an extension may be
+            required in certain circumstances.
+          </p>
+
+          <div class="policy-warning">
+            No personal data can be supplied relating to another individual apart from the
+            data subject.
+          </div>
+
+          <h3>Providing Information Over the Phone</h3>
+
+          <p>
+            The policy advises employees dealing with telephone enquiries to be careful about
+            disclosing personal information held by the school over the phone.
+          </p>
+
+          <ul class="policy-list">
+            <li>Ask the caller to put their request in writing.</li>
+            <li>Refer the request to the Principal for assistance in difficult situations.</li>
+            <li>Do not feel forced into disclosing personal information.</li>
+          </ul>
+
+          <h3>Data Breaches</h3>
+
+          <p>
+            All incidents where personal data has been put at risk must be reported to the
+            Office of the Data Protection Commissioner within 72 hours where required.
+          </p>
+
+          <p>
+            If a data processor becomes aware of a personal data breach, this must be brought
+            to the attention of the data controller without undue delay.
+          </p>
+
+          <h3>Roles and Responsibilities</h3>
+
+          <p>
+            The Board of Management is the data controller of all school-held data. The Principal
+            and school staff, under the direction of the Board, implement and monitor the policy.
+          </p>
+
+          <p>
+            Individual teachers should design, administer and record in-class testing and should
+            store personal data held in their classrooms carefully. The Principal ensures records
+            are maintained and stored securely.
+          </p>
+
+          <h3>Ratification, Communication and Review</h3>
+
+          <p>
+            The policy states that the agreed Data Protection Policy will be circulated within
+            the school community and that the full policy will be available to staff.
+          </p>
+
+          <p>
+            The original policy was implemented on <strong>06/06/2018</strong>. The revised policy
+            was implemented from <strong>10/11/2020</strong> following ratification at a Board of
+            Management meeting on <strong>9 November 2020</strong>. The document notes a minimum
+            review date in the school year <strong>2024–25</strong>.
+          </p>
+
+          <div class="contact-policy-box">
+            <h3>Contact the School Office</h3>
+            <p>
+              If you need guidance in relation to school data protection procedures, please
+              contact the school office.
+            </p>
+
+            <p>
+              Cara Junior School<br />
+              Banduff Road, Mayfield, Cork<br />
+              Phone: <a href="tel:0214643060">021 4643060</a><br />
+              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+            </p>
+          </div>
+
+          <div class="policy-actions">
+            <a class="btn btn-primary" href="policies.html">Back to Policy Library</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to school information</h2>
+        </div>
+
+        <div class="policy-next-links">
+          <a class="policy-next-link" href="policies.html">
+            <span>Policy Library</span>
+            <small>Return to all school policies</small>
+          </a>
+
+          <a class="policy-next-link" href="parents.html">
+            <span>Parents</span>
+            <small>Useful information for parents and guardians</small>
+          </a>
+
+          <a class="policy-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+        <h2>Cara Junior School</h2>
+        <p>Support and grow together</p>
+        <p>Banduff Road, Mayfield, Cork</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:0214643060">021 4643060</a></p>
+        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
