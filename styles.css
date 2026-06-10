@@ -129,7 +129,7 @@ a {
 }
 
 .nav-inner {
-  min-height: 78px;
+  min-height: 86px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -142,8 +142,11 @@ a {
   gap: 12px;
   text-decoration: none;
   color: var(--navy);
+  max-width: 340px;
+  min-width: 0;
 }
 
+/* Old CJS block fallback, kept in case we ever use it */
 .brand-mark {
   width: 54px;
   height: 54px;
@@ -156,18 +159,32 @@ a {
   border: 3px solid rgba(18, 51, 95, 0.12);
 }
 
+/* Real logo in header */
+.brand-logo {
+  width: 64px !important;
+  height: 64px !important;
+  object-fit: contain;
+  display: block;
+  flex: 0 0 64px;
+}
+
 .brand-text {
   display: flex;
   flex-direction: column;
   line-height: 1.15;
+  min-width: 0;
 }
 
 .brand-text strong {
+  display: block;
   font-size: 1.05rem;
+  line-height: 1.1;
 }
 
 .brand-text span {
+  display: block;
   font-size: 0.82rem;
+  line-height: 1.15;
   color: var(--muted);
 }
 
@@ -245,7 +262,7 @@ a {
 
 .hero {
   background:
-    radial-gradient(circle at top left, rgba(246, 196, 79, 0.45), transparent 32%),
+    radial-gradient(circle at top left, rgba(246, 196, 79, 0.42), transparent 32%),
     linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
   padding: 52px 0 36px;
 }
@@ -321,6 +338,13 @@ a {
   overflow: hidden;
   box-shadow: var(--shadow);
   border: 1px solid rgba(18, 51, 95, 0.08);
+}
+
+.hero-photo {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .school-photo-placeholder {
@@ -642,6 +666,15 @@ a {
   gap: 28px;
 }
 
+.footer-logo {
+  width: 86px;
+  height: auto;
+  margin-bottom: 14px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 6px;
+}
+
 .site-footer h2,
 .site-footer h3 {
   margin: 0 0 10px;
@@ -757,10 +790,35 @@ a {
   }
 }
 
-/* Small phone refinements */
+/* =========================================================
+   Tablet and phone refinements
+   ========================================================= */
+
+@media (max-width: 979px) {
+  .nav-inner {
+    min-height: 76px;
+  }
+
+  .brand-logo {
+    width: 56px !important;
+    height: 56px !important;
+    flex-basis: 56px;
+  }
+}
+
 @media (max-width: 430px) {
   .container {
     width: min(100% - 24px, var(--max-width));
+  }
+
+  .brand {
+    max-width: 240px;
+  }
+
+  .brand-logo {
+    width: 48px !important;
+    height: 48px !important;
+    flex-basis: 48px;
   }
 
   .brand-mark {
@@ -771,11 +829,15 @@ a {
   }
 
   .brand-text strong {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
   }
 
   .brand-text span {
-    font-size: 0.76rem;
+    font-size: 0.74rem;
+  }
+
+  .hero-photo {
+    height: 240px;
   }
 
   .hero-actions {
