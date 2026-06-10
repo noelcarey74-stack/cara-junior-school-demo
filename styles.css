@@ -852,3 +852,18 @@ a {
     padding: 48px 0;
   }
 }
+/* =========================================================
+   Larger policy library grid
+   ========================================================= */
+
+@media (min-width: 720px) {
+  .policy-grid-large {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1080px) {
+  .policy-grid-large {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
