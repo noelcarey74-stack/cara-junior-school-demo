@@ -12,9 +12,216 @@
   />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .accessibility-page {
+      background: #f7fbff;
+    }
+
+    .accessibility-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .accessibility-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .accessibility-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .accessibility-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 14px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .accessibility-hero-card img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 22px;
+    }
+
+    .accessibility-hero-info {
+      padding: 18px 10px 6px;
+    }
+
+    .accessibility-hero-info h2 {
+      margin: 0 0 8px;
+      color: var(--navy);
+    }
+
+    .accessibility-hero-info p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .accessibility-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .accessibility-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .accessibility-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .accessibility-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .accessibility-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .accessibility-card h2 {
+      color: var(--navy);
+    }
+
+    .accessibility-card h3 {
+      margin-top: 28px;
+      color: var(--navy);
+    }
+
+    .accessibility-card p {
+      color: #344054;
+    }
+
+    .accessibility-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .accessibility-list li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .accessibility-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f5b;
+      font-weight: 950;
+    }
+
+    .accessibility-contact-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(32, 201, 151, 0.18);
+    }
+
+    .accessibility-contact-box h3 {
+      margin-top: 0;
+    }
+
+    .accessibility-contact-box a {
+      color: #087f5b;
+      font-weight: 850;
+    }
+
+    .accessibility-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .accessibility-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .accessibility-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .accessibility-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .accessibility-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .accessibility-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .accessibility-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .accessibility-hero-card img {
+        height: 240px;
+      }
+
+      .accessibility-card {
+        padding: 24px;
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body class="accessibility-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
@@ -61,30 +268,53 @@
   </header>
 
   <main id="main-content">
-    <section class="hero page-hero">
+    <section class="hero page-hero accessibility-hero">
       <div class="container hero-grid">
         <div class="hero-content">
           <p class="eyebrow">Accessibility</p>
           <h1>Accessibility Statement</h1>
+
           <p class="hero-text">
             Cara Junior School aims to make this website clear, simple and accessible
             for parents, guardians, staff and visitors.
           </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contact.html">Contact Office</a>
+            <a class="btn btn-secondary" href="parents.html">Parents Page</a>
+          </div>
         </div>
 
-        <div class="hero-card">
+        <div class="accessibility-hero-card">
           <img
-            class="hero-photo"
             src="school-front.jpg"
             alt="Front of Cara Junior School building in Mayfield, Cork"
           />
 
-          <div class="hero-info">
-            <h2>Accessible Design</h2>
+          <div class="accessibility-hero-info">
+            <h2>Clear and Simple</h2>
             <p>
-              This website uses clear navigation, readable text, mobile-friendly layouts
-              and simple page structures.
+              The website is designed with readable text, clear navigation and simple page layouts.
             </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="accessibility-summary">
+          <div class="accessibility-summary-card">
+            <strong>Readable</strong>
+            <p>Clear headings, simple wording and easy-to-read page sections.</p>
+          </div>
+
+          <div class="accessibility-summary-card">
+            <strong>Mobile Friendly</strong>
+            <p>Pages are designed to work clearly on phones, tablets and computers.</p>
+          </div>
+
+          <div class="accessibility-summary-card">
+            <strong>Easy to Navigate</strong>
+            <p>Consistent menus and quick links help visitors find information.</p>
           </div>
         </div>
       </div>
@@ -92,7 +322,7 @@
 
     <section class="section">
       <div class="container legal-layout">
-        <article class="legal-card">
+        <article class="accessibility-card">
           <p class="section-label">Accessibility Statement</p>
           <h2>Our commitment to accessibility</h2>
 
@@ -111,7 +341,7 @@
             This website includes:
           </p>
 
-          <ul>
+          <ul class="accessibility-list">
             <li>Clear page headings and structured content.</li>
             <li>A skip-to-content link for keyboard users.</li>
             <li>Readable font sizes and strong colour contrast.</li>
@@ -137,19 +367,47 @@
             in another format, please contact the school office.
           </p>
 
-          <h3>Contact</h3>
-          <p>
-            Cara Junior School<br />
-            Banduff Road, Mayfield, Cork<br />
-            Phone: <a href="tel:0214643060">021 4643060</a><br />
-            Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
-          </p>
+          <div class="accessibility-contact-box">
+            <h3>Contact</h3>
+            <p>
+              Cara Junior School<br />
+              Banduff Road, Mayfield, Cork<br />
+              Phone: <a href="tel:0214643060">021 4643060</a><br />
+              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+            </p>
+          </div>
 
           <h3>Review</h3>
           <p>
             This accessibility statement may be reviewed and updated as the website develops.
           </p>
         </article>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to school information</h2>
+        </div>
+
+        <div class="accessibility-next-links">
+          <a class="accessibility-next-link" href="parents.html">
+            <span>Parents</span>
+            <small>Useful information for parents and guardians</small>
+          </a>
+
+          <a class="accessibility-next-link" href="policies.html">
+            <span>Policies</span>
+            <small>School policy library and PDF downloads</small>
+          </a>
+
+          <a class="accessibility-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -173,6 +431,7 @@
         <h3>Quick Links</h3>
         <ul>
           <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
           <li><a href="policies.html">Policies</a></li>
           <li><a href="calendar.html">Calendar</a></li>
           <li><a href="contact.html">Contact</a></li>
