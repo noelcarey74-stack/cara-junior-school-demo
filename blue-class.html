@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Blue Class | Cara Junior School</title>
+
+  <meta
+    name="description"
+    content="Blue Class page for Cara Junior School, with approved class news, activities, photos and school updates."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Blue Class page bright calm layout */
+    .blue-class-page {
+      background: #f3f8ff;
+    }
+
+    .blue-class-page .eyebrow,
+    .blue-class-page .section-label {
+      color: #1971c2;
+    }
+
+    .blue-class-hero {
+      position: relative;
+      padding: 56px 0 44px;
+      background:
+        radial-gradient(circle at top left, rgba(25, 113, 194, 0.20), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(116, 192, 252, 0.26), transparent 36%),
+        linear-gradient(135deg, #ffffff 0%, #e7f5ff 100%);
+      overflow: hidden;
+    }
+
+    .blue-class-hero::before,
+    .blue-class-hero::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background:
+        radial-gradient(circle at 40% 30%, rgba(25, 113, 194, 0.18), transparent 18%),
+        radial-gradient(circle at 65% 45%, rgba(25, 113, 194, 0.12), transparent 20%),
+        radial-gradient(circle at 42% 68%, rgba(25, 113, 194, 0.10), transparent 19%);
+      opacity: 0.65;
+      pointer-events: none;
+    }
+
+    .blue-class-hero::before {
+      left: -60px;
+      bottom: -40px;
+    }
+
+    .blue-class-hero::after {
+      right: -60px;
+      top: 30px;
+    }
+
+    .blue-class-hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .blue-class-copy h1 {
+      margin: 0;
+      color: #1864ab;
+      font-size: clamp(2.35rem, 7vw, 4.6rem);
+      line-height: 1.03;
+      letter-spacing: -0.05em;
+    }
+
+    .blue-class-copy p {
+      max-width: 650px;
+      color: #26384d;
+      font-size: 1.12rem;
+    }
+
+    .blue-class-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(25, 113, 194, 0.12);
+      color: #1971c2;
+      border: 1px solid rgba(25, 113, 194, 0.22);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 0.78rem;
+      margin-bottom: 14px;
+    }
+
+    .blue-class-badge span {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #1971c2;
+      display: inline-block;
+    }
+
+    .blue-class-photo-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 12px;
+      box-shadow: 0 22px 50px rgba(18, 51, 95, 0.14);
+      border: 1px solid rgba(25, 113, 194, 0.18);
+    }
+
+    .blue-class-photo-card a {
+      display: block;
+      text-decoration: none;
+    }
+
+    .blue-class-photo-card img {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .blue-class-photo-card div {
+      padding: 16px 10px 8px;
+    }
+
+    .blue-class-photo-card h2 {
+      margin: 0 0 6px;
+      color: #1864ab;
+      font-size: 1.35rem;
+    }
+
+    .blue-class-photo-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .blue-button-primary {
+      background: #1971c2;
+      color: #ffffff;
+      box-shadow: 0 14px 28px rgba(25, 113, 194, 0.22);
+    }
+
+    .blue-button-secondary {
+      background: #ffffff;
+      color: #1971c2;
+      border: 2px solid rgba(25, 113, 194, 0.35);
+    }
+
+    .blue-team-section {
+      background: #ffffff;
+    }
+
+    .blue-team-grid {
+      display: grid;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .blue-team-card {
+      background: #e7f5ff;
+      border-radius: 26px;
+      padding: 24px;
+      border: 1px solid rgba(25, 113, 194, 0.16);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .blue-team-card h3 {
+      margin: 0 0 14px;
+      color: #1864ab;
+      font-size: 1.4rem;
+    }
+
+    .team-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .team-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(25, 113, 194, 0.16);
+      color: #344054;
+    }
+
+    .team-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .team-list strong {
+      color: var(--navy);
+    }
+
+    .team-photo-card {
+      background: #ffffff;
+      border-radius: 26px;
+      padding: 14px;
+      border: 1px solid rgba(25, 113, 194, 0.16);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .team-photo-placeholder {
+      min-height: 240px;
+      border-radius: 20px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.75), transparent 32%),
+        linear-gradient(135deg, #d0ebff, #74c0fc);
+      color: #1864ab;
+      font-weight: 950;
+    }
+
+    .team-photo-card p {
+      margin: 14px 4px 4px;
+      color: #475467;
+      font-size: 0.95rem;
+    }
+
+    .blue-note-box {
+      margin-top: 18px;
+      background: #ffffff;
+      border-left: 5px solid #1971c2;
+      border-radius: 16px;
+      padding: 16px;
+      color: #344054;
+    }
+
+    .blue-updates-section {
+      background: #ffffff;
+    }
+
+    .blue-update-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .blue-update-card {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(25, 113, 194, 0.14);
+      box-shadow: 0 14px 36px rgba(18, 51, 95, 0.09);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .blue-update-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 46px rgba(18, 51, 95, 0.14);
+      border-color: rgba(25, 113, 194, 0.34);
+    }
+
+    .blue-update-image {
+      min-height: 180px;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.65), transparent 32%),
+        linear-gradient(135deg, #d0ebff, #74c0fc);
+      color: #1864ab;
+      font-weight: 950;
+      text-align: center;
+      padding: 18px;
+    }
+
+    .blue-update-image span {
+      background: rgba(255, 255, 255, 0.88);
+      padding: 8px 14px;
+      border-radius: 999px;
+    }
+
+    .blue-update-content {
+      padding: 20px;
+    }
+
+    .blue-update-date {
+      display: inline-flex;
+      background: #e7f5ff;
+      color: #1864ab;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.78rem;
+      font-weight: 950;
+      margin-bottom: 10px;
+    }
+
+    .blue-update-content h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+    }
+
+    .blue-update-content p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .blue-update-content small {
+      display: inline-flex;
+      margin-top: 14px;
+      color: #1971c2;
+      font-weight: 950;
+    }
+
+    .activity-detail-section {
+      background:
+        radial-gradient(circle at top left, rgba(25, 113, 194, 0.10), transparent 30%),
+        linear-gradient(135deg, #f3f8ff, #ffffff);
+      scroll-margin-top: 130px;
+    }
+
+    .activity-detail-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 26px;
+      border: 1px solid rgba(25, 113, 194, 0.14);
+      box-shadow: 0 16px 42px rgba(18, 51, 95, 0.10);
+    }
+
+    .activity-detail-header {
+      display: grid;
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+
+    .activity-detail-header h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(1.9rem, 5vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    .activity-detail-header p {
+      color: #475467;
+      font-size: 1.05rem;
+    }
+
+    .activity-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .activity-meta span {
+      display: inline-flex;
+      background: #e7f5ff;
+      color: #1864ab;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.8rem;
+      font-weight: 950;
+    }
+
+    .activity-gallery {
+      display: grid;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .activity-photo-placeholder {
+      min-height: 190px;
+      display: grid;
+      place-items: center;
+      border-radius: 20px;
+      background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.70), transparent 30%),
+        linear-gradient(135deg, #d0ebff, #74c0fc);
+      color: #1864ab;
+      font-weight: 950;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid rgba(25, 113, 194, 0.16);
+    }
+
+    .activity-text-box {
+      background: #e7f5ff;
+      border-radius: 20px;
+      padding: 22px;
+      border: 1px solid rgba(25, 113, 194, 0.14);
+      margin-top: 20px;
+    }
+
+    .activity-text-box h3 {
+      margin: 0 0 8px;
+      color: #1864ab;
+    }
+
+    .activity-text-box p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .back-to-updates {
+      display: inline-flex;
+      margin-top: 22px;
+      color: #1971c2;
+      font-weight: 950;
+      text-decoration: none;
+      border-bottom: 3px solid #74c0fc;
+    }
+
+    .blue-grow-section {
+      background:
+        radial-gradient(circle at top left, rgba(25, 113, 194, 0.12), transparent 28%),
+        linear-gradient(135deg, #e7f5ff, #ffffff);
+    }
+
+    .blue-grow-card {
+      display: grid;
+      gap: 18px;
+      background: #ffffff;
+      border-radius: 26px;
+      padding: 24px;
+      border: 1px solid rgba(25, 113, 194, 0.14);
+      box-shadow: var(--shadow);
+    }
+
+    .blue-grow-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #e7f5ff;
+      color: #1864ab;
+      font-size: 2rem;
+      font-weight: 950;
+    }
+
+    .blue-grow-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .blue-grow-list li {
+      position: relative;
+      padding-left: 30px;
+      margin: 12px 0;
+      color: #344054;
+    }
+
+    .blue-grow-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #1971c2;
+      font-weight: 950;
+    }
+
+    @media (min-width: 720px) {
+      .blue-class-hero-grid {
+        grid-template-columns: 0.95fr 1.05fr;
+      }
+
+      .blue-team-grid {
+        grid-template-columns: 1.05fr 0.95fr;
+      }
+
+      .blue-update-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .activity-detail-header {
+        grid-template-columns: 1fr 0.6fr;
+      }
+
+      .activity-gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .blue-grow-card {
+        grid-template-columns: 90px 1fr;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .blue-class-photo-card img {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+
+<body class="class-page blue-class-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>Cara Junior School, Banduff Road, Mayfield, Cork</p>
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html" class="active">Classes</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="policies.html">Policies</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="blue-class-hero">
+      <div class="container blue-class-hero-grid">
+        <div class="blue-class-copy">
+          <div class="blue-class-badge">
+            <span></span>
+            Blue Class
+          </div>
+
+          <h1>Welcome to Blue Class.</h1>
+
+          <p>
+            A warm space for Blue Class news, approved photographs, classroom activities
+            and school updates throughout the year.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn blue-button-primary" href="#blue-updates">Class Updates</a>
+            <a class="btn blue-button-secondary" href="classes.html">Back to All Classes</a>
+          </div>
+        </div>
+
+        <div class="blue-class-photo-card">
+          <a href="blue-classroom.jpg" target="_blank" rel="noopener">
+            <img src="blue-classroom.jpg" alt="Blue Class classroom" />
+          </a>
+          <div>
+            <h2>Blue Class</h2>
+            <p>
+              Click the classroom image to open it larger. Real approved classroom photos
+              can be added here later.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section blue-team-section">
+      <div class="container blue-team-grid">
+        <div>
+          <p class="section-label">Class Team</p>
+          <h2>Blue Class team</h2>
+
+          <div class="blue-team-card">
+            <h3>2025 / 2026</h3>
+
+            <ul class="team-list">
+              <li>
+                <strong>Class Teacher</strong>
+                <span>To be confirmed</span>
+              </li>
+              <li>
+                <strong>SNA Team</strong>
+                <span>To be confirmed</span>
+              </li>
+              <li>
+                <strong>Class Colour</strong>
+                <span>Blue</span>
+              </li>
+              <li>
+                <strong>Room</strong>
+                <span>Blue Class</span>
+              </li>
+            </ul>
+
+            <div class="blue-note-box">
+              Teacher and SNA names can be added once approved by the school.
+              Staff photographs should only be used where staff are happy and the school approves.
+            </div>
+          </div>
+        </div>
+
+        <div class="team-photo-card">
+          <div class="team-photo-placeholder">
+            Class team photo<br />
+            to be added if approved
+          </div>
+          <p>
+            A staff or classroom photo can be placed here once approved. Pupil names should
+            not be attached to photographs unless the school gives clear permission.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section blue-updates-section" id="blue-updates">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">2025 / 2026</p>
+          <h2>Blue Class updates</h2>
+          <p>
+            Click a card below to open the activity, news or photo section further down
+            this same page.
+          </p>
+        </div>
+
+        <div class="blue-update-grid">
+          <a class="blue-update-card" href="#blue-activity-1">
+            <div class="blue-update-image">
+              <span>Open activity</span>
+            </div>
+            <div class="blue-update-content">
+              <span class="blue-update-date">2025 / 2026</span>
+              <h3>Class Activities</h3>
+              <p>
+                Classroom activities, learning moments and approved photos can be added here.
+              </p>
+              <small>View activity →</small>
+            </div>
+          </a>
+
+          <a class="blue-update-card" href="#blue-activity-2">
+            <div class="blue-update-image">
+              <span>Open news</span>
+            </div>
+            <div class="blue-update-content">
+              <span class="blue-update-date">2025 / 2026</span>
+              <h3>Class News</h3>
+              <p>
+                Blue Class news, classroom learning or school updates can be shared here.
+              </p>
+              <small>View news →</small>
+            </div>
+          </a>
+
+          <a class="blue-update-card" href="#blue-activity-3">
+            <div class="blue-update-image">
+              <span>Open photos</span>
+            </div>
+            <div class="blue-update-content">
+              <span class="blue-update-date">2025 / 2026</span>
+              <h3>Photos & Moments</h3>
+              <p>
+                Approved photos and special class moments can be added safely here.
+              </p>
+              <small>View photos →</small>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section activity-detail-section" id="blue-activity-1">
+      <div class="container">
+        <article class="activity-detail-card">
+          <div class="activity-detail-header">
+            <div>
+              <p class="section-label">Class Activities</p>
+              <h2>Blue Class activities</h2>
+              <p>
+                This section can hold the full story of a class activity, including photos,
+                a short description and approved information from the class team.
+              </p>
+
+              <div class="activity-meta">
+                <span>Blue Class</span>
+                <span>2025 / 2026</span>
+                <span>Photos approved before upload</span>
+              </div>
+            </div>
+
+            <div class="activity-text-box">
+              <h3>Activity notes</h3>
+              <p>
+                Add the teacher-approved activity text here. Teacher names can be included
+                if approved by the school. Pupil names should be avoided unless the school
+                specifically approves them.
+              </p>
+            </div>
+          </div>
+
+          <div class="activity-gallery">
+            <div class="activity-photo-placeholder">Activity photo 1</div>
+            <div class="activity-photo-placeholder">Activity photo 2</div>
+            <div class="activity-photo-placeholder">Activity photo 3</div>
+          </div>
+
+          <div class="activity-text-box">
+            <h3>About this activity</h3>
+            <p>
+              A short approved description of the Blue Class activity can be written here.
+              This could describe classroom learning, sensory work, art, play-based learning,
+              communication activities, seasonal work or another approved class activity.
+            </p>
+          </div>
+
+          <a class="back-to-updates" href="#blue-updates">Back to Blue Class updates</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section activity-detail-section" id="blue-activity-2">
+      <div class="container">
+        <article class="activity-detail-card">
+          <div class="activity-detail-header">
+            <div>
+              <p class="section-label">Class News</p>
+              <h2>Blue Class news</h2>
+              <p>
+                This section is for class news, small updates, school events or classroom
+                achievements that are approved for the website.
+              </p>
+
+              <div class="activity-meta">
+                <span>Blue Class</span>
+                <span>News update</span>
+                <span>Approved school content</span>
+              </div>
+            </div>
+
+            <div class="activity-text-box">
+              <h3>News text</h3>
+              <p>
+                Add the full approved class news here. This can be changed any time the class
+                team sends new text or photos.
+              </p>
+            </div>
+          </div>
+
+          <div class="activity-gallery">
+            <div class="activity-photo-placeholder">News photo 1</div>
+            <div class="activity-photo-placeholder">News photo 2</div>
+            <div class="activity-photo-placeholder">News photo 3</div>
+          </div>
+
+          <div class="activity-text-box">
+            <h3>Class news details</h3>
+            <p>
+              Blue Class news, classroom learning or school updates can be shared here.
+              Keep the wording simple, warm and approved by the school before publishing.
+            </p>
+          </div>
+
+          <a class="back-to-updates" href="#blue-updates">Back to Blue Class updates</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section activity-detail-section" id="blue-activity-3">
+      <div class="container">
+        <article class="activity-detail-card">
+          <div class="activity-detail-header">
+            <div>
+              <p class="section-label">Photos & Moments</p>
+              <h2>Blue Class photos and moments</h2>
+              <p>
+                This section can be used for approved photographs, seasonal events,
+                classroom displays or special class moments.
+              </p>
+
+              <div class="activity-meta">
+                <span>Blue Class</span>
+                <span>Photos and moments</span>
+                <span>No pupil names unless approved</span>
+              </div>
+            </div>
+
+            <div class="activity-text-box">
+              <h3>Photo note</h3>
+              <p>
+                Add approved photos here. For privacy, avoid attaching pupil names to photos
+                unless the school has given clear permission.
+              </p>
+            </div>
+          </div>
+
+          <div class="activity-gallery">
+            <div class="activity-photo-placeholder">Photo 1</div>
+            <div class="activity-photo-placeholder">Photo 2</div>
+            <div class="activity-photo-placeholder">Photo 3</div>
+          </div>
+
+          <div class="activity-text-box">
+            <h3>About these photos</h3>
+            <p>
+              A short approved description of this Blue Class moment can be added here.
+              This keeps the page warm, personal and professional without needing extra files.
+            </p>
+          </div>
+
+          <a class="back-to-updates" href="#blue-updates">Back to Blue Class updates</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section blue-grow-section">
+      <div class="container">
+        <div class="blue-grow-card">
+          <div class="blue-grow-icon">💙</div>
+
+          <div>
+            <p class="section-label">A Note from Blue Class</p>
+            <h2>Sharing our year together</h2>
+
+            <ul class="blue-grow-list">
+              <li>
+                We look forward to sharing little moments from Blue Class throughout the school year.
+              </li>
+              <li>
+                This page will celebrate classroom activities, learning, creativity and special moments in a safe and respectful way.
+              </li>
+              <li>
+                All photographs and updates shared here will be approved by the school before being added to the website.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Class Landing Page</p>
+          <h2>Return to all class colours</h2>
+          <p>
+            Visit the main class landing page to choose another class colour.
+          </p>
+        </div>
+
+        <div class="quick-links">
+          <a href="classes.html">
+            <span>All Classes</span>
+            <small>Return to the full class landing page</small>
+          </a>
+
+          <a href="news.html">
+            <span>News</span>
+            <small>School news and events</small>
+          </a>
+
+          <a href="parents.html">
+            <span>Parents</span>
+            <small>Useful information for families</small>
+          </a>
+
+          <a href="contact.html">
+            <span>Contact</span>
+            <small>Contact the school office</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+        <h2>Cara Junior School</h2>
+        <p>Support and grow together</p>
+        <p>Banduff Road, Mayfield, Cork</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:0214643060">021 4643060</a></p>
+        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
