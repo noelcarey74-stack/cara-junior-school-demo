@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>School Transport Policy | Cara Junior School</title>
+
+  <meta
+    name="description"
+    content="School Transport Policy for Cara Junior School, including guidance on bus escorts, pupil safety, seating, collection, transport behaviour and new enrolments."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .policy-page {
+      background: #f7fbff;
+    }
+
+    .policy-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .policy-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .policy-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .policy-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policy-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: #eef7ff;
+      color: #1971c2;
+      font-size: 2rem;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policy-hero-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .policy-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .policy-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-content-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-content-card h2,
+    .policy-content-card h3 {
+      color: var(--navy);
+    }
+
+    .policy-content-card h3 {
+      margin-top: 28px;
+    }
+
+    .policy-content-card p {
+      color: #344054;
+    }
+
+    .policy-note {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-left: 6px solid #20c997;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-warning {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-left: 6px solid #fab005;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-danger {
+      background:
+        radial-gradient(circle at top left, rgba(240, 62, 62, 0.10), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff5f5);
+      border-left: 6px solid #f03e3e;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .policy-list li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .policy-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f5b;
+      font-weight: 950;
+    }
+
+    .transport-grid {
+      display: grid;
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .transport-card {
+      background: #f8fbff;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      border-top: 6px solid #20c997;
+    }
+
+    .transport-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .transport-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .transport-card:nth-child(4) {
+      border-top-color: #7048e8;
+    }
+
+    .transport-card:nth-child(5) {
+      border-top-color: #f06595;
+    }
+
+    .transport-card:nth-child(6) {
+      border-top-color: #ff922b;
+    }
+
+    .transport-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .transport-card p {
+      margin-bottom: 0;
+      color: #344054;
+    }
+
+    .numbered-policy-list {
+      counter-reset: policy-step;
+      list-style: none;
+      margin: 18px 0 0;
+      padding: 0;
+    }
+
+    .numbered-policy-list li {
+      counter-increment: policy-step;
+      position: relative;
+      padding-left: 48px;
+      margin: 16px 0;
+      color: #344054;
+    }
+
+    .numbered-policy-list li::before {
+      content: counter(policy-step);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #1971c2;
+      color: #ffffff;
+      font-weight: 950;
+    }
+
+    .contact-policy-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+    }
+
+    .contact-policy-box h3 {
+      margin-top: 0;
+    }
+
+    .policy-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .policy-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .policy-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .policy-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .policy-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .policy-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .transport-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .policy-content-card {
+        padding: 24px;
+      }
+
+      .policy-actions {
+        flex-direction: column;
+      }
+
+      .policy-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="policy-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>Cara Junior School, Banduff Road, Mayfield, Cork</p>
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html">Classes</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="policies.html" class="active">Policies</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero page-hero policy-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">School Policy</p>
+          <h1>School Transport Policy</h1>
+
+          <p class="hero-text">
+            Guidance for school transport, bus escorts, pupil safety, pick-up,
+            drop-off, seating and communication with parents and guardians.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#policy-content">Read Policy</a>
+            <a class="btn btn-secondary" href="policies.html">Back to Policies</a>
+          </div>
+        </div>
+
+        <div class="policy-hero-card">
+          <div class="policy-icon">🚌</div>
+          <h2>Safe Transport</h2>
+          <p>
+            This policy explains how school transport is managed and the expectations
+            for safe, smooth and respectful travel.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="policy-summary">
+          <div class="policy-summary-card">
+            <strong>Be Ready</strong>
+            <p>Pupils should be ready and waiting to board to avoid morning delays.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Seatbelts</strong>
+            <p>Pupils must wear seatbelts provided while travelling.</p>
+          </div>
+
+          <div class="policy-summary-card">
+            <strong>Safety</strong>
+            <p>Disruptive behaviour may result in removal from transport until resolved.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="policy-content">
+      <div class="container legal-layout">
+        <article class="policy-content-card">
+          <p class="section-label">Transport Policy</p>
+          <h2>School Transport Policy</h2>
+
+          <p>
+            Bus escorts are provided by the Board of Management using grant assistance
+            from the Department of Education and Skills to assist and supervise pupils
+            using school transport.
+          </p>
+
+          <p>
+            The purpose of this policy is to support safe, organised and respectful school
+            transport for pupils, families, escorts and drivers.
+          </p>
+
+          <div class="policy-note">
+            Parents and guardians are asked to have pupils ready for transport at the appointed
+            time so the vehicle can keep to its schedule and avoid delays for other pupils.
+          </div>
+
+          <h3>Main Transport Guidelines</h3>
+
+          <ol class="numbered-policy-list">
+            <li>
+              Pupils should be ready and waiting to board in the morning. Bus escorts wait in,
+              or at, the vehicle. It is the parents’ responsibility to get the pupil onto the transport.
+            </li>
+
+            <li>
+              If a pupil is not presented for transport within five minutes of arrival at the
+              pick-up point or home, the transport will leave to avoid delays for other pupils.
+            </li>
+
+            <li>
+              A short transition period is allowed for pupils moving from home to vehicle.
+              Parents still need to have pupils ready at the appointed time.
+            </li>
+
+            <li>
+              If a pupil is upset before leaving home and poses a risk to the escort or driver
+              in the confined space of a vehicle, the school may decline transport on that occasion.
+            </li>
+
+            <li>
+              Transport will not return to a pupil’s home for forgotten items, to avoid delaying
+              other pupils.
+            </li>
+
+            <li>
+              If pupils are not travelling, escorts and drivers appreciate being informed in
+              advance where possible.
+            </li>
+
+            <li>
+              Pupils will only be handed over to named persons. The school will not release
+              pupils to travel unaccompanied or with third parties unless written permission
+              has been provided in advance.
+            </li>
+
+            <li>
+              Escorts are not permitted to drop off at empty houses or at locations other than
+              the specified transport location.
+            </li>
+
+            <li>
+              Items in the pupil’s possession that may be a hazard to themselves or others
+              will be removed.
+            </li>
+
+            <li>
+              Pupils must wear the seatbelts provided. Some pupils may require a harness to
+              ensure they remain seated.
+            </li>
+
+            <li>
+              Consuming food, sweets and drinks on transport is not permitted.
+            </li>
+          </ol>
+
+          <h3>Safety and Behaviour on Transport</h3>
+
+          <div class="transport-grid">
+            <div class="transport-card">
+              <h3>Seatbelts and Harnesses</h3>
+              <p>
+                Pupils must use seatbelts provided. Some pupils may require a harness to
+                support safe seating during transport.
+              </p>
+            </div>
+
+            <div class="transport-card">
+              <h3>No Food or Drinks</h3>
+              <p>
+                Food, sweets and drinks are not permitted on transport.
+              </p>
+            </div>
+
+            <div class="transport-card">
+              <h3>Disruptive Behaviour</h3>
+              <p>
+                Persistent disruptive or challenging behaviour that may affect safety can
+                result in the pupil being removed from the service until the situation is resolved.
+              </p>
+            </div>
+
+            <div class="transport-card">
+              <h3>Agitated Before Travel</h3>
+              <p>
+                If a pupil is agitated or upset before leaving home, parents may need to bring
+                the pupil to school themselves once the pupil is regulated.
+              </p>
+            </div>
+
+            <div class="transport-card">
+              <h3>Medication</h3>
+              <p>
+                Escorts will ensure medication needed by pupils is given to families each morning
+                and afternoon by school staff.
+              </p>
+            </div>
+
+            <div class="transport-card">
+              <h3>Respectful Communication</h3>
+              <p>
+                Drivers and escorts should not discuss pupils or the school negatively, recognising
+                that many pupils may understand more than they can verbally communicate.
+              </p>
+            </div>
+          </div>
+
+          <h3>Concerns About Transport</h3>
+
+          <p>
+            If there is a concern regarding a pupil or home situation, it should be brought
+            to the attention of the Principal or Deputy Principal immediately.
+          </p>
+
+          <h3>Relief Escorts</h3>
+
+          <p>
+            Every effort is made to ensure escorts travel on each vehicle to assist pupils
+            and safeguard their safety. There may be occasions where the escort is unavailable.
+            The school has a bank of Garda-vetted relief escorts who may be called upon in
+            these circumstances.
+          </p>
+
+          <p>
+            Occasionally, if there is no escort available for a route, parents will be informed
+            with as much notice as possible. In that situation, it is the responsibility of parents
+            to bring and/or collect their child to and from school.
+          </p>
+
+          <h3>New Enrolments</h3>
+
+          <p>
+            Following formal acceptance of an offer of enrolment by letter, the Principal applies
+            for transport via the Special Educational Needs Officer. This application is then
+            processed by the National Council for Special Education.
+          </p>
+
+          <div class="policy-warning">
+            The Department is not obliged to arrange or pay a grant towards private transport
+            arrangements to any school other than the nearest recognised mainstream school,
+            special class, special school or unit.
+          </div>
+
+          <h3>If a Child Finds It Difficult to Remain Seated</h3>
+
+          <p>
+            If a child is finding it difficult to remain seated on transport, the Principal
+            should be alerted and the protocol should be followed in consultation with the
+            class teacher, escort and parents.
+          </p>
+
+          <h3>Policy Review</h3>
+
+          <p>
+            The policy was originally ratified on 23 September 2011. It was reviewed and revised
+            in 2013, 2016, 2018 and again in December 2022. The document notes the next review
+            in the school year 2025–2026.
+          </p>
+
+          <div class="contact-policy-box">
+            <h3>Contact the School Office</h3>
+            <p>
+              If you need guidance in relation to school transport, please contact the school office.
+            </p>
+
+            <p>
+              Cara Junior School<br />
+              Banduff Road, Mayfield, Cork<br />
+              Phone: <a href="tel:0214643060">021 4643060</a><br />
+              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+            </p>
+          </div>
+
+          <div class="policy-actions">
+            <a class="btn btn-primary" href="policies.html">Back to Policy Library</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to school information</h2>
+        </div>
+
+        <div class="policy-next-links">
+          <a class="policy-next-link" href="policies.html">
+            <span>Policy Library</span>
+            <small>Return to all school policies</small>
+          </a>
+
+          <a class="policy-next-link" href="parents.html">
+            <span>Parents</span>
+            <small>Useful information for parents and guardians</small>
+          </a>
+
+          <a class="policy-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+        <h2>Cara Junior School</h2>
+        <p>Support and grow together</p>
+        <p>Banduff Road, Mayfield, Cork</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:0214643060">021 4643060</a></p>
+        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
