@@ -181,8 +181,59 @@
       color: #344054;
     }
 
+    .contact-support-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .contact-support-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .contact-support-card h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+    }
+
+    .contact-support-card p {
+      margin: 0;
+      color: #475467;
+      line-height: 1.6;
+    }
+
+    .contact-support-card span {
+      display: inline-grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      margin-bottom: 14px;
+      background: #eef7ff;
+      color: var(--navy);
+      font-size: 1.35rem;
+      font-weight: 950;
+    }
+
+    .contact-support-card:nth-child(2) span {
+      background: #f1fff9;
+      color: #087f5b;
+    }
+
+    .contact-support-card:nth-child(3) span {
+      background: #fff9db;
+      color: #e67700;
+    }
+
     @media (min-width: 820px) {
       .contact-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .contact-support-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
@@ -415,6 +466,46 @@
 </section>
 
 <section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-label">How We Can Help</p>
+      <h2>What to contact the office about</h2>
+      <p>
+        The school office is the first point of contact for families and visitors.
+      </p>
+    </div>
+
+    <div class="contact-support-grid">
+      <div class="contact-support-card">
+        <span>📝</span>
+        <h3>Admissions</h3>
+        <p>
+          For admissions information, application forms, enrolment notices or questions
+          about places in the school.
+        </p>
+      </div>
+
+      <div class="contact-support-card">
+        <span>📅</span>
+        <h3>Calendar & Dates</h3>
+        <p>
+          For school closures, return dates, calendar information or to confirm an
+          important school date.
+        </p>
+      </div>
+
+      <div class="contact-support-card">
+        <span>📄</span>
+        <h3>Policies & Information</h3>
+        <p>
+          For questions about school policies, forms, notices or general school information.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section classes-section">
   <div class="container two-column">
     <div>
       <p class="section-label">Office</p>
@@ -448,7 +539,7 @@
   </div>
 </section>
 
-<section class="section classes-section">
+<section class="section">
   <div class="container">
     <div class="section-heading">
       <p class="section-label">Useful Links</p>
