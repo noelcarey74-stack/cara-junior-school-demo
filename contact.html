@@ -74,6 +74,26 @@
       gap: 12px;
     }
 
+    .mini-direction-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 14px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--navy);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 900;
+      box-shadow: 0 10px 22px rgba(18, 51, 95, 0.16);
+    }
+
+    .mini-direction-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(18, 51, 95, 0.22);
+    }
+
     @media (max-width: 520px) {
       .contact-map-frame {
         height: 300px;
@@ -86,6 +106,10 @@
       .map-actions .btn {
         width: 100%;
         justify-content: center;
+      }
+
+      .mini-direction-link {
+        width: 100%;
       }
     }
   </style>
@@ -169,6 +193,15 @@
               <li><strong>Roll Number:</strong> 20354A</li>
               <li><strong>Eircode:</strong> T23 TA12</li>
             </ul>
+
+            <a
+              class="mini-direction-link"
+              href="https://www.google.com/maps/dir/?api=1&destination=51.917861,-8.424502"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get Directions
+            </a>
           </div>
         </div>
       </div>
@@ -207,6 +240,15 @@
               Cork,<br />
               T23 TA12.
             </p>
+
+            <a
+              class="mini-direction-link"
+              href="https://www.google.com/maps/dir/?api=1&destination=51.917861,-8.424502"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get Directions
+            </a>
           </article>
 
           <article class="contact-card">
@@ -252,6 +294,15 @@
             The correct school address is Cara Junior School, Banduff Road,
             Mayfield, Cork, T23 TA12.
           </p>
+
+          <a
+            class="mini-direction-link"
+            href="https://www.google.com/maps/dir/?api=1&destination=51.917861,-8.424502"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Directions
+          </a>
         </div>
 
         <div class="map-card">
@@ -366,20 +417,22 @@
         </ul>
       </div>
 
-     <div>
-  <h3>Website</h3>
-  <ul>
-    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-    <li><a href="cookie-policy.html">Cookie Policy</a></li>
-    <li><a href="accessibility.html">Accessibility Statement</a></li>
-    <li><a href="terms.html">Terms of Use</a></li>
-    <li>
-      <a href="https://www.facebook.com/profile.php?id=61580438163822" target="_blank" rel="noopener">
-        Facebook
-      </a>
-    </li>
-  </ul>
-</div>
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61580438163822" target="_blank" rel="noopener noreferrer">
+              Facebook
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <div class="footer-bottom">
       <div class="container">
         <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
