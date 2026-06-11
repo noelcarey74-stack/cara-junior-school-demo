@@ -108,6 +108,104 @@
       color: #475467;
     }
 
+    .principal-welcome-section {
+      background:
+        radial-gradient(circle at top right, rgba(250, 176, 5, 0.16), transparent 28%),
+        linear-gradient(135deg, #ffffff 0%, #f7fbff 100%);
+    }
+
+    .principal-welcome-card {
+      display: grid;
+      gap: 28px;
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 28px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 46px rgba(18, 51, 95, 0.10);
+    }
+
+    .principal-photo-wrap {
+      align-self: start;
+      background: linear-gradient(135deg, #e7f5ff, #fff9db);
+      border-radius: 28px;
+      padding: 14px;
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.10);
+    }
+
+    .principal-photo-wrap img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 22px;
+      display: block;
+    }
+
+    .principal-caption {
+      margin: 14px 4px 0;
+      color: var(--navy);
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .principal-caption span {
+      display: block;
+      color: #667085;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    .principal-welcome-content h2 {
+      color: var(--navy);
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .principal-welcome-content p {
+      color: #344054;
+      line-height: 1.75;
+      margin: 0 0 16px;
+    }
+
+    .principal-procedures {
+      margin-top: 22px;
+      background: #f8fbff;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      border-radius: 22px;
+      padding: 20px;
+    }
+
+    .principal-procedures h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .principal-procedures ul {
+      margin: 0;
+      padding-left: 20px;
+      color: #344054;
+    }
+
+    .principal-procedures li {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    .principal-signoff {
+      margin-top: 22px;
+      font-weight: 900;
+      color: var(--navy);
+    }
+
+    .principal-signoff span {
+      display: block;
+      font-weight: 700;
+      color: #475467;
+      margin-top: 4px;
+    }
+
     .home-class-grid {
       display: grid;
       gap: 16px;
@@ -220,6 +318,13 @@
       }
     }
 
+    @media (min-width: 900px) {
+      .principal-welcome-card {
+        grid-template-columns: 360px 1fr;
+        align-items: start;
+      }
+    }
+
     @media (min-width: 1020px) {
       .home-class-grid {
         grid-template-columns: repeat(4, 1fr);
@@ -229,6 +334,14 @@
     @media (max-width: 520px) {
       .home-hero-card img {
         height: 240px;
+      }
+
+      .principal-welcome-card {
+        padding: 20px;
+      }
+
+      .principal-photo-wrap img {
+        height: 300px;
       }
 
       .home-class-card {
@@ -244,7 +357,7 @@
   <header class="site-header">
     <div class="top-bar">
       <div class="container top-bar-inner">
-        <p>Cara Junior School, Banduff Road, Mayfield, Cork</p>
+        <p>Cara Junior School, Banduff Road, Mayfield, Cork, T23 TA12</p>
         <div class="top-contact">
           <a href="tel:0214643060">021 4643060</a>
           <span>|</span>
@@ -363,6 +476,75 @@
             <span>Policies</span>
             <small>School policy library</small>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section principal-welcome-section">
+      <div class="container">
+        <div class="principal-welcome-card">
+          <div class="principal-photo-wrap">
+            <img
+              src="colette-butler-principal.jpg"
+              alt="Colette Butler, Principal of Cara Junior School"
+            />
+            <p class="principal-caption">
+              Colette Butler
+              <span>Principal, Cara Junior School</span>
+            </p>
+          </div>
+
+          <div class="principal-welcome-content">
+            <p class="section-label">Principal’s Welcome</p>
+            <h2>Welcome</h2>
+
+            <p>
+              It is a privilege to be the Principal of Cara Junior School. I have been
+              in teaching for 25 years, 16 of those years in the special education sector.
+              It is with the knowledge and experience I have gained over the years that
+              I hope to enhance and develop the community that is Cara Junior School.
+            </p>
+
+            <p>
+              Cara Junior School has 12 teachers and 37 S.N.A.s. Each one of these people
+              is a dedicated professional who is committed to ensuring that your child,
+              our pupils, receive the very best learning opportunities that we can afford
+              them. We are fortunate to have a large building which provides us with ample
+              space for learning and sensory regulation.
+            </p>
+
+            <p>
+              Parental involvement is crucial to the smooth running of our school community
+              and contributes to improved learning outcomes for your child. An active PFA
+              can advocate for the school and its pupils. It can provide an opportunity for
+              parents to connect with and support each other; “support and grow together”.
+            </p>
+
+            <p>
+              My role as Principal is to lead the teaching and learning, ensuring your child
+              gets the best education possible. I must also ensure that the school community
+              is safe; therefore, health and safety is a priority. As members of the school
+              community, I hope that we can work together to achieve this goal, respecting
+              each other and putting your child and their wellbeing at the forefront of all
+              that we do.
+            </p>
+
+            <div class="principal-procedures">
+              <h3>To assist us, please observe the following procedures:</h3>
+
+              <ul>
+                <li>Supervision of children begins at 9.10 a.m.</li>
+                <li>Visitors access the school through the main door, where they can remain in the lobby area.</li>
+                <li>Meetings with teachers must be scheduled through the class or office email. Phone calls can be arranged but must also be scheduled.</li>
+                <li>Meetings with the Principal can be arranged through the office. All calls will be returned when possible.</li>
+              </ul>
+            </div>
+
+            <p class="principal-signoff">
+              Thank you,
+              <span>Colette Butler, Principal</span>
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -526,7 +708,7 @@
         <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
         <h2>Cara Junior School</h2>
         <p>Support and grow together</p>
-        <p>Banduff Road, Mayfield, Cork</p>
+        <p>Banduff Road, Mayfield, Cork, T23 TA12</p>
       </div>
 
       <div>
