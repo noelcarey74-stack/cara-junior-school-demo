@@ -1,897 +1,719 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Purple Class | Cara Junior School</title>
+  <title>Pupil Illness Policy | Cara Junior School</title>
 
-  <meta
-    name="description"
-    content="Purple Class page for Cara Junior School, with approved class news, activities, photos and school updates."
-  />
+<meta
+ name="description"
+ content="Pupil Illness Policy for Cara Junior School, including guidance on when pupils should remain at home due to illness."
+/>
 
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* Purple Class page warm layout */
-    .purple-class-page {
-      background: #fbf7ff;
+    .policy-page {
+      background: #f7fbff;
     }
 
-    .purple-class-page .eyebrow,
-    .purple-class-page .section-label {
-      color: #7048e8;
-    }
-
-    .purple-class-hero {
+    .policy-hero {
       position: relative;
-      padding: 56px 0 44px;
-      background:
-        radial-gradient(circle at top left, rgba(112, 72, 232, 0.20), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(190, 162, 255, 0.26), transparent 36%),
-        linear-gradient(135deg, #ffffff 0%, #f3ecff 100%);
       overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
     }
 
-    .purple-class-hero::before,
-    .purple-class-hero::after {
+    .policy-hero::after {
       content: "";
       position: absolute;
-      width: 180px;
-      height: 180px;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
       background:
-        radial-gradient(circle at 40% 30%, rgba(112, 72, 232, 0.18), transparent 18%),
-        radial-gradient(circle at 65% 45%, rgba(112, 72, 232, 0.12), transparent 20%),
-        radial-gradient(circle at 42% 68%, rgba(112, 72, 232, 0.10), transparent 19%);
-      opacity: 0.65;
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
       pointer-events: none;
     }
 
-    .purple-class-hero::before {
-      left: -60px;
-      bottom: -40px;
-    }
-
-    .purple-class-hero::after {
-      right: -60px;
-      top: 30px;
-    }
-
-    .purple-class-hero-grid {
+    .policy-hero .container {
       position: relative;
       z-index: 1;
-      display: grid;
-      gap: 34px;
-      align-items: center;
     }
 
-    .purple-class-copy h1 {
-      margin: 0;
-      color: #5f3dc4;
-      font-size: clamp(2.35rem, 7vw, 4.6rem);
-      line-height: 1.03;
-      letter-spacing: -0.05em;
-    }
-
-    .purple-class-copy p {
-      max-width: 650px;
-      color: #26384d;
-      font-size: 1.12rem;
-    }
-
-    .purple-class-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(112, 72, 232, 0.14);
-      color: #7048e8;
-      border: 1px solid rgba(112, 72, 232, 0.26);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-weight: 950;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      font-size: 0.78rem;
-      margin-bottom: 14px;
-    }
-
-    .purple-class-badge span {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #7048e8;
-      display: inline-block;
-    }
-
-    .purple-class-photo-card {
+    .policy-hero-card {
       background: #ffffff;
-      border-radius: 28px;
-      padding: 12px;
-      box-shadow: 0 22px 50px rgba(18, 51, 95, 0.14);
-      border: 1px solid rgba(112, 72, 232, 0.18);
-    }
-
-    .purple-class-photo-card a {
-      display: block;
-      text-decoration: none;
-    }
-
-    .purple-class-photo-card img {
-      width: 100%;
-      height: 330px;
-      object-fit: cover;
-      border-radius: 20px;
-    }
-
-    .purple-class-photo-card div {
-      padding: 16px 10px 8px;
-    }
-
-    .purple-class-photo-card h2 {
-      margin: 0 0 6px;
-      color: #5f3dc4;
-      font-size: 1.35rem;
-    }
-
-    .purple-class-photo-card p {
-      margin: 0;
-      color: #475467;
-    }
-
-    .purple-button-primary {
-      background: #7048e8;
-      color: #ffffff;
-      box-shadow: 0 14px 28px rgba(112, 72, 232, 0.22);
-    }
-
-    .purple-button-secondary {
-      background: #ffffff;
-      color: #7048e8;
-      border: 2px solid rgba(112, 72, 232, 0.35);
-    }
-
-    .purple-team-section {
-      background: #ffffff;
-    }
-
-    .purple-team-grid {
-      display: grid;
-      gap: 22px;
-      align-items: start;
-    }
-
-    .purple-team-card {
-      background: #f3ecff;
-      border-radius: 26px;
+      border-radius: 30px;
       padding: 24px;
-      border: 1px solid rgba(112, 72, 232, 0.16);
-      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
     }
 
-    .purple-team-card h3 {
-      margin: 0 0 14px;
-      color: #5f3dc4;
-      font-size: 1.4rem;
-    }
-
-    .team-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .team-list li {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(112, 72, 232, 0.16);
-      color: #344054;
-    }
-
-    .team-list li:last-child {
-      border-bottom: 0;
-    }
-
-    .team-list strong {
-      color: var(--navy);
-    }
-
-    .team-photo-card {
-      background: #ffffff;
-      border-radius: 26px;
-      padding: 14px;
-      border: 1px solid rgba(112, 72, 232, 0.16);
-      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
-    }
-
-    .team-photo-placeholder {
-      min-height: 240px;
-      border-radius: 20px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 24px;
-      background:
-        radial-gradient(circle at top right, rgba(255, 255, 255, 0.75), transparent 32%),
-        linear-gradient(135deg, #e5dbff, #b197fc);
-      color: #5f3dc4;
-      font-weight: 950;
-    }
-
-    .team-photo-card p {
-      margin: 14px 4px 4px;
-      color: #475467;
-      font-size: 0.95rem;
-    }
-
-    .purple-note-box {
-      margin-top: 18px;
-      background: #ffffff;
-      border-left: 5px solid #7048e8;
-      border-radius: 16px;
-      padding: 16px;
-      color: #344054;
-    }
-
-    .purple-updates-section {
-      background: #ffffff;
-    }
-
-    .purple-update-grid {
-      display: grid;
-      gap: 18px;
-    }
-
-    .purple-update-card {
-      display: block;
-      background: #ffffff;
-      border-radius: 24px;
-      overflow: hidden;
-      border: 1px solid rgba(112, 72, 232, 0.14);
-      box-shadow: 0 14px 36px rgba(18, 51, 95, 0.09);
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-    }
-
-    .purple-update-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 22px 46px rgba(18, 51, 95, 0.14);
-      border-color: rgba(112, 72, 232, 0.34);
-    }
-
-    .purple-update-image {
-      min-height: 180px;
-      display: grid;
-      place-items: center;
-      background:
-        radial-gradient(circle at top right, rgba(255, 255, 255, 0.65), transparent 32%),
-        linear-gradient(135deg, #e5dbff, #b197fc);
-      color: #5f3dc4;
-      font-weight: 950;
-      text-align: center;
-      padding: 18px;
-    }
-
-    .purple-update-image span {
-      background: rgba(255, 255, 255, 0.88);
-      padding: 8px 14px;
-      border-radius: 999px;
-    }
-
-    .purple-update-content {
-      padding: 20px;
-    }
-
-    .purple-update-date {
-      display: inline-flex;
-      background: #f3ecff;
-      color: #5f3dc4;
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 0.78rem;
-      font-weight: 950;
-      margin-bottom: 10px;
-    }
-
-    .purple-update-content h3 {
-      margin: 0 0 8px;
-      color: var(--navy);
-    }
-
-    .purple-update-content p {
-      margin: 0;
-      color: #475467;
-    }
-
-    .purple-update-content small {
-      display: inline-flex;
-      margin-top: 14px;
-      color: #7048e8;
-      font-weight: 950;
-    }
-
-    .activity-detail-section {
-      background:
-        radial-gradient(circle at top left, rgba(112, 72, 232, 0.10), transparent 30%),
-        linear-gradient(135deg, #fbf7ff, #ffffff);
-      scroll-margin-top: 130px;
-    }
-
-    .activity-detail-card {
-      background: #ffffff;
-      border-radius: 28px;
-      padding: 26px;
-      border: 1px solid rgba(112, 72, 232, 0.14);
-      box-shadow: 0 16px 42px rgba(18, 51, 95, 0.10);
-    }
-
-    .activity-detail-header {
-      display: grid;
-      gap: 18px;
-      align-items: start;
-      margin-bottom: 24px;
-    }
-
-    .activity-detail-header h2 {
-      margin: 0;
-      color: var(--navy);
-      font-size: clamp(1.9rem, 5vw, 3rem);
-      line-height: 1.08;
-      letter-spacing: -0.03em;
-    }
-
-    .activity-detail-header p {
-      color: #475467;
-      font-size: 1.05rem;
-    }
-
-    .activity-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .activity-meta span {
-      display: inline-flex;
-      background: #f3ecff;
-      color: #5f3dc4;
-      border-radius: 999px;
-      padding: 7px 12px;
-      font-size: 0.8rem;
-      font-weight: 950;
-    }
-
-    .activity-gallery {
-      display: grid;
-      gap: 16px;
-      margin-top: 20px;
-    }
-
-    .activity-photo-placeholder {
-      min-height: 190px;
-      display: grid;
-      place-items: center;
-      border-radius: 20px;
-      background:
-        radial-gradient(circle at top right, rgba(255, 255, 255, 0.70), transparent 30%),
-        linear-gradient(135deg, #e5dbff, #b197fc);
-      color: #5f3dc4;
-      font-weight: 950;
-      text-align: center;
-      padding: 20px;
-      border: 1px solid rgba(112, 72, 232, 0.16);
-    }
-
-    .activity-text-box {
-      background: #f3ecff;
-      border-radius: 20px;
-      padding: 22px;
-      border: 1px solid rgba(112, 72, 232, 0.14);
-      margin-top: 20px;
-    }
-
-    .activity-text-box h3 {
-      margin: 0 0 8px;
-      color: #5f3dc4;
-    }
-
-    .activity-text-box p {
-      margin: 0;
-      color: #344054;
-    }
-
-    .back-to-updates {
-      display: inline-flex;
-      margin-top: 22px;
-      color: #7048e8;
-      font-weight: 950;
-      text-decoration: none;
-      border-bottom: 3px solid #b197fc;
-    }
-
-    .purple-grow-section {
-      background:
-        radial-gradient(circle at top left, rgba(112, 72, 232, 0.12), transparent 28%),
-        linear-gradient(135deg, #f3ecff, #ffffff);
-    }
-
-    .purple-grow-card {
-      display: grid;
-      gap: 18px;
-      background: #ffffff;
-      border-radius: 26px;
-      padding: 24px;
-      border: 1px solid rgba(112, 72, 232, 0.14);
-      box-shadow: var(--shadow);
-    }
-
-    .purple-grow-icon {
+    .policy-icon {
       width: 78px;
       height: 78px;
-      border-radius: 50%;
+      border-radius: 22px;
       display: grid;
       place-items: center;
-      background: #f3ecff;
-      color: #5f3dc4;
+      background: #fff5f5;
+      color: #c92a2a;
       font-size: 2rem;
       font-weight: 950;
+      margin-bottom: 18px;
     }
 
-    .purple-grow-list {
+    .policy-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policy-hero-card p {
       margin: 0;
+      color: #475467;
+    }
+
+    .policy-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .policy-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .policy-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-content-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-content-card h2,
+    .policy-content-card h3 {
+      color: var(--navy);
+    }
+
+    .policy-content-card h3 {
+      margin-top: 28px;
+    }
+
+    .policy-content-card p {
+      color: #344054;
+    }
+
+    .policy-note {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-left: 6px solid #20c997;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-warning {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-left: 6px solid #fab005;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-list {
+      margin: 18px 0 0;
       padding: 0;
       list-style: none;
     }
 
-    .purple-grow-list li {
+    .policy-list li {
       position: relative;
-      padding-left: 30px;
-      margin: 12px 0;
+      padding-left: 32px;
+      margin: 13px 0;
       color: #344054;
     }
 
-    .purple-grow-list li::before {
+    .policy-list li::before {
       content: "✓";
       position: absolute;
       left: 0;
       top: 0;
-      color: #7048e8;
+      color: #087f5b;
       font-weight: 950;
     }
 
+    .illness-grid {
+      display: grid;
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .illness-card {
+      background: #f8fbff;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      border-top: 6px solid #20c997;
+    }
+
+    .illness-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .illness-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .illness-card:nth-child(4) {
+      border-top-color: #f03e3e;
+    }
+
+    .illness-card:nth-child(5) {
+      border-top-color: #7048e8;
+    }
+
+    .illness-card:nth-child(6) {
+      border-top-color: #ff922b;
+    }
+
+    .illness-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .illness-card p {
+      margin-bottom: 0;
+      color: #344054;
+    }
+
+    .symptom-table-wrap {
+      overflow-x: auto;
+      margin-top: 20px;
+      border-radius: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 10px 26px rgba(18, 51, 95, 0.06);
+    }
+
+    .symptom-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+      background: #ffffff;
+    }
+
+    .symptom-table th {
+      background: #12335f;
+      color: #ffffff;
+      text-align: left;
+      padding: 14px;
+      font-size: 0.95rem;
+    }
+
+    .symptom-table td {
+      padding: 14px;
+      border-bottom: 1px solid rgba(18, 51, 95, 0.10);
+      color: #344054;
+      vertical-align: top;
+    }
+
+    .symptom-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .symptom-table strong {
+      color: var(--navy);
+    }
+
+    .contact-policy-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+    }
+
+    .contact-policy-box h3 {
+      margin-top: 0;
+    }
+
+    .policy-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .policy-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .policy-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .policy-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .policy-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
     @media (min-width: 720px) {
-      .purple-class-hero-grid {
-        grid-template-columns: 0.95fr 1.05fr;
-      }
-
-      .purple-team-grid {
-        grid-template-columns: 1.05fr 0.95fr;
-      }
-
-      .purple-update-grid {
+      .policy-summary {
         grid-template-columns: repeat(3, 1fr);
       }
 
-      .activity-detail-header {
-        grid-template-columns: 1fr 0.6fr;
+      .illness-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .activity-gallery {
+      .policy-next-links {
         grid-template-columns: repeat(3, 1fr);
-      }
-
-      .purple-grow-card {
-        grid-template-columns: 90px 1fr;
-        align-items: center;
       }
     }
 
     @media (max-width: 520px) {
-      .purple-class-photo-card img {
-        height: 240px;
+      .policy-content-card {
+        padding: 24px;
+      }
+
+      .policy-actions {
+        flex-direction: column;
+      }
+
+      .policy-actions .btn {
+        width: 100%;
+        justify-content: center;
       }
     }
   </style>
+
 </head>
 
-<body class="class-page purple-class-page">
+<body class="policy-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
     <div class="top-bar">
       <div class="container top-bar-inner">
-  <p>
-    Cara Junior School, Banduff Road, Mayfield, Cork, T23 TA12
-    <a
-      class="top-directions-link"
-      href="https://www.google.com/maps/dir/?api=1&destination=51.917861,-8.424502"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Get Directions
-    </a>
-  </p>
+        <p>
+          Cara Junior School, Banduff Road, Mayfield, Cork, T23 TA12
+          <a
+            class="top-directions-link"
+            href="https://www.google.com/maps/dir/?api=1&destination=51.917861,-8.424502"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Directions
+          </a>
+        </p>
 
-  <div class="top-contact">
-
-    <div class="nav-wrap">
-      <div class="container nav-inner">
-        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
-          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
-          <div class="brand-text">
-            <strong>Cara Junior School</strong>
-            <span>Support and grow together</span>
-          </div>
-        </a>
-
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="classes.html" class="active">Classes</a>
-          <a href="admissions.html">Admissions</a>
-          <a href="parents.html">Parents</a>
-          <a href="calendar.html">Calendar</a>
-          <a href="policies.html">Policies</a>
-          <a href="news.html">News</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
+```
+    <div class="top-contact">
+      <a href="tel:0214643060">021 4643060</a>
+      <span>|</span>
+      <a href="mailto:office@carajs.ie">office@carajs.ie</a>
     </div>
+  </div>
+</div>
+
+<div class="nav-wrap">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+      <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+      <div class="brand-text">
+        <strong>Cara Junior School</strong>
+        <span>Support and grow together</span>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="classes.html">Classes</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="parents.html">Parents</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="policies.html" class="active">Policies</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</div>
+```
+
   </header>
 
   <main id="main-content">
-    <section class="purple-class-hero">
-      <div class="container purple-class-hero-grid">
-        <div class="purple-class-copy">
-          <div class="purple-class-badge">
-            <span></span>
-            Purple Class
-          </div>
+    <section class="hero page-hero policy-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">School Policy</p>
+          <h1>Pupil Illness Policy</h1>
 
-          <h1>Welcome to Purple Class.</h1>
+```
+      <p class="hero-text">
+        Guidance for parents and guardians on when a child should remain at home,
+        when the school may contact home, and how illness is managed safely.
+      </p>
 
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#policy-content">Read Policy</a>
+        <a class="btn btn-secondary" href="policies.html">Back to Policies</a>
+      </div>
+    </div>
+
+    <div class="policy-hero-card">
+      <div class="policy-icon">🩺</div>
+      <h2>Health and Safety</h2>
+      <p>
+        This page presents the pupil illness guidance in a clearer website format
+        for parents, guardians and staff.
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="policy-summary">
+      <div class="policy-summary-card">
+        <strong>Keep Home if Unwell</strong>
+        <p>If a child cannot take part in normal school activities, they should stay at home.</p>
+      </div>
+
+      <div class="policy-summary-card">
+        <strong>Infection Control</strong>
+        <p>Some illnesses require absence to prevent infection spreading to pupils or staff.</p>
+      </div>
+
+      <div class="policy-summary-card">
+        <strong>Collection</strong>
+        <p>If a child becomes unwell during the day, parents or guardians may be contacted.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="policy-content">
+  <div class="container legal-layout">
+    <article class="policy-content-card">
+      <p class="section-label">Pupil Illness Policy</p>
+      <h2>Policy on Pupil Illness in Cara Junior School</h2>
+
+      <p>
+        Deciding when to keep a child from school can be difficult, especially where
+        a child may not be able to verbalise that they are unwell or in pain.
+      </p>
+
+      <p>
+        Some illnesses require absence from school to prevent infection spreading to
+        other children or staff and to allow the child time to rest, recover and be treated.
+      </p>
+
+      <div class="policy-note">
+        If your child is not well enough to participate in normal school activities,
+        the safest decision may be to keep them at home under observation.
+      </div>
+
+      <h3>Why this policy is important</h3>
+
+      <p>
+        Cara Junior School pupils may require a high level of support, supervision and
+        routine during the school day. The school does not have nursing cover as part of
+        the multi-disciplinary support team.
+      </p>
+
+      <p>
+        If a sick child is in class for the day, it may disrupt the educational activities
+        of the class and may require significant staff attention. It may also increase the
+        risk of infection spreading to other pupils and staff.
+      </p>
+
+      <h3>If a child becomes unwell during the day</h3>
+
+      <p>
+        If a child appears unwell during the school day, the school will contact parents
+        or guardians where there are concerns about the child’s health or capacity to
+        remain in school.
+      </p>
+
+      <p>
+        The school has a medical room where a child may rest while awaiting collection,
+        but this is only an interim measure.
+      </p>
+
+      <h3>When to keep a child at home</h3>
+
+      <div class="illness-grid">
+        <div class="illness-card">
+          <h3>Too Unwell for Activities</h3>
           <p>
-            A warm space for Purple Class news, approved photographs, classroom activities
-            and school updates throughout the year.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn purple-button-primary" href="#purple-updates">Class Updates</a>
-            <a class="btn purple-button-secondary" href="classes.html">Back to All Classes</a>
-          </div>
-        </div>
-
-        <div class="purple-class-photo-card">
-          <a href="purple-classroom.jpg" target="_blank" rel="noopener">
-            <img src="purple-classroom.jpg" alt="Purple Class classroom" />
-          </a>
-          <div>
-            <h2>Purple Class</h2>
-            <p>
-              Click the classroom image to open it larger. Real approved classroom photos
-              can be added here later.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section purple-team-section">
-      <div class="container purple-team-grid">
-        <div>
-          <p class="section-label">Class Team</p>
-          <h2>Purple Class team</h2>
-
-          <div class="purple-team-card">
-            <h3>2025 / 2026</h3>
-
-            <ul class="team-list">
-              <li>
-                <strong>Class Teacher</strong>
-                <span>To be confirmed</span>
-              </li>
-              <li>
-                <strong>SNA Team</strong>
-                <span>To be confirmed</span>
-              </li>
-              <li>
-                <strong>Class Colour</strong>
-                <span>Purple</span>
-              </li>
-              <li>
-                <strong>Room</strong>
-                <span>Purple Class</span>
-              </li>
-            </ul>
-
-            <div class="purple-note-box">
-              Teacher and SNA names can be added once approved by the school.
-              Staff photographs should only be used where staff are happy and the school approves.
-            </div>
-          </div>
-        </div>
-
-        <div class="team-photo-card">
-          <div class="team-photo-placeholder">
-            Class team photo<br />
-            to be added if approved
-          </div>
-          <p>
-            A staff or classroom photo can be placed here once approved. Pupil names should
-            not be attached to photographs unless the school gives clear permission.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section purple-updates-section" id="purple-updates">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-label">2025 / 2026</p>
-          <h2>Purple Class updates</h2>
-          <p>
-            Click a card below to open the activity, news or photo section further down
-            this same page.
-          </p>
-        </div>
-
-        <div class="purple-update-grid">
-          <a class="purple-update-card" href="#purple-activity-1">
-            <div class="purple-update-image">
-              <span>Open activity</span>
-            </div>
-            <div class="purple-update-content">
-              <span class="purple-update-date">2025 / 2026</span>
-              <h3>Class Activities</h3>
-              <p>
-                Classroom activities, learning moments and approved photos can be added here.
-              </p>
-              <small>View activity →</small>
-            </div>
-          </a>
-
-          <a class="purple-update-card" href="#purple-activity-2">
-            <div class="purple-update-image">
-              <span>Open news</span>
-            </div>
-            <div class="purple-update-content">
-              <span class="purple-update-date">2025 / 2026</span>
-              <h3>Class News</h3>
-              <p>
-                Purple Class news, classroom learning or school updates can be shared here.
-              </p>
-              <small>View news →</small>
-            </div>
-          </a>
-
-          <a class="purple-update-card" href="#purple-activity-3">
-            <div class="purple-update-image">
-              <span>Open photos</span>
-            </div>
-            <div class="purple-update-content">
-              <span class="purple-update-date">2025 / 2026</span>
-              <h3>Photos & Moments</h3>
-              <p>
-                Approved photos and special class moments can be added safely here.
-              </p>
-              <small>View photos →</small>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section activity-detail-section" id="purple-activity-1">
-      <div class="container">
-        <article class="activity-detail-card">
-          <div class="activity-detail-header">
-            <div>
-              <p class="section-label">Class Activities</p>
-              <h2>Purple Class activities</h2>
-              <p>
-                This section can hold the full story of a class activity, including photos,
-                a short description and approved information from the class team.
-              </p>
-
-              <div class="activity-meta">
-                <span>Purple Class</span>
-                <span>2025 / 2026</span>
-                <span>Photos approved before upload</span>
-              </div>
-            </div>
-
-            <div class="activity-text-box">
-              <h3>Activity notes</h3>
-              <p>
-                Add the teacher-approved activity text here. Teacher names can be included
-                if approved by the school. Pupil names should be avoided unless the school
-                specifically approves them.
-              </p>
-            </div>
-          </div>
-
-          <div class="activity-gallery">
-            <div class="activity-photo-placeholder">Activity photo 1</div>
-            <div class="activity-photo-placeholder">Activity photo 2</div>
-            <div class="activity-photo-placeholder">Activity photo 3</div>
-          </div>
-
-          <div class="activity-text-box">
-            <h3>About this activity</h3>
-            <p>
-              A short approved description of the Purple Class activity can be written here.
-              This could describe classroom learning, sensory work, art, play-based learning,
-              communication activities, seasonal work or another approved class activity.
-            </p>
-          </div>
-
-          <a class="back-to-updates" href="#purple-updates">Back to Purple Class updates</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section activity-detail-section" id="purple-activity-2">
-      <div class="container">
-        <article class="activity-detail-card">
-          <div class="activity-detail-header">
-            <div>
-              <p class="section-label">Class News</p>
-              <h2>Purple Class news</h2>
-              <p>
-                This section is for class news, small updates, school events or classroom
-                achievements that are approved for the website.
-              </p>
-
-              <div class="activity-meta">
-                <span>Purple Class</span>
-                <span>News update</span>
-                <span>Approved school content</span>
-              </div>
-            </div>
-
-            <div class="activity-text-box">
-              <h3>News text</h3>
-              <p>
-                Add the full approved class news here. This can be changed any time the class
-                team sends new text or photos.
-              </p>
-            </div>
-          </div>
-
-          <div class="activity-gallery">
-            <div class="activity-photo-placeholder">News photo 1</div>
-            <div class="activity-photo-placeholder">News photo 2</div>
-            <div class="activity-photo-placeholder">News photo 3</div>
-          </div>
-
-          <div class="activity-text-box">
-            <h3>Class news details</h3>
-            <p>
-              Purple Class news, classroom learning or school updates can be shared here.
-              Keep the wording simple, warm and approved by the school before publishing.
-            </p>
-          </div>
-
-          <a class="back-to-updates" href="#purple-updates">Back to Purple Class updates</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section activity-detail-section" id="purple-activity-3">
-      <div class="container">
-        <article class="activity-detail-card">
-          <div class="activity-detail-header">
-            <div>
-              <p class="section-label">Photos & Moments</p>
-              <h2>Purple Class photos and moments</h2>
-              <p>
-                This section can be used for approved photographs, seasonal events,
-                classroom displays or special class moments.
-              </p>
-
-              <div class="activity-meta">
-                <span>Purple Class</span>
-                <span>Photos and moments</span>
-                <span>No pupil names unless approved</span>
-              </div>
-            </div>
-
-            <div class="activity-text-box">
-              <h3>Photo note</h3>
-              <p>
-                Add approved photos here. For privacy, avoid attaching pupil names to photos
-                unless the school has given clear permission.
-              </p>
-            </div>
-          </div>
-
-          <div class="activity-gallery">
-            <div class="activity-photo-placeholder">Photo 1</div>
-            <div class="activity-photo-placeholder">Photo 2</div>
-            <div class="activity-photo-placeholder">Photo 3</div>
-          </div>
-
-          <div class="activity-text-box">
-            <h3>About these photos</h3>
-            <p>
-              A short approved description of this Purple Class moment can be added here.
-              This keeps the page warm, personal and professional without needing extra files.
-            </p>
-          </div>
-
-          <a class="back-to-updates" href="#purple-updates">Back to Purple Class updates</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section purple-grow-section">
-      <div class="container">
-        <div class="purple-grow-card">
-          <div class="purple-grow-icon">💜</div>
-
-          <div>
-            <p class="section-label">A Note from Purple Class</p>
-            <h2>Sharing our year together</h2>
-
-            <ul class="purple-grow-list">
-              <li>
-                We look forward to sharing little moments from Purple Class throughout the school year.
-              </li>
-              <li>
-                This page will celebrate classroom activities, learning, creativity and special moments in a safe and respectful way.
-              </li>
-              <li>
-                All photographs and updates shared here will be approved by the school before being added to the website.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section classes-section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-label">Class Landing Page</p>
-          <h2>Return to all class colours</h2>
-          <p>
-            Visit the main class landing page to choose another class colour.
+            Keep the child at home if they are extremely tired, unusually irritable,
+            crying without known cause, or not able to participate in normal activities.
           </p>
         </div>
 
-        <div class="quick-links">
-          <a href="classes.html">
-            <span>All Classes</span>
-            <small>Return to the full class landing page</small>
-          </a>
+        <div class="illness-card">
+          <h3>Additional Care Needed</h3>
+          <p>
+            Keep the child at home if they need more care than staff can provide safely
+            without affecting the health and safety of other pupils.
+          </p>
+        </div>
 
-          <a href="news.html">
-            <span>News</span>
-            <small>School news and events</small>
-          </a>
+        <div class="illness-card">
+          <h3>Restrictions Needed</h3>
+          <p>
+            If a child needs restrictions such as no PE, no yard or reduced activity,
+            they may need to remain at home.
+          </p>
+        </div>
 
-          <a href="parents.html">
-            <span>Parents</span>
-            <small>Useful information for families</small>
-          </a>
+        <div class="illness-card">
+          <h3>Infectious Illness</h3>
+          <p>
+            If a condition can be passed to other pupils or staff, the child should remain
+            at home until the risk of infection has passed.
+          </p>
+        </div>
 
-          <a href="contact.html">
-            <span>Contact</span>
-            <small>Contact the school office</small>
-          </a>
+        <div class="illness-card">
+          <h3>Poor Sleep or Exhaustion</h3>
+          <p>
+            If a child has not slept well or has been awake since early morning, consider
+            keeping them at home under observation.
+          </p>
+        </div>
+
+        <div class="illness-card">
+          <h3>After Laxatives</h3>
+          <p>
+            If laxatives have been administered, the policy advises keeping the child at home
+            for 24 hours.
+          </p>
         </div>
       </div>
-    </section>
+
+      <h3>Common illness and symptom guidance</h3>
+
+      <p>
+        The table below summarises the main guidance from the policy in a website-friendly way.
+        Parents and guardians should seek medical advice where necessary.
+      </p>
+
+      <div class="symptom-table-wrap">
+        <table class="symptom-table">
+          <thead>
+            <tr>
+              <th>Illness or Symptom</th>
+              <th>Guidance</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td><strong>Antibiotics</strong></td>
+              <td>Remain at home until the child has no fever for 24 hours, indicating antibiotics are taking effect.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Asthma</strong></td>
+              <td>Absence is needed if the pupil has had an asthma attack and requires recovery time. The school should have a written health plan and medication authorisation.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Body rash with fever</strong></td>
+              <td>Seek medical advice. The pupil may return when a medical practitioner determines the illness is not communicable.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Chicken pox or shingles</strong></td>
+              <td>Remain at home until blisters have dried and crusted, usually 5–6 days after onset of rash.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Conjunctivitis</strong></td>
+              <td>May return 24 hours after treatment begins. If a GP decides not to treat, a note is required.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Severe cough, runny nose or mucus</strong></td>
+              <td>Medical attention may be necessary, especially with uncontrolled coughing, wheezing or difficulty breathing.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Diarrhoea</strong></td>
+              <td>Pupils and staff with gastrointestinal illness should stay at home until symptom-free for at least 48 hours.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Vomiting</strong></td>
+              <td>Parents will be contacted to collect the child immediately. Stay at home until symptom-free for at least 48 hours.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Fever with behaviour changes or illness</strong></td>
+              <td>Exclusion is necessary where fever is accompanied by behaviour changes or signs of illness.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Headlice</strong></td>
+              <td>Children may return after treatment and removal of live lice and nits from hair.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Impetigo / Staph / MRSA</strong></td>
+              <td>May return 24 hours after treatment starts. Wound must be covered with dressing taped on all four sides.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Ringworm</strong></td>
+              <td>May return after treatment begins. Area should be covered in school for the first 48 hours.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Scabies</strong></td>
+              <td>May return after treatment is started with a note from GP.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Strep throat</strong></td>
+              <td>May return after 24 hours of antibiotic treatment and no fever for 24 hours.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Vaccine preventable diseases</strong></td>
+              <td>Remain at home until judged not infectious by a medical practitioner.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Slapped cheek syndrome</strong></td>
+              <td>Medical advice may be needed. Keep child at home until rash has presented and they are no longer contagious.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="policy-warning">
+        This webpage is a clean summary of the policy. Parents and guardians should contact
+        the school or seek medical advice if unsure whether a child should attend school.
+      </div>
+
+      <h3>Policy review</h3>
+
+      <p>
+        The uploaded policy notes that it was ratified by the Board of Management on
+        21 March 2013, reviewed during the 2016–2017 school year, and ratified again
+        on 6 March 2018. The next scheduled review noted in the document was the
+        2022–2023 school year.
+      </p>
+
+      <div class="contact-policy-box">
+        <h3>Contact the School Office</h3>
+        <p>
+          If your child is unwell or you need guidance about attendance due to illness,
+          please contact the school office.
+        </p>
+
+        <p>
+          Cara Junior School<br />
+          Banduff Road, Mayfield, Cork, T23 TA12<br />
+          Phone: <a href="tel:0214643060">021 4643060</a><br />
+          Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </p>
+      </div>
+
+      <div class="policy-actions">
+        <a class="btn btn-primary" href="policies.html">Back to Policy Library</a>
+        <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section classes-section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-label">Useful Links</p>
+      <h2>Continue to school information</h2>
+    </div>
+
+    <div class="policy-next-links">
+      <a class="policy-next-link" href="policies.html">
+        <span>Policy Library</span>
+        <small>Return to all school policies</small>
+      </a>
+
+      <a class="policy-next-link" href="parents.html">
+        <span>Parents</span>
+        <small>Useful information for parents and guardians</small>
+      </a>
+
+      <a class="policy-next-link" href="contact.html">
+        <span>Contact</span>
+        <small>Phone, email and school location</small>
+      </a>
+    </div>
+  </div>
+</section>
+```
+
   </main>
 
   <footer class="site-footer">
@@ -900,47 +722,53 @@
         <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
         <h2>Cara Junior School</h2>
         <p>Support and grow together</p>
-        <p>Banduff Road, Mayfield, Cork</p>
+        <p>Banduff Road, Mayfield, Cork, T23 TA12</p>
       </div>
 
-      <div>
-        <h3>Contact</h3>
-        <p><a href="tel:0214643060">021 4643060</a></p>
-        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
-      </div>
+```
+  <div>
+    <h3>Contact</h3>
+    <p><a href="tel:0214643060">021 4643060</a></p>
+    <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+  </div>
 
-      <div>
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="classes.html">Classes</a></li>
-          <li><a href="admissions.html">Admissions</a></li>
-          <li><a href="policies.html">Policies</a></li>
-          <li><a href="calendar.html">Calendar</a></li>
-        </ul>
-      </div>
+  <div>
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="classes.html">Classes</a></li>
+      <li><a href="policies.html">Policies</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
 
-     <div>
-  <h3>Website</h3>
-  <ul>
-    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-    <li><a href="cookie-policy.html">Cookie Policy</a></li>
-    <li><a href="accessibility.html">Accessibility Statement</a></li>
-    <li><a href="terms.html">Terms of Use</a></li>
-    <li>
-      <a href="https://www.facebook.com/profile.php?id=61580438163822" target="_blank" rel="noopener">
-        Facebook
-      </a>
-    </li>
-  </ul>
+  <div>
+    <h3>Website</h3>
+    <ul>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="cookie-policy.html">Cookie Policy</a></li>
+      <li><a href="accessibility.html">Accessibility Statement</a></li>
+      <li><a href="terms.html">Terms of Use</a></li>
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=61580438163822" target="_blank" rel="noopener noreferrer">
+          Facebook
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
 
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
-      </div>
-    </div>
+<div class="footer-bottom">
+  <div class="container">
+    <p>&copy; 2026 Cara Junior School. Website demo prepared by Carey Web Services.</p>
+  </div>
+</div>
+```
+
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
