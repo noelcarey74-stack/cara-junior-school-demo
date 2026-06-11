@@ -124,6 +124,32 @@ a {
   text-decoration: underline;
 }
 
+/* Small Get Directions button in the top header */
+.top-directions-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 8px 18px rgba(18, 51, 95, 0.14);
+  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.top-directions-link:hover {
+  background: var(--gold-soft);
+  color: var(--navy);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(18, 51, 95, 0.18);
+}
 .nav-wrap {
   background: var(--white);
 }
