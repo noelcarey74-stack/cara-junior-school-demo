@@ -4,85 +4,91 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Accessibility Statement | Cara Junior School</title>
+  <title>Classes | Cara Junior School</title>
 
   <meta
     name="description"
-    content="Accessibility Statement for the Cara Junior School website."
+    content="Explore the colourful class communities at Cara Junior School: Green, Red, Peach, Turquoise, Grey, Navy, Purple, Cerise, Blue, Orange, Silver and Yellow."
   />
 
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    .accessibility-page {
+    .classes-page {
       background: #f7fbff;
     }
 
-    .accessibility-hero {
+    .classes-hero {
       position: relative;
       overflow: hidden;
       background:
-        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
-        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at top left, rgba(76, 175, 80, 0.18), transparent 28%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.16), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.18), transparent 28%),
         linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
     }
 
-    .accessibility-hero::after {
+    .classes-hero::before {
       content: "";
       position: absolute;
-      right: -90px;
-      bottom: -90px;
       width: 260px;
       height: 260px;
-      border-radius: 50%;
+      right: -90px;
+      bottom: -90px;
       background:
-        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
-        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
-        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+        radial-gradient(circle at 30% 30%, rgba(194, 37, 92, 0.20), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(112, 72, 232, 0.18), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(32, 201, 151, 0.20), transparent 20%);
+      opacity: 0.8;
       pointer-events: none;
     }
 
-    .accessibility-hero .container {
+    .classes-hero .container {
       position: relative;
       z-index: 1;
     }
 
-    .accessibility-hero-card {
+    .class-hero-card {
       background: #ffffff;
       border-radius: 30px;
       padding: 14px;
-      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      box-shadow: 0 22px 55px rgba(18, 51, 95, 0.14);
       border: 1px solid rgba(18, 51, 95, 0.10);
     }
 
-    .accessibility-hero-card img {
+    .class-hero-card img {
       width: 100%;
-      height: 340px;
+      height: 330px;
       object-fit: cover;
       border-radius: 22px;
     }
 
-    .accessibility-hero-info {
-      padding: 18px 10px 6px;
+    .class-colour-strip {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+      margin: 16px 8px 4px;
     }
 
-    .accessibility-hero-info h2 {
-      margin: 0 0 8px;
-      color: var(--navy);
+    .class-colour-strip span {
+      height: 12px;
+      border-radius: 999px;
     }
 
-    .accessibility-hero-info p {
-      margin: 0;
-      color: #475467;
-    }
+    .strip-green { background: #2f9e44; }
+    .strip-red { background: #e03131; }
+    .strip-peach { background: #ff8a5b; }
+    .strip-turquoise { background: #20c997; }
+    .strip-purple { background: #7048e8; }
+    .strip-yellow { background: #fab005; }
 
-    .accessibility-summary {
+    .class-intro-cards {
       display: grid;
       gap: 18px;
       margin-top: 28px;
     }
 
-    .accessibility-summary-card {
+    .class-intro-card {
       background: #ffffff;
       border-radius: 24px;
       padding: 22px;
@@ -90,53 +96,109 @@
       box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
     }
 
-    .accessibility-summary-card strong {
+    .class-intro-card strong {
       display: block;
       color: var(--navy);
       font-size: 1.15rem;
       margin-bottom: 8px;
     }
 
-    .accessibility-summary-card p {
+    .class-intro-card p {
       margin: 0;
       color: #475467;
     }
 
-    .accessibility-card {
-      background: #ffffff;
-      border-radius: 30px;
-      padding: 30px;
-      border: 1px solid rgba(18, 51, 95, 0.10);
+    .colour-class-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .colour-class-card {
+      position: relative;
+      min-height: 145px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px;
+      border-radius: 26px;
+      color: #ffffff;
+      text-decoration: none;
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(18, 51, 95, 0.13);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .colour-class-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 50px rgba(18, 51, 95, 0.18);
+    }
+
+    .colour-class-card::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      right: -34px;
+      bottom: -34px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .colour-class-card span {
+      position: relative;
+      z-index: 1;
+      font-size: 1.45rem;
+      font-weight: 950;
+    }
+
+    .colour-class-card small {
+      position: relative;
+      z-index: 1;
+      font-size: 0.92rem;
+      font-weight: 850;
+      opacity: 0.95;
+    }
+
+    .colour-class-card.green { background: linear-gradient(135deg, #2f9e44, #69db7c); }
+    .colour-class-card.red { background: linear-gradient(135deg, #c92a2a, #ff6b6b); }
+    .colour-class-card.peach { background: linear-gradient(135deg, #e8590c, #ffa94d); }
+    .colour-class-card.turquoise { background: linear-gradient(135deg, #087f5b, #38d9a9); }
+    .colour-class-card.grey { background: linear-gradient(135deg, #495057, #adb5bd); }
+    .colour-class-card.navy { background: linear-gradient(135deg, #12335f, #5d87be); }
+    .colour-class-card.purple { background: linear-gradient(135deg, #7048e8, #b197fc); }
+    .colour-class-card.cerise { background: linear-gradient(135deg, #c2255c, #f06595); }
+    .colour-class-card.blue { background: linear-gradient(135deg, #1971c2, #74c0fc); }
+    .colour-class-card.orange { background: linear-gradient(135deg, #e67700, #ffc078); }
+    .colour-class-card.silver { background: linear-gradient(135deg, #64748b, #cbd5e1); }
+    .colour-class-card.yellow {
+      background: linear-gradient(135deg, #fab005, #ffe066);
+      color: #5c3d00;
+    }
+
+    .privacy-highlight {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.14), transparent 28%),
+        linear-gradient(135deg, #ffffff, #f1fff9);
+      border-radius: 28px;
+      padding: 28px;
+      border: 1px solid rgba(32, 201, 151, 0.18);
       box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
     }
 
-    .accessibility-card h2 {
-      color: var(--navy);
-    }
-
-    .accessibility-card h3 {
-      margin-top: 28px;
-      color: var(--navy);
-    }
-
-    .accessibility-card p {
-      color: #344054;
-    }
-
-    .accessibility-list {
-      margin: 18px 0 0;
+    .privacy-highlight ul {
+      margin: 16px 0 0;
       padding: 0;
       list-style: none;
     }
 
-    .accessibility-list li {
+    .privacy-highlight li {
       position: relative;
-      padding-left: 32px;
-      margin: 13px 0;
+      padding-left: 30px;
+      margin: 12px 0;
       color: #344054;
     }
 
-    .accessibility-list li::before {
+    .privacy-highlight li::before {
       content: "✓";
       position: absolute;
       left: 0;
@@ -145,276 +207,293 @@
       font-weight: 950;
     }
 
-    .accessibility-contact-box {
-      margin-top: 24px;
-      background:
-        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
-        linear-gradient(135deg, #f1fff9, #ffffff);
-      border-radius: 24px;
-      padding: 24px;
-      border: 1px solid rgba(32, 201, 151, 0.18);
-    }
-
-    .accessibility-contact-box h3 {
-      margin-top: 0;
-    }
-
-    .accessibility-contact-box a {
-      color: #087f5b;
-      font-weight: 850;
-    }
-
-    .accessibility-next-links {
-      display: grid;
-      gap: 18px;
-    }
-
-    .accessibility-next-link {
-      display: block;
-      background: #ffffff;
-      border-radius: 24px;
-      padding: 22px;
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid rgba(18, 51, 95, 0.10);
-      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
-    }
-
-    .accessibility-next-link:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
-    }
-
-    .accessibility-next-link span {
-      display: block;
-      color: var(--navy);
-      font-size: 1.2rem;
-      font-weight: 950;
-      margin-bottom: 6px;
-    }
-
-    .accessibility-next-link small {
-      color: #475467;
-      font-weight: 750;
-    }
-
     @media (min-width: 720px) {
-      .accessibility-summary {
+      .class-intro-cards {
         grid-template-columns: repeat(3, 1fr);
       }
 
-      .accessibility-next-links {
+      .colour-class-grid {
         grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1020px) {
+      .colour-class-grid {
+        grid-template-columns: repeat(4, 1fr);
       }
     }
 
     @media (max-width: 520px) {
-      .accessibility-hero-card img {
+      .class-hero-card img {
         height: 240px;
       }
 
-      .accessibility-card {
-        padding: 24px;
+      .colour-class-card {
+        min-height: 125px;
       }
     }
   </style>
 </head>
 
-<body class="accessibility-page">
+<body class="classes-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
-  <div class="top-bar">
-    <div class="container top-bar-inner">
-      <p>
-        Cara Junior School, Banduff Road, Mayfield, Cork, T23 TA12
-        <a
-          class="top-directions-link"
-          href="https://www.google.com/maps/dir/?api=1&destination=51.917861,-8.424502"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Get Directions
-        </a>
-      </p>
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>
+          Cara Junior School, Banduff Road, Mayfield, Cork, T23 TA12
+          <a
+            class="top-directions-link"
+            href="https://www.google.com/maps/dir/?api=1&destination=51.917861,-8.424502"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Directions
+          </a>
+        </p>
 
-      <div class="top-contact">
-        <a href="tel:0214643060">021 4643060</a>
-        <span>|</span>
-        <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="nav-wrap">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html" aria-label="Cara Junior School Home">
-        <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
-        <div class="brand-text">
-          <strong>Cara Junior School</strong>
-          <span>Support and grow together</span>
-        </div>
-      </a>
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="classes.html">Classes</a>
-        <a href="admissions.html">Admissions</a>
-        <a href="parents.html">Parents</a>
-        <a href="calendar.html">Calendar</a>
-        <a href="policies.html">Policies</a>
-        <a href="news.html">News</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html" class="active">Classes</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="policies.html">Policies</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <main id="main-content">
-    <section class="hero page-hero accessibility-hero">
+    <section class="hero page-hero classes-hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <p class="eyebrow">Accessibility</p>
-          <h1>Accessibility Statement</h1>
+          <p class="eyebrow">Our Classes</p>
+          <h1>Colourful class communities, each with its own identity.</h1>
 
           <p class="hero-text">
-            Cara Junior School aims to make this website clear, simple and accessible
-            for parents, guardians, staff and visitors.
+            Each class at Cara Junior School has its own colour, personality and space
+            to share approved class news, activities, photographs and school memories.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="contact.html">Contact Office</a>
-            <a class="btn btn-secondary" href="parents.html">Parents Page</a>
+            <a class="btn btn-primary" href="#class-list">View Classes</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
           </div>
         </div>
 
-        <div class="accessibility-hero-card">
+        <div class="class-hero-card">
           <img
             src="school-front.jpg"
             alt="Front of Cara Junior School building in Mayfield, Cork"
           />
 
-          <div class="accessibility-hero-info">
-            <h2>Clear and Simple</h2>
-            <p>
-              The website is designed with readable text, clear navigation and simple page layouts.
-            </p>
+          <div class="class-colour-strip" aria-hidden="true">
+            <span class="strip-green"></span>
+            <span class="strip-red"></span>
+            <span class="strip-peach"></span>
+            <span class="strip-turquoise"></span>
+            <span class="strip-purple"></span>
+            <span class="strip-yellow"></span>
           </div>
         </div>
       </div>
 
       <div class="container">
-        <div class="accessibility-summary">
-          <div class="accessibility-summary-card">
-            <strong>Readable</strong>
-            <p>Clear headings, simple wording and easy-to-read page sections.</p>
+        <div class="class-intro-cards">
+          <div class="class-intro-card">
+            <strong>12 class pages</strong>
+            <p>Each colour class has its own dedicated page.</p>
           </div>
 
-          <div class="accessibility-summary-card">
-            <strong>Mobile Friendly</strong>
-            <p>Pages are designed to work clearly on phones, tablets and computers.</p>
+          <div class="class-intro-card">
+            <strong>Approved updates</strong>
+            <p>Class news and photographs can be added safely when approved.</p>
           </div>
 
-          <div class="accessibility-summary-card">
-            <strong>Easy to Navigate</strong>
-            <p>Consistent menus and quick links help visitors find information.</p>
+          <div class="class-intro-card">
+            <strong>Easy for families</strong>
+            <p>Parents and guardians can quickly find the correct class page.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="section classes-section" id="class-list">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Class Landing Page</p>
+          <h2>Choose a class colour</h2>
+          <p>
+            Select a class below to open its own page. Each page can hold class news,
+            approved photos, school year memories and updates.
+          </p>
+        </div>
+
+        <div class="colour-class-grid">
+          <a class="colour-class-card green" href="green-class.html">
+            <span>Green Class</span>
+            <small>View class page →</small>
+          </a>
+
+          <a class="colour-class-card red" href="red-class.html">
+            <span>Red Class</span>
+            <small>View class page →</small>
+          </a>
+
+          <a class="colour-class-card peach" href="peach-class.html">
+            <span>Peach Class</span>
+            <small>View class page →</small>
+          </a>
+
+          <a class="colour-class-card turquoise" href="turquoise-class.html">
+            <span>Turquoise Class</span>
+            <small>View class page →</small>
+          </a>
+
+          <a class="colour-class-card grey" href="grey-class.html">
+            <span>Grey Class</span>
+            <small>View class page →</small>
+          </a>
+
+          <a class="colour-class-card navy" href="navy-class.html">
+            <span>Navy Class</span>
+            <small>View class page →</small>
+          </a>
+
+          <a class="colour-class-card purple" href="purple-class.html">
+            <span>Purple Class</span>
+            <small>View class page →</small>
+          </a>
+
+          <a class="colour-class-card cerise" href="cerise-class.html">
+            <span>Cerise Class</span>
+            <small>View class page →</small>
+          </a>
+
+          <a class="colour-class-card blue" href="blue-class.html">
+            <span>Blue Class</span>
+            <small>View class page →</small>
+          </a>
+
+          <a class="colour-class-card orange" href="orange-class.html">
+            <span>Orange Class</span>
+            <small>View class page →</small>
+          </a>
+
+          <a class="colour-class-card silver" href="silver-class.html">
+            <span>Silver Class</span>
+            <small>View class page →</small>
+          </a>
+
+          <a class="colour-class-card yellow" href="yellow-class.html">
+            <span>Yellow Class</span>
+            <small>View class page →</small>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
-      <div class="container legal-layout">
-        <article class="accessibility-card">
-          <p class="section-label">Accessibility Statement</p>
-          <h2>Our commitment to accessibility</h2>
+      <div class="container two-column">
+        <div>
+          <p class="section-label">Class Memories</p>
+          <h2>Separate pages make updates easier</h2>
+        </div>
 
+        <div class="content-card">
           <p>
-            Cara Junior School wants this website to be easy to use and accessible to as many
-            people as possible.
+            Each class page has its own colour theme, welcome area, class team section,
+            photo space and class update section.
           </p>
 
           <p>
-            The website has been designed with clear navigation, readable text, strong contrast,
-            mobile-friendly layouts and simple page structures.
+            This makes the website easier to manage. When one class sends an update,
+            only that class page needs to be changed.
           </p>
 
-          <h3>Website features</h3>
           <p>
-            This website includes:
+            The class pages can grow naturally over time with approved school updates,
+            photographs and memories.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section parent-section">
+      <div class="container two-column">
+        <div>
+          <p class="section-label">Privacy & Care</p>
+          <h2>Approved photos and class news</h2>
+        </div>
+
+        <div class="privacy-highlight">
+          <p>
+            Class pages can be updated with approved photographs, classroom activities,
+            school events and short pieces of information supplied by the school.
           </p>
 
-          <ul class="accessibility-list">
-            <li>Clear page headings and structured content.</li>
-            <li>A skip-to-content link for keyboard users.</li>
-            <li>Readable font sizes and strong colour contrast.</li>
-            <li>Mobile-friendly layouts for phones and tablets.</li>
-            <li>Alternative text for important images.</li>
-            <li>Simple navigation and consistent page layouts.</li>
+          <ul>
+            <li>Photographs should be approved by the school before being added.</li>
+            <li>Pupil names should not be attached to photographs unless approved by the school.</li>
+            <li>Teacher and SNA names can be added once confirmed and approved.</li>
           </ul>
-
-          <h3>PDF documents</h3>
-          <p>
-            Some school information may be provided as PDF documents. The school aims to present
-            these documents in a clear policy library so they are easier to find and download.
-          </p>
-
-          <p>
-            If you have difficulty accessing a PDF or any information on this website, please
-            contact the school office.
-          </p>
-
-          <h3>Feedback</h3>
-          <p>
-            If you find any part of this website difficult to use, or if you need information
-            in another format, please contact the school office.
-          </p>
-
-          <div class="accessibility-contact-box">
-            <h3>Contact</h3>
-            <p>
-              Cara Junior School<br />
-              Banduff Road, Mayfield, Cork<br />
-              Phone: <a href="tel:0214643060">021 4643060</a><br />
-              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
-            </p>
-          </div>
-
-          <h3>Review</h3>
-          <p>
-            This accessibility statement may be reviewed and updated as the website develops.
-          </p>
-        </article>
+        </div>
       </div>
     </section>
 
     <section class="section classes-section">
       <div class="container">
         <div class="section-heading">
-          <p class="section-label">Useful Links</p>
-          <h2>Continue to school information</h2>
+          <p class="section-label">Quick Links</p>
+          <h2>Useful school pages</h2>
         </div>
 
-        <div class="accessibility-next-links">
-          <a class="accessibility-next-link" href="parents.html">
+        <div class="quick-links">
+          <a href="parents.html">
             <span>Parents</span>
             <small>Useful information for parents and guardians</small>
           </a>
 
-          <a class="accessibility-next-link" href="policies.html">
-            <span>Policies</span>
-            <small>School policy library and PDF downloads</small>
+          <a href="calendar.html">
+            <span>Calendar</span>
+            <small>School dates, holidays and closures</small>
           </a>
 
-          <a class="accessibility-next-link" href="contact.html">
+          <a href="policies.html">
+            <span>Policies</span>
+            <small>School policy library</small>
+          </a>
+
+          <a href="contact.html">
             <span>Contact</span>
             <small>Phone, email and school location</small>
           </a>
@@ -429,7 +508,7 @@
         <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
         <h2>Cara Junior School</h2>
         <p>Support and grow together</p>
-        <p>Banduff Road, Mayfield, Cork</p>
+        <p>Banduff Road, Mayfield, Cork, T23 TA12</p>
       </div>
 
       <div>
@@ -442,7 +521,6 @@
         <h3>Quick Links</h3>
         <ul>
           <li><a href="admissions.html">Admissions</a></li>
-          <li><a href="classes.html">Classes</a></li>
           <li><a href="policies.html">Policies</a></li>
           <li><a href="calendar.html">Calendar</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -450,19 +528,20 @@
       </div>
 
       <div>
-  <h3>Website</h3>
-  <ul>
-    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-    <li><a href="cookie-policy.html">Cookie Policy</a></li>
-    <li><a href="accessibility.html">Accessibility Statement</a></li>
-    <li><a href="terms.html">Terms of Use</a></li>
-    <li>
-      <a href="https://www.facebook.com/profile.php?id=61580438163822" target="_blank" rel="noopener">
-        Facebook
-      </a>
-    </li>
-  </ul>
-</div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61580438163822" target="_blank" rel="noopener noreferrer">
+              Facebook
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <div class="footer-bottom">
       <div class="container">
