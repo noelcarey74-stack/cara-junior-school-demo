@@ -56,6 +56,17 @@
       line-height: 1.7;
     }
 
+    .map-note {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: #eef7ff;
+      color: #344054;
+      border: 1px solid rgba(25, 113, 194, 0.14);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
     .map-actions {
       margin-top: 18px;
       display: flex;
@@ -246,10 +257,10 @@
         <div class="map-card">
           <iframe
             class="contact-map-frame"
-            title="Map showing Cara Junior School, Banduff Road, Mayfield, Cork"
+            title="Map showing Cara Junior School location using correct coordinates"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Cara%20Junior%20School%2C%20Banduff%20Road%2C%20Mayfield%2C%20Cork%2C%20T23%20TA12&output=embed">
+            src="https://www.google.com/maps?q=51.920531,-8.415434&z=17&output=embed">
           </iframe>
 
           <div class="map-address-box">
@@ -260,16 +271,21 @@
               Cork,<br />
               T23 TA12.
             </p>
+
+            <div class="map-note">
+              The map link uses the school’s correct location coordinates to avoid Google
+              showing the old school pin.
+            </div>
           </div>
 
           <div class="map-actions">
             <a
               class="btn btn-primary"
-              href="https://www.google.com/maps/search/?api=1&query=Cara%20Junior%20School%2C%20Banduff%20Road%2C%20Mayfield%2C%20Cork%2C%20T23%20TA12"
+              href="https://www.google.com/maps?q=51.920531,-8.415434"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Open in Google Maps
+              Open Correct Location in Google Maps
             </a>
 
             <a
