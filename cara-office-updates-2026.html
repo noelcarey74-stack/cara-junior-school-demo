@@ -22,7 +22,18 @@
   <header class="site-header">
     <div class="top-bar">
       <div class="container top-bar-inner">
-        <p>Cara Junior School Staff Website Updates</p>
+        <p>
+          Cara Junior School Staff Website Updates — Banduff Road, Mayfield, Cork, T23 TA12
+          <a
+            class="top-directions-link"
+            href="https://www.google.com/maps/dir/?api=1&destination=51.917861,-8.424502"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Directions
+          </a>
+        </p>
+
         <div class="top-contact">
           <a href="tel:0214643060">021 4643060</a>
           <span>|</span>
@@ -52,6 +63,7 @@
         <div class="hero-content">
           <p class="eyebrow">Private Staff Page</p>
           <h1>Website update portal for approved school content.</h1>
+
           <p class="hero-text">
             This page is for Cara Junior School staff to send approved website updates,
             class news, photos, policy updates and school information.
@@ -204,6 +216,27 @@
         </div>
       </div>
     </section>
+
+    <section class="section parent-section">
+      <div class="container two-column">
+        <div>
+          <p class="section-label">Private Page</p>
+          <h2>Not for the public menu</h2>
+        </div>
+
+        <div class="content-card">
+          <p>
+            This page is private and should not be added to the public website menu,
+            footer quick links or sitemap.
+          </p>
+
+          <p>
+            The page is marked <strong>noindex, nofollow</strong> to discourage search engines
+            from listing it.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -212,7 +245,7 @@
         <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
         <h2>Cara Junior School</h2>
         <p>Support and grow together</p>
-        <p>Banduff Road, Mayfield, Cork</p>
+        <p>Banduff Road, Mayfield, Cork, T23 TA12</p>
       </div>
 
       <div>
@@ -222,23 +255,24 @@
       </div>
 
       <div>
-  <h3>Website</h3>
-  <ul>
-    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-    <li><a href="cookie-policy.html">Cookie Policy</a></li>
-    <li><a href="accessibility.html">Accessibility Statement</a></li>
-    <li><a href="terms.html">Terms of Use</a></li>
-    <li>
-      <a href="https://www.facebook.com/profile.php?id=61580438163822" target="_blank" rel="noopener">
-        Facebook
-      </a>
-    </li>
-  </ul>
-</div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61580438163822" target="_blank" rel="noopener noreferrer">
+              Facebook
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <div>
         <h3>Private Page</h3>
         <p>This page is not shown in the public website menu.</p>
+        <p>Staff code required before sending an update email.</p>
       </div>
     </div>
 
@@ -261,17 +295,17 @@
       function buildEmail(updateType) {
         const subject = "Cara Junior School Website Update - " + updateType;
 
-        const body =
-          "Website Update Request%0D%0A%0D%0A" +
-          "Update Type: " + encodeURIComponent(updateType) + "%0D%0A" +
-          "Class / Section:%0D%0A" +
-          "School Year: 2025/2026%0D%0A" +
-          "Event Title:%0D%0A" +
-          "Event Date:%0D%0A" +
-          "Short Description:%0D%0A" +
-          "Photos Attached: Yes / No%0D%0A" +
-          "Approved By:%0D%0A%0D%0A" +
-          "Please add the following approved update to the website:%0D%0A%0D%0A";
+        const bodyText =
+          "Website Update Request\n\n" +
+          "Update Type: " + updateType + "\n" +
+          "Class / Section:\n" +
+          "School Year: 2025/2026\n" +
+          "Event Title:\n" +
+          "Event Date:\n" +
+          "Short Description:\n" +
+          "Photos Attached: Yes / No\n" +
+          "Approved By:\n\n" +
+          "Please add the following approved update to the website:\n\n";
 
         const mailLink =
           "mailto:" +
@@ -279,7 +313,7 @@
           "?subject=" +
           encodeURIComponent(subject) +
           "&body=" +
-          body;
+          encodeURIComponent(bodyText);
 
         window.location.href = mailLink;
       }
