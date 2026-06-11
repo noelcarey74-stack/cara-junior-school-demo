@@ -4,136 +4,328 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Contact | Cara Junior School</title>
+  <title>Child Safeguarding Statement | Cara Junior School</title>
 
   <meta
     name="description"
-    content="Contact Cara Junior School, Banduff Road, Mayfield, Cork, T23 TA12. Phone 021 4643060 or email office@carajs.ie."
+    content="Child Safeguarding Statement and Risk Assessment for Cara Junior School."
   />
 
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    .contact-page {
+    .policy-page {
       background: #f7fbff;
     }
 
-    .contact-map-frame {
-      width: 100%;
-      height: 360px;
-      border: 0;
-      border-radius: 24px;
-      display: block;
-      box-shadow: 0 16px 38px rgba(18, 51, 95, 0.10);
+    .policy-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
     }
 
-    .map-card {
+    .policy-hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(32, 201, 151, 0.18), transparent 20%),
+        radial-gradient(circle at 70% 35%, rgba(25, 113, 194, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(250, 176, 5, 0.18), transparent 20%);
+      pointer-events: none;
+    }
+
+    .policy-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .policy-hero-card {
       background: #ffffff;
       border-radius: 30px;
-      padding: 18px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .policy-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: #f1fff9;
+      color: #087f5b;
+      font-size: 2rem;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .policy-hero-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-summary {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .policy-summary-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .policy-summary-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .policy-summary-card p {
+      margin: 0;
+      color: #475467;
+    }
+
+    .policy-content-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
       border: 1px solid rgba(18, 51, 95, 0.10);
       box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
     }
 
-    .map-address-box {
-      margin-top: 18px;
-      background:
-        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
-        linear-gradient(135deg, #ffffff, #f1fff9);
-      border-radius: 22px;
-      padding: 20px;
-      border: 1px solid rgba(32, 201, 151, 0.18);
-    }
-
-    .map-address-box h3 {
-      margin: 0 0 8px;
+    .policy-content-card h2,
+    .policy-content-card h3 {
       color: var(--navy);
     }
 
-    .map-address-box p {
-      margin: 0;
-      color: #344054;
-      line-height: 1.7;
+    .policy-content-card h3 {
+      margin-top: 28px;
     }
 
-    .map-note {
-      margin-top: 14px;
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: #eef7ff;
+    .policy-content-card p {
       color: #344054;
-      border: 1px solid rgba(25, 113, 194, 0.14);
-      font-size: 0.95rem;
-      line-height: 1.6;
     }
 
-    .map-actions {
-      margin-top: 18px;
+    .policy-note {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #f1fff9, #ffffff);
+      border-left: 6px solid #20c997;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-warning {
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-left: 6px solid #fab005;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 24px 0;
+      color: #344054;
+    }
+
+    .policy-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .policy-list li {
+      position: relative;
+      padding-left: 32px;
+      margin: 13px 0;
+      color: #344054;
+    }
+
+    .policy-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #087f5b;
+      font-weight: 950;
+    }
+
+    .risk-grid {
+      display: grid;
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .risk-card {
+      background: #f8fbff;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      border-top: 6px solid #20c997;
+    }
+
+    .risk-card:nth-child(2) {
+      border-top-color: #1971c2;
+    }
+
+    .risk-card:nth-child(3) {
+      border-top-color: #fab005;
+    }
+
+    .risk-card:nth-child(4) {
+      border-top-color: #7048e8;
+    }
+
+    .risk-card:nth-child(5) {
+      border-top-color: #f06595;
+    }
+
+    .risk-card:nth-child(6) {
+      border-top-color: #ff922b;
+    }
+
+    .risk-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .risk-card p {
+      margin-bottom: 0;
+      color: #344054;
+    }
+
+    .contact-policy-box {
+      margin-top: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(250, 176, 5, 0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fff9db);
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(250, 176, 5, 0.18);
+    }
+
+    .contact-policy-box h3 {
+      margin-top: 0;
+    }
+
+    .policy-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      margin-top: 28px;
     }
 
-    .mini-direction-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 14px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: var(--navy);
-      color: #ffffff;
+    .policy-next-links {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-next-link {
+      display: block;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
       text-decoration: none;
-      font-size: 0.92rem;
-      font-weight: 900;
-      box-shadow: 0 10px 22px rgba(18, 51, 95, 0.16);
+      color: inherit;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
     }
 
-    .mini-direction-link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 28px rgba(18, 51, 95, 0.22);
+    .policy-next-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(18, 51, 95, 0.15);
+    }
+
+    .policy-next-link span {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 950;
+      margin-bottom: 6px;
+    }
+
+    .policy-next-link small {
+      color: #475467;
+      font-weight: 750;
+    }
+
+    @media (min-width: 720px) {
+      .policy-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .risk-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-next-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     @media (max-width: 520px) {
-      .contact-map-frame {
-        height: 300px;
+      .policy-content-card {
+        padding: 24px;
       }
 
-      .map-actions {
+      .policy-actions {
         flex-direction: column;
       }
 
-      .map-actions .btn {
+      .policy-actions .btn {
         width: 100%;
         justify-content: center;
-      }
-
-      .mini-direction-link {
-        width: 100%;
       }
     }
   </style>
 </head>
 
-<body class="contact-page">
+<body class="policy-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
     <div class="top-bar">
       <div class="container top-bar-inner">
-  <p>
-    Cara Junior School, Banduff Road, Mayfield, Cork, T23 TA12
-    <a
-      class="top-directions-link"
-      href="https://www.google.com/maps/dir/?api=1&destination=51.917861,-8.424502"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Get Directions
-    </a>
-  </p>
+        <p>
+          Cara Junior School, Banduff Road, Mayfield, Cork, T23 TA12
+          <a
+            class="top-directions-link"
+            href="https://www.google.com/maps/dir/?api=1&destination=51.917861,-8.424502"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Directions
+          </a>
+        </p>
 
-  <div class="top-contact">
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
 
     <div class="nav-wrap">
       <div class="container nav-inner">
@@ -158,239 +350,271 @@
           <a href="admissions.html">Admissions</a>
           <a href="parents.html">Parents</a>
           <a href="calendar.html">Calendar</a>
-          <a href="policies.html">Policies</a>
+          <a href="policies.html" class="active">Policies</a>
           <a href="news.html">News</a>
-          <a href="contact.html" class="active">Contact</a>
+          <a href="contact.html">Contact</a>
         </nav>
       </div>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="hero page-hero">
+    <section class="hero page-hero policy-hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <p class="eyebrow">Contact Us</p>
-          <h1>Contact Cara Junior School.</h1>
+          <p class="eyebrow">School Policy</p>
+          <h1>Child Safeguarding Statement & Risk Assessment</h1>
+
           <p class="hero-text">
-            Parents, guardians and visitors can contact the school office by phone or email.
-            For urgent matters during the school day, please phone the office directly.
+            Cara Junior School is committed to safeguarding children and supporting
+            a safe, respectful and caring school environment.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="tel:0214643060">Call Office</a>
-            <a class="btn btn-secondary" href="mailto:office@carajs.ie">Email Office</a>
+            <a class="btn btn-primary" href="#policy-content">Read Statement</a>
+            <a class="btn btn-secondary" href="policies.html">Back to Policies</a>
           </div>
         </div>
 
-        <div class="hero-card">
-          <img
-            class="hero-photo"
-            src="school-front.jpg"
-            alt="Front of Cara Junior School building in Mayfield, Cork"
-          />
-
-          <div class="hero-info">
-            <h2>School Office</h2>
-            <ul>
-              <li><strong>Phone:</strong> 021 4643060</li>
-              <li><strong>Email:</strong> office@carajs.ie</li>
-              <li><strong>Roll Number:</strong> 20354A</li>
-              <li><strong>Eircode:</strong> T23 TA12</li>
-            </ul>
-
-            <a
-              class="mini-direction-link"
-              href="https://www.google.com/maps/dir/?api=1&destination=51.917861,-8.424502"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get Directions
-            </a>
-          </div>
+        <div class="policy-hero-card">
+          <div class="policy-icon">🛡️</div>
+          <h2>Child Protection</h2>
+          <p>
+            This page presents the Child Safeguarding Statement and key risk assessment
+            areas in a clear website format.
+          </p>
         </div>
       </div>
-    </section>
 
-    <section class="section">
       <div class="container">
-        <div class="section-heading">
-          <p class="section-label">Contact Details</p>
-          <h2>School office information</h2>
-          <p>
-            Please use the details below to contact the school office.
-          </p>
-        </div>
+        <div class="policy-summary">
+          <div class="policy-summary-card">
+            <strong>Safeguarding</strong>
+            <p>Protecting pupils and promoting their welfare is central to school life.</p>
+          </div>
 
-        <div class="contact-grid">
-          <article class="contact-card">
-            <div class="contact-icon">☎</div>
-            <h3>Phone</h3>
-            <p><a href="tel:0214643060">021 4643060</a></p>
-          </article>
+          <div class="policy-summary-card">
+            <strong>Reporting</strong>
+            <p>Concerns are managed through school child protection procedures.</p>
+          </div>
 
-          <article class="contact-card">
-            <div class="contact-icon">✉</div>
-            <h3>Email</h3>
-            <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
-          </article>
-
-          <article class="contact-card">
-            <div class="contact-icon">⌂</div>
-            <h3>Address</h3>
-            <p>
-              Cara Junior School,<br />
-              Banduff Road,<br />
-              Mayfield,<br />
-              Cork,<br />
-              T23 TA12.
-            </p>
-
-            <a
-              class="mini-direction-link"
-              href="https://www.google.com/maps/dir/?api=1&destination=51.917861,-8.424502"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get Directions
-            </a>
-          </article>
-
-          <article class="contact-card">
-            <div class="contact-icon">ⓘ</div>
-            <h3>Roll Number</h3>
-            <p>20354A</p>
-          </article>
+          <div class="policy-summary-card">
+            <strong>Risk Assessment</strong>
+            <p>The school identifies risks and the procedures in place to address them.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section parent-section">
-      <div class="container two-column">
-        <div>
-          <p class="section-label">Office Hours</p>
-          <h2>Contacting the school</h2>
-        </div>
+    <section class="section" id="policy-content">
+      <div class="container legal-layout">
+        <article class="policy-content-card">
+          <p class="section-label">Child Safeguarding Statement</p>
+          <h2>Child Safeguarding Statement & Risk Assessment</h2>
 
-        <div class="content-card">
           <p>
-            The school office can help with general enquiries, admissions information,
-            calendar questions, meetings and school communications.
+            Cara Junior School has adopted and follows child safeguarding procedures for
+            schools. The school recognises that child protection and welfare considerations
+            must be reflected in all school policies, procedures, practices and activities.
           </p>
 
           <p>
-            If you need to arrange a meeting with the principal, teacher or another member
-            of staff, please contact the office first.
+            The Child Safeguarding Statement sets out how the school seeks to protect pupils
+            from harm and how it manages child protection concerns in line with relevant
+            school procedures.
           </p>
+
+          <div class="policy-note">
+            Child safeguarding is everyone’s responsibility. All staff and school personnel
+            are expected to act in the best interests of pupils and follow the school’s
+            child protection procedures.
+          </div>
+
+          <h3>Purpose of this Statement</h3>
 
           <p>
-            For urgent matters during the school day, please phone the school directly.
+            The purpose of the Child Safeguarding Statement is to provide a clear statement
+            of the school’s approach to child safeguarding and to identify procedures that
+            support the protection and welfare of pupils.
           </p>
-        </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container two-column">
-        <div>
-          <p class="section-label">Location</p>
-          <h2>Find us in Mayfield, Cork</h2>
+          <ul class="policy-list">
+            <li>To promote a safe school environment for pupils.</li>
+            <li>To identify possible child safeguarding risks within school activities.</li>
+            <li>To record procedures in place to address and reduce those risks.</li>
+            <li>To support staff awareness of child protection responsibilities.</li>
+            <li>To ensure concerns are reported and managed appropriately.</li>
+          </ul>
+
+          <h3>Designated Liaison Person</h3>
+
           <p>
-            The correct school address is Cara Junior School, Banduff Road,
-            Mayfield, Cork, T23 TA12.
+            The school’s Child Safeguarding Statement includes details of the Designated
+            Liaison Person and Deputy Designated Liaison Person. These named roles should
+            be confirmed against the current official school document before publication.
           </p>
 
-          <a
-            class="mini-direction-link"
-            href="https://www.google.com/maps/dir/?api=1&destination=51.917861,-8.424502"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Get Directions
-          </a>
-        </div>
+          <div class="policy-warning">
+            Before this page is made public, the school should confirm the current DLP,
+            Deputy DLP, review dates and Board of Management approval dates.
+          </div>
 
-        <div class="map-card">
-          <iframe
-            class="contact-map-frame"
-            title="Map showing Cara Junior School location using correct coordinates"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=51.917861,-8.424502&z=17&output=embed">
-          </iframe>
+          <h3>Procedures in Place</h3>
 
-          <div class="map-address-box">
-            <h3>Cara Junior School</h3>
-            <p>
-              Banduff Road,<br />
-              Mayfield,<br />
-              Cork,<br />
-              T23 TA12.
-            </p>
+          <p>
+            The school’s safeguarding procedures include arrangements for reporting child
+            protection concerns, maintaining records, training staff, managing recruitment,
+            and ensuring school activities are supervised appropriately.
+          </p>
 
-            <div class="map-note">
-              The map above uses the school’s correct location coordinates to avoid Google
-              showing the old school pin. Please use the direction button below for the most
-              accurate route.
+          <ul class="policy-list">
+            <li>Child protection concerns are reported through the school’s child protection procedures.</li>
+            <li>Relevant staff training and awareness are maintained.</li>
+            <li>School personnel are made aware of child safeguarding responsibilities.</li>
+            <li>Child safeguarding records are managed carefully and appropriately.</li>
+            <li>School activities are planned with pupil safety and welfare in mind.</li>
+          </ul>
+
+          <h3>Risk Assessment Areas</h3>
+
+          <p>
+            The uploaded document includes a risk assessment table. The areas below present
+            the main safeguarding risk themes in a clearer website format.
+          </p>
+
+          <div class="risk-grid">
+            <div class="risk-card">
+              <h3>Harm Not Recognised or Reported</h3>
+              <p>
+                Procedures support staff in recognising and reporting child protection concerns
+                appropriately.
+              </p>
+            </div>
+
+            <div class="risk-card">
+              <h3>Behaviour and Supervision</h3>
+              <p>
+                Supervision, positive behaviour supports and school procedures help reduce risks
+                during the school day.
+              </p>
+            </div>
+
+            <div class="risk-card">
+              <h3>One-to-One or Small Group Work</h3>
+              <p>
+                Teaching, therapies, care supports and individual work should be managed with
+                appropriate safeguarding awareness.
+              </p>
+            </div>
+
+            <div class="risk-card">
+              <h3>Intimate Care and Medical Needs</h3>
+              <p>
+                Intimate care and administration of medicine are supported by relevant school
+                policies and careful record keeping.
+              </p>
+            </div>
+
+            <div class="risk-card">
+              <h3>Visitors and External Personnel</h3>
+              <p>
+                Visiting personnel, volunteers and external supports should follow school
+                safeguarding procedures and supervision arrangements.
+              </p>
+            </div>
+
+            <div class="risk-card">
+              <h3>Online and Digital Safety</h3>
+              <p>
+                Internet use, images, recordings and digital communication should be managed
+                in line with school policy and pupil safety requirements.
+              </p>
             </div>
           </div>
 
-          <div class="map-actions">
-            <a
-              class="btn btn-primary"
-              href="https://www.google.com/maps/dir/?api=1&destination=51.917861,-8.424502"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get Directions to Correct Location
-            </a>
+          <h3>Policies Linked to Safeguarding</h3>
 
-            <a
-              class="btn btn-secondary"
-              href="https://www.google.com/maps?q=51.917861,-8.424502"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open Map Pin
-            </a>
+          <p>
+            Child safeguarding connects with a number of other school policies and procedures.
+            These may include behaviour, anti-bullying, intimate care, administration of medicine,
+            internet acceptable use, data protection, health and safety, and school transport.
+          </p>
 
-            <a
-              class="btn btn-secondary"
-              href="mailto:office@carajs.ie"
-            >
-              Email Office
-            </a>
+          <ul class="policy-list">
+            <li>Code of Behaviour and Discipline Policy</li>
+            <li>Anti-Bullying Policy</li>
+            <li>Intimate Care Policy</li>
+            <li>Administration of Medicine Policy</li>
+            <li>Data Protection Policy</li>
+            <li>School Transport Policy</li>
+            <li>Health and Safety procedures</li>
+            <li>Acceptable Use / Online Safety procedures</li>
+          </ul>
+
+          <h3>Staff Awareness and Training</h3>
+
+          <p>
+            The school’s procedures include awareness of child safeguarding training and
+            information. School personnel should be aware of the procedures to follow where
+            a concern arises.
+          </p>
+
+          <h3>Review and Board of Management</h3>
+
+          <p>
+            The Child Safeguarding Statement and Risk Assessment should be reviewed by the
+            school and the Board of Management in line with current requirements.
+          </p>
+
+          <p>
+            The uploaded document includes Board of Management sign-off and review areas.
+            These should be checked and confirmed before the final live version is published.
+          </p>
+
+          <div class="contact-policy-box">
+            <h3>Contact the School Office</h3>
+            <p>
+              If you need guidance in relation to school safeguarding information, please
+              contact the school office.
+            </p>
+
+            <p>
+              Cara Junior School<br />
+              Banduff Road, Mayfield, Cork, T23 TA12<br />
+              Phone: <a href="tel:0214643060">021 4643060</a><br />
+              Email: <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+            </p>
           </div>
-        </div>
+
+          <div class="policy-actions">
+            <a class="btn btn-primary" href="policies.html">Back to Policy Library</a>
+            <a class="btn btn-secondary" href="contact.html">Contact Office</a>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="section classes-section">
       <div class="container">
         <div class="section-heading">
-          <p class="section-label">Quick Links</p>
-          <h2>Helpful pages</h2>
+          <p class="section-label">Useful Links</p>
+          <h2>Continue to school information</h2>
         </div>
 
-        <div class="quick-links">
-          <a href="admissions.html">
-            <span>Admissions</span>
-            <small>Admissions policy, notice and application form</small>
+        <div class="policy-next-links">
+          <a class="policy-next-link" href="policies.html">
+            <span>Policy Library</span>
+            <small>Return to all school policies</small>
           </a>
 
-          <a href="parents.html">
+          <a class="policy-next-link" href="parents.html">
             <span>Parents</span>
             <small>Useful information for parents and guardians</small>
           </a>
 
-          <a href="calendar.html">
-            <span>Calendar</span>
-            <small>School dates, holidays and closures</small>
-          </a>
-
-          <a href="policies.html">
-            <span>Policies</span>
-            <small>School policy library</small>
+          <a class="policy-next-link" href="contact.html">
+            <span>Contact</span>
+            <small>Phone, email and school location</small>
           </a>
         </div>
       </div>
@@ -416,6 +640,7 @@
         <h3>Quick Links</h3>
         <ul>
           <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
           <li><a href="policies.html">Policies</a></li>
           <li><a href="calendar.html">Calendar</a></li>
           <li><a href="contact.html">Contact</a></li>
