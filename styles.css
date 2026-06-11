@@ -150,6 +150,7 @@ a {
   transform: translateY(-1px);
   box-shadow: 0 10px 22px rgba(18, 51, 95, 0.18);
 }
+
 .nav-wrap {
   background: var(--white);
 }
@@ -1371,6 +1372,16 @@ a {
     width: 56px !important;
     height: 56px !important;
     flex-basis: 56px;
+  }
+}
+
+@media (max-width: 720px) {
+  .top-directions-link {
+    display: inline-flex;
+    margin-left: 0;
+    margin-top: 6px;
+    padding: 6px 10px;
+    font-size: 0.78rem;
   }
 }
 
