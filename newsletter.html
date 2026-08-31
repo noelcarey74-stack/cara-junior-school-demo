@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Newsletters | Cara Junior School</title>
+
+  <meta
+    name="description"
+    content="School newsletters, reminders and updates from Cara Junior School, Banduff Road, Mayfield, Cork."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .newsletter-page {
+      background: #f7fbff;
+    }
+
+    .newsletter-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(25, 113, 194, 0.15), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(250, 176, 5, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+    }
+
+    .newsletter-hero-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 24px 60px rgba(18, 51, 95, 0.16);
+      border: 1px solid rgba(18, 51, 95, 0.10);
+    }
+
+    .newsletter-hero-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 22px;
+      margin-bottom: 18px;
+    }
+
+    .newsletter-hero-card h2,
+    .newsletter-card h3,
+    .archive-card h3 {
+      color: var(--navy);
+    }
+
+    .latest-newsletter-card {
+      background:
+        radial-gradient(circle at top left, rgba(32, 201, 151, 0.12), transparent 30%),
+        linear-gradient(135deg, #ffffff, #f1fff9);
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(32, 201, 151, 0.18);
+      box-shadow: 0 18px 44px rgba(18, 51, 95, 0.08);
+    }
+
+    .newsletter-status {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: #fff9db;
+      color: #8a5a00;
+      font-weight: 950;
+      margin-bottom: 14px;
+    }
+
+    .newsletter-card-grid,
+    .archive-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .newsletter-card,
+    .archive-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(18, 51, 95, 0.10);
+      box-shadow: 0 14px 34px rgba(18, 51, 95, 0.08);
+    }
+
+    .newsletter-card {
+      border-top: 6px solid #20c997;
+    }
+
+    .newsletter-card:nth-child(2) { border-top-color: #1971c2; }
+    .newsletter-card:nth-child(3) { border-top-color: #fab005; }
+    .newsletter-card:nth-child(4) { border-top-color: #7048e8; }
+
+    .archive-card small {
+      display: inline-flex;
+      margin-top: 10px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: #eef7ff;
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    @media (min-width: 720px) {
+      .newsletter-card-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .archive-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .newsletter-hero-card img {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body class="newsletter-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <p>
+          Cara Junior School, Banduff Road, Mayfield, Cork, T23 TA12
+          <a
+            class="top-directions-link"
+            href="https://www.google.com/maps/dir/?api=1&destination=51.917861,-8.424502"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Directions
+          </a>
+        </p>
+
+        <div class="top-contact">
+          <a href="tel:0214643060">021 4643060</a>
+          <span>|</span>
+          <a href="mailto:office@carajs.ie">office@carajs.ie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Cara Junior School Home">
+          <img class="brand-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+          <div class="brand-text">
+            <strong>Cara Junior School</strong>
+            <span>Support and grow together</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="classes.html">Classes</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="parents.html">Parents</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="policies.html">Policies</a>
+          <a href="news.html" class="active">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero page-hero newsletter-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">School Newsletters</p>
+          <h1>Newsletters and updates for parents and guardians.</h1>
+          <p class="hero-text">
+            School newsletters, reminders and approved updates from Cara Junior School
+            will be shared here during the school year.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#latest-newsletter">Latest Newsletter</a>
+            <a class="btn btn-secondary" href="calendar.html">View Calendar</a>
+          </div>
+        </div>
+
+        <div class="newsletter-hero-card">
+          <img
+            src="school-front.jpg"
+            alt="Front of Cara Junior School building in Mayfield, Cork"
+          />
+          <h2>Keeping families informed</h2>
+          <p>
+            This page will hold the latest newsletter and an archive of previous school updates.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="latest-newsletter">
+      <div class="container two-column">
+        <div>
+          <p class="section-label">Latest Newsletter</p>
+          <h2>Current school newsletter</h2>
+        </div>
+
+        <div class="latest-newsletter-card">
+          <span class="newsletter-status">Coming soon</span>
+          <h3>Latest newsletter will be added here</h3>
+          <p>
+            The latest school newsletter will be uploaded here when it is approved and ready
+            to share with parents and guardians.
+          </p>
+          <p>
+            When a newsletter PDF is supplied, this card can link directly to the file for easy viewing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">What Newsletters May Include</p>
+          <h2>School notices and reminders</h2>
+          <p>
+            Newsletters can help families keep up to date with important school information.
+          </p>
+        </div>
+
+        <div class="newsletter-card-grid">
+          <article class="newsletter-card">
+            <h3>Important Dates</h3>
+            <p>Return dates, school closures, events and calendar reminders.</p>
+          </article>
+
+          <article class="newsletter-card">
+            <h3>School Notices</h3>
+            <p>General school reminders and approved information for families.</p>
+          </article>
+
+          <article class="newsletter-card">
+            <h3>Class Updates</h3>
+            <p>Approved classroom news, activities and school memories.</p>
+          </article>
+
+          <article class="newsletter-card">
+            <h3>Parent Information</h3>
+            <p>Useful links, policy reminders and home-school communication updates.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Newsletter Archive</p>
+          <h2>School year 2026–2027</h2>
+          <p>
+            Archive cards are ready now and can be linked to PDF newsletters as they are provided.
+          </p>
+        </div>
+
+        <div class="archive-grid">
+          <article class="archive-card"><h3>September 2026</h3><p>Newsletter PDF will be added when available.</p><small>Coming soon</small></article>
+          <article class="archive-card"><h3>October 2026</h3><p>Newsletter PDF will be added when available.</p><small>Coming soon</small></article>
+          <article class="archive-card"><h3>Christmas 2026</h3><p>Newsletter PDF will be added when available.</p><small>Coming soon</small></article>
+          <article class="archive-card"><h3>Spring 2027</h3><p>Newsletter PDF will be added when available.</p><small>Coming soon</small></article>
+          <article class="archive-card"><h3>Summer 2027</h3><p>Newsletter PDF will be added when available.</p><small>Coming soon</small></article>
+          <article class="archive-card"><h3>End of Year 2027</h3><p>Newsletter PDF will be added when available.</p><small>Coming soon</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section classes-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Useful Links</p>
+          <h2>More school information</h2>
+        </div>
+
+        <div class="quick-links">
+          <a href="parents.html"><span>Parents</span><small>Useful information for families</small></a>
+          <a href="calendar.html"><span>Calendar</span><small>School dates and closures</small></a>
+          <a href="policies.html"><span>Policies</span><small>School policy library</small></a>
+          <a href="contact.html"><span>Contact</span><small>Phone, email and directions</small></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="cara-logo.png" alt="Cara Junior School logo" />
+        <h2>Cara Junior School</h2>
+        <p>Support and grow together</p>
+        <p>Banduff Road, Mayfield, Cork, T23 TA12</p>
+        <p>Charity Number: 20139599</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:0214643060">021 4643060</a></p>
+        <p><a href="mailto:office@carajs.ie">office@carajs.ie</a></p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="newsletter.html">Newsletters</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Website</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61580438163822" target="_blank" rel="noopener noreferrer">
+              Facebook
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Cara Junior School. Website prepared by Carey Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
