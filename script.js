@@ -89,6 +89,19 @@ document.addEventListener("DOMContentLoaded", function () {
         quickLinksList.appendChild(newsletterItem);
       }
     }
+
+    // Public footer credit shown across the website.
+    const footerCreditHtml = '&copy; 2026 Cara Junior School. Website by <a href="https://careywebservices.ie" target="_blank" rel="noopener noreferrer">Carey Web Services</a>.';
+    const footerCredit = footer.querySelector(".footer-bottom .container p") || footer.querySelector(".footer-bottom p");
+
+    if (footerCredit) {
+      footerCredit.innerHTML = footerCreditHtml;
+    } else {
+      const footerBottom = document.createElement("div");
+      footerBottom.className = "footer-bottom";
+      footerBottom.innerHTML = '<div class="container"><p>' + footerCreditHtml + '</p></div>';
+      footer.appendChild(footerBottom);
+    }
   }
 
   // Add a newsletter shortcut to the News page if not already in the page content.
