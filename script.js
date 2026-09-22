@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   replaceLeafText(/2025\s*\/\s*2026/g, "2026 / 2027");
   replaceLeafText(/2025\s*-\s*2026/g, "2026-2027");
 
-  // Contact page office wording.
+  // Contact page office wording and School Administrator card.
   if (path.endsWith("/contact.html") || path.endsWith("contact.html")) {
     document.querySelectorAll(".section-heading").forEach(function (heading) {
       const title = heading.querySelector("h2");
@@ -75,6 +75,86 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (paragraphs[0]) {
         paragraphs[0].textContent = "Please contact Carol Carey, the School Administrator, for all general enquiries.";
+      }
+
+      const sectionContainer = heading.parentElement;
+      const contactGrid = sectionContainer ? sectionContainer.querySelector(".contact-grid") : null;
+
+      if (sectionContainer && contactGrid && !sectionContainer.querySelector(".office-admin-card")) {
+        const style = document.createElement("style");
+        style.textContent = `
+          .office-admin-card {
+            display: grid;
+            gap: 18px;
+            align-items: center;
+            background: linear-gradient(135deg, #ffffff, #f7fbff);
+            border: 1px solid rgba(18, 51, 95, 0.10);
+            border-radius: 26px;
+            padding: 22px;
+            margin: 24px 0 26px;
+            box-shadow: 0 16px 38px rgba(18, 51, 95, 0.10);
+          }
+
+          .office-admin-card img {
+            width: 118px;
+            height: 118px;
+            object-fit: cover;
+            border-radius: 999px;
+            border: 5px solid #ffffff;
+            box-shadow: 0 14px 30px rgba(18, 51, 95, 0.16);
+          }
+
+          .office-admin-card h3 {
+            margin: 4px 0 4px;
+            color: var(--navy);
+            font-size: 1.45rem;
+          }
+
+          .office-admin-card p {
+            margin: 0 0 10px;
+            color: #344054;
+            line-height: 1.6;
+          }
+
+          .office-admin-card .office-role {
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            margin-bottom: 4px;
+            padding: 6px 11px;
+            border-radius: 999px;
+            background: #fff3bf;
+            color: var(--navy);
+            font-size: 0.78rem;
+            font-weight: 950;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+          }
+
+          @media (min-width: 700px) {
+            .office-admin-card {
+              grid-template-columns: 130px 1fr;
+            }
+          }
+        `;
+        document.head.appendChild(style);
+
+        const adminCard = document.createElement("div");
+        adminCard.className = "office-admin-card";
+        adminCard.innerHTML = `
+          <img src="carol-carey-school-administrator.jpg" alt="Carol Carey, School Administrator at Cara Junior School" />
+          <div>
+            <span class="office-role">School Administrator</span>
+            <h3>Carol Carey</h3>
+            <p>Please contact Carol Carey, School Administrator, for all general enquiries.</p>
+            <div class="contact-actions" style="margin-top: 12px;">
+              <a class="btn btn-primary" href="tel:0214643060">Call Office</a>
+              <a class="btn btn-secondary" href="mailto:office@carajs.ie">Email Office</a>
+            </div>
+          </div>
+        `;
+
+        sectionContainer.insertBefore(adminCard, contactGrid);
       }
     });
   }
