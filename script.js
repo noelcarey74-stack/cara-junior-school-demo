@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Site-wide school year update for classroom pages.
-  // This keeps the class update cards current without editing every class page one by one.
   replaceLeafText(/2025\s*\/\s*2026/g, "2026 / 2027");
   replaceLeafText(/2025\s*-\s*2026/g, "2026-2027");
 
@@ -120,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Classroom staff lists for 2026 / 2027.
-  // Names come from the staff class list supplied by the school.
   const classStaff = {
     green: {
       className: "Green Class",
@@ -244,9 +242,15 @@ document.addEventListener("DOMContentLoaded", function () {
       return box.className && typeof box.className === "string" && box.className.indexOf("note-box") !== -1;
     });
 
-    if (noteBox && /Teacher and SNA names can be added/i.test(noteBox.textContent)) {
+    if (noteBox && /Teacher and SNA names can be added|Class team names have been updated|Staff photographs should only/i.test(noteBox.textContent)) {
       noteBox.textContent = "Class team names have been updated for the 2026 / 2027 school year.";
     }
+
+    document.querySelectorAll(".team-photo-card p").forEach(function (paragraph) {
+      if (/A staff or classroom photo can be placed here|Pupil names should not be attached/i.test(paragraph.textContent)) {
+        paragraph.remove();
+      }
+    });
   }
 
   // Site-wide footer clean-up and consistency.
@@ -286,7 +290,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // Public footer credit shown across the website.
     const footerCreditHtml = '&copy; 2026 Cara Junior School. Website by <a href="https://careywebservices.ie" target="_blank" rel="noopener noreferrer">Carey Web Services</a>.';
     const footerCredit = footer.querySelector(".footer-bottom .container p") || footer.querySelector(".footer-bottom p");
 
@@ -300,7 +303,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Add a newsletter shortcut to the News page if not already in the page content.
   if (document.body && document.title.includes("News")) {
     const latestNewsSection = document.getElementById("latest-news");
     const newsGrid = latestNewsSection ? latestNewsSection.querySelector(".news-grid") : null;
