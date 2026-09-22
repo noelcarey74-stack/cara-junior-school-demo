@@ -53,6 +53,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Site-wide school year update for classroom pages.
+  // This keeps the class update cards current without editing every class page one by one.
+  document.querySelectorAll("body *").forEach(function (element) {
+    if (element.childElementCount === 0 && element.textContent) {
+      element.textContent = element.textContent
+        .replace(/2025\s*\/\s*2026/g, "2026 / 2027")
+        .replace(/2025\s*-\s*2026/g, "2026-2027");
+    }
+  });
+
   // Site-wide footer clean-up and consistency.
   const footer = document.querySelector(".site-footer");
 
