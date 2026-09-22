@@ -41,15 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        closeMenu();
-      }
+      if (event.key === "Escape") closeMenu();
     });
 
     window.addEventListener("resize", function () {
-      if (window.innerWidth >= 980) {
-        closeMenu();
-      }
+      if (window.innerWidth >= 980) closeMenu();
     });
   }
 
@@ -61,20 +57,34 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  const path = window.location.pathname || "";
+
   // Site-wide school year update for classroom pages.
   replaceLeafText(/2025\s*\/\s*2026/g, "2026 / 2027");
   replaceLeafText(/2025\s*-\s*2026/g, "2026-2027");
 
-  // Admissions notice update for 2027-2028. Dates are TBC until the school confirms them.
-  const path = window.location.pathname || "";
+  // Contact page office wording.
+  if (path.endsWith("/contact.html") || path.endsWith("contact.html")) {
+    document.querySelectorAll(".section-heading").forEach(function (heading) {
+      const title = heading.querySelector("h2");
+      if (!title || title.textContent.trim().toLowerCase() !== "contact details") return;
 
+      const paragraphs = Array.from(heading.querySelectorAll("p")).filter(function (paragraph) {
+        return !paragraph.classList.contains("section-label");
+      });
+
+      if (paragraphs[0]) {
+        paragraphs[0].textContent = "Please contact Carol Carey, the School Administrator, for all general enquiries.";
+      }
+    });
+  }
+
+  // Admissions notice update for 2027-2028. Dates are TBC until the school confirms them.
   if (path.endsWith("/admissions.html") || path.endsWith("admissions.html")) {
     document.querySelectorAll('a[href="admissions-notice-2026-2027.html"]').forEach(function (link) {
       link.setAttribute("aria-label", "Admissions notice 2027 2028");
       const heading = link.querySelector("h3");
-      if (heading) {
-        heading.textContent = "Admissions Notice 2027–2028";
-      }
+      if (heading) heading.textContent = "Admissions Notice 2027–2028";
     });
   }
 
@@ -84,9 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     replaceLeafText(/2026-2027/g, "2027-2028");
 
     const heroTitle = document.querySelector(".hero-content h1");
-    if (heroTitle) {
-      heroTitle.textContent = "Admissions Notice 2027–2028";
-    }
+    if (heroTitle) heroTitle.textContent = "Admissions Notice 2027–2028";
 
     const heroText = document.querySelector(".hero-text");
     if (heroText) {
@@ -97,12 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (applicationCard) {
       const applicationHeading = applicationCard.querySelector("h2");
       const applicationText = applicationCard.querySelector("p");
-      if (applicationHeading) {
-        applicationHeading.textContent = "Application Dates";
-      }
-      if (applicationText) {
-        applicationText.textContent = "Application dates are to be confirmed.";
-      }
+      if (applicationHeading) applicationHeading.textContent = "Application Dates";
+      if (applicationText) applicationText.textContent = "Application dates are to be confirmed.";
     }
 
     document.querySelectorAll(".policy-summary-card").forEach(function (card) {
@@ -120,87 +124,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Classroom staff lists for 2026 / 2027.
   const classStaff = {
-    green: {
-      className: "Green Class",
-      teacherLabel: "Class Teacher",
-      teacher: "Jean Walsh",
-      snas: "Mary St Leger, Nicole O Halloran, Rosaire Wall"
-    },
-    red: {
-      className: "Red Class",
-      teacherLabel: "Class Teacher",
-      teacher: "Aine Kirby",
-      snas: "Helena O Sullivan, Mary Byrne, Gonzalo de la Puente / Martina Nugent"
-    },
-    peach: {
-      className: "Peach Class",
-      teacherLabel: "Class Teacher",
-      teacher: "Holly Cussen",
-      snas: "Edita Sweeney, Ciara Harrington, Jennet Reyes"
-    },
-    turquoise: {
-      className: "Turquoise Class",
-      teacherLabel: "Class Teacher",
-      teacher: "Aisling Dempsey",
-      snas: "Julie Fenney, Deirdre Brewster, Robert Bailey"
-    },
-    grey: {
-      className: "Grey Class",
-      teacherLabel: "Class Teachers",
-      teacher: "Annmarie Finnegan & Roisin Byrne",
-      snas: "Shauna O Driscoll, Katie Ahern, Amy Twohig"
-    },
-    navy: {
-      className: "Navy Class",
-      teacherLabel: "Class Teacher",
-      teacher: "Siobhan O Leary",
-      snas: "Gemma Crowley, Charlotte Barton, Fiona Cahalane / Janet Hales"
-    },
-    purple: {
-      className: "Purple Class",
-      teacherLabel: "Class Teacher",
-      teacher: "Sarah Cunningham",
-      snas: "Natasha O Mahony, Linda Twohig, Rosina Sweeney"
-    },
-    cerise: {
-      className: "Cerise Class",
-      teacherLabel: "Class Teacher",
-      teacher: "Lisa Quinlan",
-      snas: "Eilish Cronin / Karen Moynihan, Karen O Farrell, Debbie Kelliher"
-    },
-    blue: {
-      className: "Blue Class",
-      teacherLabel: "Class Teacher",
-      teacher: "Nora O Riordan",
-      snas: "Laura Kelly, Stephaine Power, Beata (Lyndsey Murphy)"
-    },
-    orange: {
-      className: "Orange Class",
-      teacherLabel: "Class Teacher",
-      teacher: "Laura Anketell",
-      snas: "Jennifer Davis, Sarah Doolan, Alison O Donovan (Lyndsey Murphy)"
-    },
-    silver: {
-      className: "Silver Class",
-      teacherLabel: "Class Teacher",
-      teacher: "Roisin Smiddy",
-      snas: "Noreen Walsh, Dean O Brien, Kelly Murphy"
-    },
-    yellow: {
-      className: "Yellow Class",
-      teacherLabel: "Class Teacher",
-      teacher: "Jennifer Mulcahy",
-      snas: "Janice Walsh, Deirdre Church, Sonia Brandon TBC"
-    }
+    green: { className: "Green Class", teacherLabel: "Class Teacher", teacher: "Jean Walsh", snas: "Mary St Leger, Nicole O Halloran, Rosaire Wall" },
+    red: { className: "Red Class", teacherLabel: "Class Teacher", teacher: "Aine Kirby", snas: "Helena O Sullivan, Mary Byrne, Gonzalo de la Puente / Martina Nugent" },
+    peach: { className: "Peach Class", teacherLabel: "Class Teacher", teacher: "Holly Cussen", snas: "Edita Sweeney, Ciara Harrington, Jennet Reyes" },
+    turquoise: { className: "Turquoise Class", teacherLabel: "Class Teacher", teacher: "Aisling Dempsey", snas: "Julie Fenney, Deirdre Brewster, Robert Bailey" },
+    grey: { className: "Grey Class", teacherLabel: "Class Teachers", teacher: "Annmarie Finnegan & Roisin Byrne", snas: "Shauna O Driscoll, Katie Ahern, Amy Twohig" },
+    navy: { className: "Navy Class", teacherLabel: "Class Teacher", teacher: "Siobhan O Leary", snas: "Gemma Crowley, Charlotte Barton, Fiona Cahalane / Janet Hales" },
+    purple: { className: "Purple Class", teacherLabel: "Class Teacher", teacher: "Sarah Cunningham", snas: "Natasha O Mahony, Linda Twohig, Rosina Sweeney" },
+    cerise: { className: "Cerise Class", teacherLabel: "Class Teacher", teacher: "Lisa Quinlan", snas: "Eilish Cronin / Karen Moynihan, Karen O Farrell, Debbie Kelliher" },
+    blue: { className: "Blue Class", teacherLabel: "Class Teacher", teacher: "Nora O Riordan", snas: "Laura Kelly, Stephaine Power, Beata (Lyndsey Murphy)" },
+    orange: { className: "Orange Class", teacherLabel: "Class Teacher", teacher: "Laura Anketell", snas: "Jennifer Davis, Sarah Doolan, Alison O Donovan (Lyndsey Murphy)" },
+    silver: { className: "Silver Class", teacherLabel: "Class Teacher", teacher: "Roisin Smiddy", snas: "Noreen Walsh, Dean O Brien, Kelly Murphy" },
+    yellow: { className: "Yellow Class", teacherLabel: "Class Teacher", teacher: "Jennifer Mulcahy", snas: "Janice Walsh, Deirdre Church, Sonia Brandon TBC" }
   };
 
   function getClassKeyFromPage() {
     const page = (window.location.pathname || "").split("/").pop().toLowerCase();
     const match = page.match(/^([a-z]+)-class\.html$/);
-    if (match && classStaff[match[1]]) {
-      return match[1];
-    }
-    return null;
+    return match && classStaff[match[1]] ? match[1] : null;
   }
 
   const classKey = getClassKeyFromPage();
