@@ -251,6 +251,25 @@ document.addEventListener("DOMContentLoaded", function () {
         paragraph.remove();
       }
     });
+
+    document.querySelectorAll('[class*="-class-photo-card"] p').forEach(function (paragraph) {
+      if (/Click the classroom image to open it larger|Real approved classroom photos can be added here later/i.test(paragraph.textContent)) {
+        paragraph.remove();
+      }
+    });
+
+    document.querySelectorAll(".activity-detail-header .activity-text-box").forEach(function (box) {
+      const text = box.textContent || "";
+      if (/Activity notes|News text|Photo note|teacher-approved activity text|approved class news|Add approved photos/i.test(text)) {
+        box.remove();
+      }
+    });
+
+    document.querySelectorAll(".activity-meta span").forEach(function (span) {
+      if (/Photos approved before upload|Approved school content|No pupil names unless approved/i.test(span.textContent || "")) {
+        span.remove();
+      }
+    });
   }
 
   // Site-wide footer clean-up and consistency.
