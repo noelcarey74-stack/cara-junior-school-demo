@@ -245,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     if (noteBox && /Teacher and SNA names can be added/i.test(noteBox.textContent)) {
-      noteBox.textContent = "Class team names have been updated for the 2026 / 2027 school year. Staff photographs should only be used where staff are happy and the school approves.";
+      noteBox.textContent = "Class team names have been updated for the 2026 / 2027 school year.";
     }
   }
 
