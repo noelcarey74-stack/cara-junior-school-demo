@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navy: { className: "Navy Class", teacherLabel: "Class Teacher", teacher: "Siobhan O Leary", snas: "Gemma Crowley, Charlotte Barton, Fiona Cahalane / Janet Hales" },
     purple: { className: "Purple Class", teacherLabel: "Class Teacher", teacher: "Sarah Cunningham", snas: "Natasha O Mahony, Linda Twohig, Rosina Sweeney" },
     cerise: { className: "Cerise Class", teacherLabel: "Class Teacher", teacher: "Lisa Quinlan", snas: "Eilish Cronin / Karen Moynihan, Karen O Farrell, Debbie Kelliher" },
-    blue: { className: "Blue Class", teacherLabel: "Class Teacher", teacher: "Nora O Riordan", snas: "Laura Kelly, Stephaine Power, Beata (Lyndsey Murphy)" },
+    blue: { className: "Blue Class", teacherLabel: "Class Teacher", teacher: "Nora O Riordan", snas: "Laura Kelly, Stephaine Power, Beata Ziaja (Lyndsey Murphy)" },
     orange: { className: "Orange Class", teacherLabel: "Class Teacher", teacher: "Laura Anketell", snas: "Jennifer Davis, Sarah Doolan, Alison O Donovan (Lyndsey Murphy)" },
     silver: { className: "Silver Class", teacherLabel: "Class Teacher", teacher: "Roisin Smiddy", snas: "Noreen Walsh, Dean O Brien, Kelly Murphy" },
     yellow: { className: "Yellow Class", teacherLabel: "Class Teacher", teacher: "Jennifer Mulcahy", snas: "Janice Walsh, Deirdre Church, Sonia Brandon TBC" }
