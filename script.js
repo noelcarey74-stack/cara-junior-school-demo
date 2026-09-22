@@ -53,15 +53,191 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function replaceLeafText(pattern, replacement) {
+    document.querySelectorAll("body *").forEach(function (element) {
+      if (element.childElementCount === 0 && element.textContent) {
+        element.textContent = element.textContent.replace(pattern, replacement);
+      }
+    });
+  }
+
   // Site-wide school year update for classroom pages.
   // This keeps the class update cards current without editing every class page one by one.
-  document.querySelectorAll("body *").forEach(function (element) {
-    if (element.childElementCount === 0 && element.textContent) {
-      element.textContent = element.textContent
-        .replace(/2025\s*\/\s*2026/g, "2026 / 2027")
-        .replace(/2025\s*-\s*2026/g, "2026-2027");
+  replaceLeafText(/2025\s*\/\s*2026/g, "2026 / 2027");
+  replaceLeafText(/2025\s*-\s*2026/g, "2026-2027");
+
+  // Admissions notice update for 2027-2028. Dates are TBC until the school confirms them.
+  const path = window.location.pathname || "";
+
+  if (path.endsWith("/admissions.html") || path.endsWith("admissions.html")) {
+    document.querySelectorAll('a[href="admissions-notice-2026-2027.html"]').forEach(function (link) {
+      link.setAttribute("aria-label", "Admissions notice 2027 2028");
+      const heading = link.querySelector("h3");
+      if (heading) {
+        heading.textContent = "Admissions Notice 2027–2028";
+      }
+    });
+  }
+
+  if (path.includes("admissions-notice-2026-2027.html")) {
+    document.title = "Admissions Notice 2027–2028 | Cara Junior School";
+    replaceLeafText(/2026–2027/g, "2027–2028");
+    replaceLeafText(/2026-2027/g, "2027-2028");
+
+    const heroTitle = document.querySelector(".hero-content h1");
+    if (heroTitle) {
+      heroTitle.textContent = "Admissions Notice 2027–2028";
     }
-  });
+
+    const heroText = document.querySelector(".hero-text");
+    if (heroText) {
+      heroText.textContent = "Key admission dates, decision dates and places available for the 2027–2028 school year at Cara Junior School.";
+    }
+
+    const applicationCard = document.querySelector(".policy-hero-card");
+    if (applicationCard) {
+      const applicationHeading = applicationCard.querySelector("h2");
+      const applicationText = applicationCard.querySelector("p");
+      if (applicationHeading) {
+        applicationHeading.textContent = "Application Dates";
+      }
+      if (applicationText) {
+        applicationText.textContent = "Application dates are to be confirmed.";
+      }
+    }
+
+    document.querySelectorAll(".policy-summary-card").forEach(function (card) {
+      const label = card.querySelector("strong");
+      const value = card.querySelector("p");
+      if (label && value && /Applications Open|Applications Close|Decision Date/i.test(label.textContent)) {
+        value.textContent = "TBC";
+      }
+    });
+
+    document.querySelectorAll(".notice-date-card strong").forEach(function (value) {
+      value.textContent = "TBC";
+    });
+  }
+
+  // Classroom staff lists for 2026 / 2027.
+  // Names come from the staff class list supplied by the school.
+  const classStaff = {
+    green: {
+      className: "Green Class",
+      teacherLabel: "Class Teacher",
+      teacher: "Jean Walsh",
+      snas: "Mary St Leger, Nicole O Halloran, Rosaire Wall"
+    },
+    red: {
+      className: "Red Class",
+      teacherLabel: "Class Teacher",
+      teacher: "Aine Kirby",
+      snas: "Helena O Sullivan, Mary Byrne, Gonzalo de la Puente / Martina Nugent"
+    },
+    peach: {
+      className: "Peach Class",
+      teacherLabel: "Class Teacher",
+      teacher: "Holly Cussen",
+      snas: "Edita Sweeney, Ciara Harrington, Jennet Reyes"
+    },
+    turquoise: {
+      className: "Turquoise Class",
+      teacherLabel: "Class Teacher",
+      teacher: "Aisling Dempsey",
+      snas: "Julie Fenney, Deirdre Brewster, Robert Bailey"
+    },
+    grey: {
+      className: "Grey Class",
+      teacherLabel: "Class Teachers",
+      teacher: "Annmarie Finnegan & Roisin Byrne",
+      snas: "Shauna O Driscoll, Katie Ahern, Amy Twohig"
+    },
+    navy: {
+      className: "Navy Class",
+      teacherLabel: "Class Teacher",
+      teacher: "Siobhan O Leary",
+      snas: "Gemma Crowley, Charlotte Barton, Fiona Cahalane / Janet Hales"
+    },
+    purple: {
+      className: "Purple Class",
+      teacherLabel: "Class Teacher",
+      teacher: "Sarah Cunningham",
+      snas: "Natasha O Mahony, Linda Twohig, Rosina Sweeney"
+    },
+    cerise: {
+      className: "Cerise Class",
+      teacherLabel: "Class Teacher",
+      teacher: "Lisa Quinlan",
+      snas: "Eilish Cronin / Karen Moynihan, Karen O Farrell, Debbie Kelliher"
+    },
+    blue: {
+      className: "Blue Class",
+      teacherLabel: "Class Teacher",
+      teacher: "Nora O Riordan",
+      snas: "Laura Kelly, Stephaine Power, Beata (Lyndsey Murphy)"
+    },
+    orange: {
+      className: "Orange Class",
+      teacherLabel: "Class Teacher",
+      teacher: "Laura Anketell",
+      snas: "Jennifer Davis, Sarah Doolan, Alison O Donovan (Lyndsey Murphy)"
+    },
+    silver: {
+      className: "Silver Class",
+      teacherLabel: "Class Teacher",
+      teacher: "Roisin Smiddy",
+      snas: "Noreen Walsh, Dean O Brien, Kelly Murphy"
+    },
+    yellow: {
+      className: "Yellow Class",
+      teacherLabel: "Class Teacher",
+      teacher: "Jennifer Mulcahy",
+      snas: "Janice Walsh, Deirdre Church, Sonia Brandon TBC"
+    }
+  };
+
+  function getClassKeyFromPage() {
+    const page = (window.location.pathname || "").split("/").pop().toLowerCase();
+    const match = page.match(/^([a-z]+)-class\.html$/);
+    if (match && classStaff[match[1]]) {
+      return match[1];
+    }
+    return null;
+  }
+
+  const classKey = getClassKeyFromPage();
+  const staff = classKey ? classStaff[classKey] : null;
+
+  if (staff) {
+    const teamList = document.querySelector(".team-list");
+    if (teamList) {
+      teamList.querySelectorAll("li").forEach(function (item) {
+        const label = item.querySelector("strong");
+        const value = item.querySelector("span");
+        if (!label || !value) return;
+
+        const labelText = label.textContent.trim().toLowerCase();
+
+        if (labelText.includes("class teacher")) {
+          label.textContent = staff.teacherLabel;
+          value.textContent = staff.teacher;
+        }
+
+        if (labelText.includes("sna")) {
+          label.textContent = "SNA Team";
+          value.textContent = staff.snas;
+        }
+      });
+    }
+
+    const noteBox = Array.from(document.querySelectorAll("div")).find(function (box) {
+      return box.className && typeof box.className === "string" && box.className.indexOf("note-box") !== -1;
+    });
+
+    if (noteBox && /Teacher and SNA names can be added/i.test(noteBox.textContent)) {
+      noteBox.textContent = "Class team names have been updated for the 2026 / 2027 school year. Staff photographs should only be used where staff are happy and the school approves.";
+    }
+  }
 
   // Site-wide footer clean-up and consistency.
   const footer = document.querySelector(".site-footer");
