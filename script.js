@@ -218,6 +218,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const labelText = label.textContent.trim().toLowerCase();
 
+        if (labelText === "room" || labelText.includes("room")) {
+          item.remove();
+          return;
+        }
+
         if (labelText.includes("class teacher")) {
           label.textContent = staff.teacherLabel;
           value.textContent = staff.teacher;
@@ -226,6 +231,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (labelText.includes("sna")) {
           label.textContent = "SNA Team";
           value.textContent = staff.snas;
+        }
+
+        if (labelText.includes("class colour") || labelText.includes("class color")) {
+          label.textContent = "Class Name";
+          value.textContent = staff.className;
         }
       });
     }
