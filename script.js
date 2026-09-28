@@ -159,12 +159,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Admissions notice update for 2027-2028. Dates are TBC until the school confirms them.
+  // Admissions policy period update for 2027-2028.
+  if (path.endsWith("/admissions-enrolment-policy.html") || path.endsWith("admissions-enrolment-policy.html")) {
+    document.querySelectorAll(".policy-summary-card").forEach(function (card) {
+      const label = card.querySelector("strong");
+      const value = card.querySelector("p");
+      if (label && value && /Admissions Period/i.test(label.textContent)) {
+        value.textContent = "Open from 6th October 2026 to TBC.";
+      }
+    });
+  }
+
+  // Admissions notice update for 2027-2028.
   if (path.endsWith("/admissions.html") || path.endsWith("admissions.html")) {
     document.querySelectorAll('a[href="admissions-notice-2026-2027.html"]').forEach(function (link) {
       link.setAttribute("aria-label", "Admissions notice 2027 2028");
       const heading = link.querySelector("h3");
+      const text = link.querySelector("p");
       if (heading) heading.textContent = "Admissions Notice 2027–2028";
+      if (text) text.textContent = "Application dates open 6th October 2026. Closing date to be confirmed.";
     });
   }
 
@@ -186,18 +199,23 @@ document.addEventListener("DOMContentLoaded", function () {
       const applicationHeading = applicationCard.querySelector("h2");
       const applicationText = applicationCard.querySelector("p");
       if (applicationHeading) applicationHeading.textContent = "Application Dates";
-      if (applicationText) applicationText.textContent = "Application dates are to be confirmed.";
+      if (applicationText) applicationText.textContent = "Applications open on 6th October 2026. Closing date to be confirmed.";
     }
 
     document.querySelectorAll(".policy-summary-card").forEach(function (card) {
       const label = card.querySelector("strong");
       const value = card.querySelector("p");
-      if (label && value && /Applications Open|Applications Close|Decision Date/i.test(label.textContent)) {
-        value.textContent = "TBC";
-      }
+      if (!label || !value) return;
+      if (/Applications Open/i.test(label.textContent)) value.textContent = "6th October 2026";
+      if (/Applications Close|Decision Date/i.test(label.textContent)) value.textContent = "TBC";
     });
 
-    document.querySelectorAll(".notice-date-card strong").forEach(function (value) {
+    const noticeValues = ["6th October 2026", "TBC", "TBC", "TBC"];
+    document.querySelectorAll(".notice-date-card strong").forEach(function (value, index) {
+      value.textContent = noticeValues[index] || "TBC";
+    });
+
+    document.querySelectorAll(".places-table tbody td strong").forEach(function (value) {
       value.textContent = "TBC";
     });
   }
