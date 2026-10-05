@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const label = card.querySelector("strong");
       const value = card.querySelector("p");
       if (label && value && /Admissions Period/i.test(label.textContent)) {
-        value.textContent = "Open from 6th October 2026 to TBC.";
+        value.textContent = "Open from 6th October 2026 to 15th January 2027.";
       }
     });
   }
@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const heading = link.querySelector("h3");
       const text = link.querySelector("p");
       if (heading) heading.textContent = "Admissions Notice 2027–2028";
-      if (text) text.textContent = "Application dates open 6th October 2026. Closing date to be confirmed.";
+      if (text) text.textContent = "Applications open 6th October 2026 and close 15th January 2027.";
     });
   }
 
@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const applicationHeading = applicationCard.querySelector("h2");
       const applicationText = applicationCard.querySelector("p");
       if (applicationHeading) applicationHeading.textContent = "Application Dates";
-      if (applicationText) applicationText.textContent = "Applications open on 6th October 2026. Closing date to be confirmed.";
+      if (applicationText) applicationText.textContent = "Applications open on 6th October 2026 and close on 15th January 2027.";
     }
 
     document.querySelectorAll(".policy-summary-card").forEach(function (card) {
@@ -207,17 +207,28 @@ document.addEventListener("DOMContentLoaded", function () {
       const value = card.querySelector("p");
       if (!label || !value) return;
       if (/Applications Open/i.test(label.textContent)) value.textContent = "6th October 2026";
-      if (/Applications Close|Decision Date/i.test(label.textContent)) value.textContent = "TBC";
+      if (/Applications Close/i.test(label.textContent)) value.textContent = "15th January 2027";
+      if (/Decision Date/i.test(label.textContent)) value.textContent = "29th January 2027";
     });
 
-    const noticeValues = ["6th October 2026", "TBC", "TBC", "TBC"];
+    const noticeValues = ["6th October 2026", "15th January 2027", "29th January 2027", "12th February 2027"];
     document.querySelectorAll(".notice-date-card strong").forEach(function (value, index) {
-      value.textContent = noticeValues[index] || "TBC";
+      value.textContent = noticeValues[index] || "";
     });
 
-    document.querySelectorAll(".places-table tbody td strong").forEach(function (value) {
-      value.textContent = "TBC";
-    });
+    const tableBody = document.querySelector(".places-table tbody");
+    if (tableBody) {
+      tableBody.innerHTML = `
+        <tr>
+          <td>Junior / Senior Infants</td>
+          <td><strong>5</strong></td>
+        </tr>
+        <tr>
+          <td>First / Second Class</td>
+          <td><strong>5</strong></td>
+        </tr>
+      `;
+    }
   }
 
   // Classroom staff lists for 2026 / 2027.
